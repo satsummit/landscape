@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e # halt script on error
+set -x # debug
 
 # If this is the deploy branch, push it up to gh-pages
 if [ $TRAVIS_PULL_REQUEST = "false" ] && [ $TRAVIS_BRANCH = ${DEPLOY_BRANCH} ]; then
