@@ -1,0 +1,9 @@
+.DS_Store
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components
+test/bower_components
+npm-debug.log
+app/assets/scripts/config/local.js

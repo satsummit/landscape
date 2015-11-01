@@ -1,0 +1,11 @@
+.inherit-height {
+  width: 100%;
+  height: inherit;
+}
+
+.row {
+  margin-top: .5em;
+  @include large {
+    margin-top: 1.75em;
+  }
+}

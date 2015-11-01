@@ -1,0 +1,603 @@
+<!doctype html>
+<!--[if lt IE 10]> <html class="lt-ie10 no-js"  lang=""> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>State of Satellite Imagery</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,500,300,300italic' rel='stylesheet' type='text/css'>
+
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+    <!-- build:css assets/styles/main.css -->
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <!-- endbuild -->
+    <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <div id="nocando">
+        <h1>No can do!</h1>
+        <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      </div>
+    <![endif]-->
+
+    <div id="header" class="hero">
+
+      <!-- banner satellite layer -->
+      <div id="top-content">
+        <div id="intro" class="header-slide large-4 medium-4 small-12">
+          <div id="intro-slide-content" class="large-4 medium-2 small-10">
+         <!-- build:intro-slide -->
+         <h1 id="better-satellites-">Better satellites.</h1>
+<h1 id="big-data-processing-">Big Data processing.</h1>
+<hr>
+<h2 id="new-insights-possible-">New insights possible.</h2>
+
+         <!-- endbuild -->
+          </div>
+        </div>
+        <div id="banner-map" class="header-slide large-4  medium-4 small-12"></div>
+        <div id="banner-map-2" class="header-slide large-4 medium-4 small-12"></div>
+      </div>
+      <div class="hero-block">
+        <div class="logos">
+          <a href="http://www.worldbank.org/" target="_blank">
+            <img class="worldbank" src="assets/graphics/layout/wbg_black.svg" alt="Development Seed logotype" />
+          </a>
+          <a href="https://developmentseed.org" target="_blank">
+            <img class="devseed" src="assets/graphics/layout/logo_horizontal_white.svg" alt="Development Seed logotype" />
+          </a>
+        </div>
+        <!-- build:header -->
+        <h3 id="satellites-in-global-development">Satellites in Global Development</h3>
+
+        <!-- endbuild -->
+      </div>
+        <div class="nav-container">
+          <nav>
+            <div class="logos">
+              <a href="http://www.worldbank.org/" target="_blank">
+                <img class="worldbank" src="assets/graphics/layout/wbg_black.svg" alt="Development Seed logotype" />
+              </a>
+              <a href="https://developmentseed.org" target="_blank">
+                <img class="devseed" src="assets/graphics/layout/logo_horizontal_white.svg" alt="Development Seed logotype" />
+              </a>
+            </div>
+            <ul>
+              <li><a class="nav-link" href="#section-1">Capture</a></li>
+              <li><a class="nav-link" href="#section-2">Analysis</a></li>
+              <li><a class="nav-link" href="#section-3">Distribution</a></li>
+              <li><a class="nav-link" href="#section-4">Impact</a></li>
+            </ul>
+          </nav>
+        </div>
+    </div>
+
+    <section id="section-0" class="row">
+
+        <div id="navigation" class="small-12 large-9 large-offset-1 column">
+          <ul class="inline-nav">
+
+            <li class="inline-nav-el">
+              <a href="#section-1" class="hero-button">
+                <label>Capture</label>
+                <img class="icon" src="assets/graphics/layout/capture.png" />
+              </a>
+            </li>
+
+            <li class="inline-nav-el">
+              <a href="#section-2" class="hero-button">
+                <label>Analysis</label>
+                <img class="icon" src="assets/graphics/layout/analysis.png" />
+              </a>
+            </li>
+
+            <li class="inline-nav-el">
+              <a href="#section-3" class="hero-button">
+                <label>Distribution</label>
+                <img class="icon" src="assets/graphics/layout/delivery.png" />
+              </a>
+            </li>
+            <li class="inline-nav-el">
+              <a href="#section-4" class="hero-button impact">
+                <label class="impact">Impact</label>
+                <img class="icon" src="assets/graphics/layout/impact.png" />
+              </a>
+            </li>
+
+          </ul>
+        </div>
+        <div id="introduction" class="small-12 large-9 large-offset-1 column">
+        <!-- build:introduction -->
+        <h2 id="we-have-better-tools-to-capture-analyze-and-distribute-data-about-the-earth-and-its-populations-this-is-creating-new-opportunities-for-impact-in-global-development-">We have better tools to capture, analyze, and distribute data about the earth and its populations. This is creating new opportunities for impact in global development.</h2>
+
+        <!-- endbuild -->
+        </div>
+      </section>
+
+    <section id="section-1">
+    <div id="capture" class="row">
+      <div class="small-12 large-9 large-offset-1 column">
+        <!-- build:capture -->
+        <h1 id="capture-">Capture.</h1>
+<hr>
+<h2 id="sharper-richer-every-day-">Sharper. Richer. Every Day.</h2>
+<p>Satellite platforms are getting better and cheaper to build and launch. New platforms have higher resolution, collect images with greater frequency and collect new types of data, allowing new insights.</p>
+
+        <!-- endbuild -->
+      </div>
+    </div>
+
+    <!-- capabilities scatterplot -->
+    <div id="capabilities" class="graphic"></div>
+
+    <!-- capabilities table -->
+    <div class="row">
+      <div id="capabilities-table" class="values-table small-12 large-9 large-offset-1 column table-block table-centered sortable">
+      </div>
+    </div>
+
+    <div id="resolution" class="row">
+      <div class="small-12 large-9 large-offset-1 column">
+        <!-- build:resolution -->
+        <h3 id="resolution">Resolution</h3>
+<h4 id="high-resolution-commercial-imagery-is-available-up-to-31m-resolution-while-there-is-still-a-premium-for-the-highest-resolution-imagery-0-50m-medium-to-low-resolution-is-increasingly-affordable-or-available-at-no-cost-">High resolution commercial imagery is available up to .31m resolution. While there is still a premium for the highest resolution imagery (&lt;0.50m), medium to low resolution is increasingly affordable or available at no cost.</h4>
+<h4 id="what-resolution-do-i-need-">What resolution do I need?</h4>
+<p>These imagery sample can help to select the right imagery for your project.</p>
+<p>In an urban environment like Fortaleza, free Landsat imagery (15m) shows the extent of the city. Medium resolution imagery like RapidEye (5m) shows roads. With Worldview 3 (.31m) and Pleiades (.5m) images you can count beach umbrellas.</p>
+
+        <!-- endbuild -->
+      </div>
+    </div>
+    <!-- resolution satellite imagery comparison -->
+    <div id="resolution-comparison" class="img-comparison"></div>
+
+    <div id="revisit" class="row">
+      <div class="small-12 large-9 large-offset-1 column">
+        <!-- build:revisit -->
+        <h3 id="revisit-temporal-resolution-">Revisit (Temporal Resolution)</h3>
+<p>Increased capture capacity for large satellites and new microsatellite platforms offer frequent revisit rates and more extensive image capture, allowing high frequency monitoring of changes on earth. More regular data makes it easier to study change over time, to track the progress of projects, and to “rewind” to the days leading up to a disaster.</p>
+<p>Planet Labs high frequency imagery over Canada shows the progress of the growing season, week by week.</p>
+
+        <!-- endbuild -->
+      </div>
+    </div>
+
+    <!-- resolution satellite imagery comparison -->
+    <div id="revisit-comparison"></div>
+
+    <div id="sensors" class="row">
+      <div class="small-12 large-9 large-offset-1 column">
+        <!-- build:sensors -->
+        <h3 id="new-sensors">New Sensors</h3>
+<p>Many modern satellites collect infrared and ultraviolet light not visible to the human eye. This information can be used to measure vegetation health, to monitor biomass, or to track forest fires. Newer laser and Radar-based sensors precisely scan the earth, eliminating weather dependencies, producing 3D earth models, and enabling better change detection.</p>
+<p>In this imagery over rural Uganda, infrared sensors augment imagery to highlight vegetation (False Color) and to measure the health of that vegetation (NDVI). These images show a range of imagery resolutions from different growing seasons.</p>
+
+        <!-- endbuild -->
+      </div>
+    </div>
+    <!-- ndvi, color composite, and resolution satellite imagery comparison -->
+    <div id="toggled-resolution-comparison" class="img-comparison"></div>
+    </section>
+    <section id="section-2">
+    <div id="analysis" class="row add-space">
+      <div class="small-12 large-9 large-offset-1 column">
+        <!-- build:spectral-analysis-intro -->
+        <h1 id="analysis-">Analysis.</h1>
+<hr>
+<h2 id="deeper-and-cheaper-analysis-on-the-cloud-">Deeper and cheaper analysis on the cloud.</h2>
+<h4 id="massive-cloud-computing-resources-and-analytical-tools-for-working-with-big-datasets-make-it-possible-extract-new-information-from-imagery-">Massive cloud computing resources and analytical tools for working with big datasets make it possible extract new information from imagery.</h4>
+<p>The combination of new sensors, deeper archives, and better computing ability make it possible draw sophisticated information from satellite imagery. Development organizations can now process imagery on the cloud and don&#39;t need to invest in expensive hardware and software.</p>
+<h3 id="insights-from-invisible-light">Insights from invisible light</h3>
+<p>Many satellites capture wavelengths such as infrared or ultraviolet light that can help to understand characteristics of the substances below.  Different substances reflect these light frequencies in different ways. Common satellite analysis techniques combines visible and invisible light bands (called &quot;spectral bands&quot;) to highlight certain characteristics. For example, spectral bands covering frequencies in the middle-infrared wavelength regions are responsive to moisture content in vegetation and soil, while near infrared wavelength regions tend to emphasize vegetation health and&#8212; at a courser scale&#8212; overall biomass.</p>
+<p>Taken together, the spectral response of each band creates a unique signature, referred to as its spectral curve. The information it communicates can help to separate different types of land cover or derive information about the conditions within a single type of land cover.</p>
+
+        <!-- endbuild -->
+          <div id="analysis-comparison" class="analysis-chart">
+
+          <div class="analysis-chart-row">
+            <div class="analysis-chart-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/falsecolor652-thumb.png">
+            </div>
+            <div class="analysis-chart-text large-9 medium-9 small-10">
+          <!-- build:spectral-analysis-comparison-false-color -->
+          <h5 id="false-color">False color</h5>
+<p>A simple form of image interpretation involves assigning invisible light bands to Red, Green, and Blue channels to create a false color image to highlight certain characteristics. False color images can distinguish muddy water from muddy land, pinpoint fires, or clearly show the extent of a growing city. This example combines the moisture sensitivity of Mid-Infrared reflectance with the vegetation sensitivity of Near-Infrared to highlight agricultural fields.</p>
+
+          <!-- endbuild -->
+            </div>
+          </div>
+
+        </div>
+
+          <div class="values-table table-block bullet-block">
+            <!-- build:band-combinations-table -->
+            <h4 id="common-landsat-8-band-combinations">Common Landsat 8 band combinations</h4>
+<p>There are several well-known combinations that are optimized to provide maximum contrast between categories of interest under various use cases.</p>
+<table>
+<thead>
+<tr>
+<th>Combination</th>
+<th>Red Wavelength</th>
+<th>Green Wavelength</th>
+<th>Blue Wavelength</th>
+<th>LS 8 Bands</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Natural Color</td>
+<td>0.64-0.67&#xb5;m</td>
+<td>0.53-0.59&#xb5;m</td>
+<td>0.45-0.51&#xb5;m</td>
+<td>4 3 2</td>
+</tr>
+<tr>
+<td>False Color (urban)</td>
+<td>2.11-2.29&#xb5;m</td>
+<td>1.57-1.65&#xb5;m</td>
+<td>0.64-0.67&#xb5;m</td>
+<td>7 6 4</td>
+</tr>
+<tr>
+<td>Color Infrared (vegetation)</td>
+<td>0.85-0.88&#xb5;m</td>
+<td>0.64-0.67&#xb5;m</td>
+<td>0.53-0.59&#xb5;m</td>
+<td>5 4 3</td>
+</tr>
+<tr>
+<td>Agriculture</td>
+<td>0.85-0.88&#xb5;m</td>
+<td>0.64-0.67&#xb5;m</td>
+<td>0.53-0.59&#xb5;m</td>
+<td>5 4 3</td>
+</tr>
+<tr>
+<td>Atmospheric Penetration</td>
+<td>2.11-2.29&#xb5;m</td>
+<td>1.57-1.65&#xb5;m</td>
+<td>0.85-0.88&#xb5;m</td>
+<td>7 6 5</td>
+</tr>
+<tr>
+<td>Healthy Vegetation</td>
+<td>0.85-0.88&#xb5;m</td>
+<td>1.57-1.65&#xb5;m</td>
+<td>0.45-0.51&#xb5;m</td>
+<td>5 6 2</td>
+</tr>
+<tr>
+<td>Land/Water</td>
+<td>0.85-0.88&#xb5;m</td>
+<td>1.57-1.65&#xb5;m</td>
+<td>0.64-0.67&#xb5;m</td>
+<td>5 6 4</td>
+</tr>
+<tr>
+<td>Natural With Atmospheric Removal</td>
+<td>2.11-2.29&#xb5;m</td>
+<td>0.85-0.88&#xb5;m</td>
+<td>0.53–0.59&#xb5;m</td>
+<td>7 5 3</td>
+</tr>
+<tr>
+<td>Shortwave Infrared</td>
+<td>2.11-2.29&#xb5;m</td>
+<td>0.85-0.88&#xb5;m</td>
+<td>0.53–0.59&#xb5;m</td>
+<td>7 5 3</td>
+</tr>
+<tr>
+<td>Vegetation Analysis</td>
+<td>1.57-1.65&#xb5;m</td>
+<td>0.85-0.88&#xb5;m</td>
+<td>0.64-0.67&#xb5;m</td>
+<td>6 5 4</td>
+</tr>
+</tbody>
+</table>
+
+            <!-- endbuild -->
+          </div>
+
+          <!-- build:spectral-analysis-mathematic -->
+          <h4 id="mathematic-spectral-transformations">Mathematic spectral transformations</h4>
+<p>In addition to False Color composition, spectral bands can be combined mathematically to emphasize a particular set of characteristics. These techniques draw from all relevant bands, rather than the three band limits of false color analysis, to draw out very specific characteristics. These techniques involve greater processing of raw data in order to minimize band characteristics that are not relevant to a particular case and by selectively enhancing the signal in areas where complementary band characteristics align. While false color can be used to identify agricultural fields, mathematic transformations can detect the health of each field. While false color can distinguish mud from water, mathematic transformations can tell you how wet the mud is.</p>
+
+          <!-- endbuild -->
+
+          <div id="analysis-comparison" class="analysis-chart">
+
+          <div class="analysis-chart-row">
+            <div class="analysis-chart-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/ndvi-thumb.png">
+            </div>
+            <div class="analysis-chart-text large-9 medium-9 small-10">
+          <!-- build:spectral-analysis-comparison_NDVI -->
+          <h5 id="vegetation-indices">Vegetation Indices</h5>
+<p>Multiplying the data from spectral bands in different combinations produces an index that can be used to compare every point in an image on the same scale. The most common indexes measure measure vegetation health and distinguish between types of plants, such as Normalized Difference Vegetation Index (NDVI) and Enhanced Vegetation Index (EVI).</p>
+
+          <!-- endbuild -->
+            </div>
+          </div>
+
+
+          <div class="analysis-chart-row">
+            <div class="analysis-chart-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/pca-thumb.png">
+            </div>
+            <div class="analysis-chart-text large-9 medium-9 small-10">
+          <!-- build:spectral-analysis-comparison-pca -->
+          <h5 id="pca">PCA</h5>
+<p>Principle Component Analysis (PCA) decorrelates the data within each spectral band, such that the most common characteristics of all bands are placed in the highest category and less common characteristics are placed in lower categories until all variance is explained. It is invaluable for exploration of data and landscape characteristics, simultaneously drawing attention to the most noteworthy and best-hidden features in a scene. </p>
+
+          <!-- endbuild -->
+            </div>
+        </div>
+
+        <div class="analysis-chart-row">
+            <div class="analysis-chart-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/tasscap-thumb.png">
+            </div>
+            <div class="analysis-chart-text large-9 medium-9 small-10">
+          <!-- build:spectral-analysis-comparison-Kauth_Thomas -->
+          <h5 id="kauth-thomas">Kauth-Thomas</h5>
+<p>KT-Transformations are a type of PCA, which, rather than being data-driven, combine information from multiple bands using specially developed coefficients to create the biophysically meaningful variables of Brightness, Greenness, and Wetness- the essential components of a landscape.</p>
+
+          <!-- endbuild -->
+            </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="advanced-analysis">
+      <div class="small-12 large-9 large-offset-1 column">
+        <!-- build:advanced-analysis-intro -->
+        <h3 id="advanced-analysis">Advanced analysis</h3>
+<p>Advanced analytical techniques go beyond band math. Advanced techniques compare data pixel by pixel, compare imagery taken at different times or different angles, or combining multiple source datasets. These techniques often result in data products like 3D terrain maps, the footprints of buildings, or the surface type of the road network. These techniques are computationally intensive and require significant processing resources. The availability of cloud computing has made these techniques more practical for development organizations.</p>
+
+        <!-- endbuild -->
+        <div id="analysis-comparison" class="analysis-chart">
+
+          <div class="analysis-chart-row">
+            <div class="analysis-chart-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/feature_extraction.png">
+            </div>
+            <div class="analysis-chart-text large-9 medium-9 small-10">
+          <!-- build:advanced-analysis-comparison-elevation -->
+          <h5 id="elevation-and-surface">Elevation and Surface</h5>
+<p>Elevation and Surface models are constructed by calculating the offset in radar or image-based data acquired from different angles. 3D terrain models are used to measure landslide or flood risk. 3D urban models are used to measure and manage vertical growth of cities. </p>
+
+          <!-- endbuild -->
+            </div>
+          </div>
+
+
+          <div class="analysis-chart-row">
+            <div class="analysis-chart-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/change_detection.png">
+            </div>
+            <div class="analysis-chart-text large-9 medium-9 small-10">
+          <!-- build:advanced-analysis-comparison-detection -->
+          <h5 id="change-detection">Change Detection</h5>
+<p>Analysis of imagery from different time periods to detect and understand changes. Examples include urban growth, deforestation, ice melting, landslide detection, or tracking urban conflict. <br>
+<br></p>
+
+          <!-- endbuild -->
+            </div>
+          </div>
+
+
+          <div class="analysis-chart-row">
+            <div class="analysis-chart-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/similar_objects.png">
+            </div>
+            <div class="analysis-chart-text large-9 medium-9 small-10">
+          <!-- build:advanced-analysis-comparison-extraction -->
+          <h5 id="feature-extraction">Feature Extraction</h5>
+<p>Analysis of imagery to extract and identify features.  These can include man-made objects (buildings, roads, structures) and natural objects (Ex: land use, water extent, crop areas). Once extracted this items can be sorted, counted, and analyzed.</p>
+
+          <!-- endbuild -->
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+    </section>
+
+
+    <section id="section-3">
+    <div id="distribution" class="row">
+      <div class="small-12 large-9 large-offset-1">
+          <!-- build:delivery -->
+          <h1 id="distribution-">Distribution.</h1>
+<hr>
+<h2 id="data-where-when-and-how-you-need-it-">Data where, when, and how you need it.</h2>
+<h3 id="enterprise-grade-services-offer-fasters-access-to-new-imagery-archival-images-and-derived-data-products-">Enterprise grade services offer fasters access to new imagery, archival images and derived data products.</h3>
+<p>Conventional models of identifying, buying and delivering imagery are giving way to new cloud based selection and delivery models. Users can search through archival content from multiple suppliers to find the best suited imagery, buy the imagery through an enterprise subscription and have it delivered online. New delivery models are not limited to raw imagery. As the value of raw pixels declines, there is greater innovation and competition to provide data products derived from imagery.</p>
+<h3 id="new-business-models-are-making-imagery-more-accessible-to-development-partners-new-open-data-sources-are-coming-available-">New business models are making imagery more accessible to development partners. New open data sources are coming available.</h3>
+<p>Freemium models - Providers are considering new pricing options that make older imagery available for free or at significant discounts. Discussions are underway to develop new licensing models that allow products licensed to the World Bank to be accessed by World Bank clients in country.</p>
+<p>Imagery &quot;rental&quot; - As providers offer analytical and processing services they will create business and pricing models to accompany these services. In some cases analytical tools may come at a premium. Eventually these services will drop in cost. Providers will offer analytical products derived from imagery for less than the cost of the raw imagery itself.</p>
+<p>New open satellite systems - Several new satellite systems are coming on line, offering open information for development use.</p>
+<ul>
+<li><p>ESA’s Copernicus system will deploy six Sentinel satellites between 2014 and 2021 to monitor land, ocean, emergency response, atmosphere, security and climate change.</p>
+</li>
+<li><p>NASA’s satellite launches last year with data to come online with information on climate change. Data from the Global Precipitation Measurement Core Observatory, Orbiting Carbon Observatory-2, and Soil Moisture Active Passive are now coming online.</p>
+</li>
+</ul>
+
+          <!-- endbuild -->
+        </div>
+      <div class="distribution">
+          <div class="distribution-card small-12 large-9 large-offset-1">
+            <div class="distribution-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/mosaic_icon.svg">
+            </div>
+            <div class="distribution-text large-9 medium-9 small-10">
+              <!-- build:distribution-mosaics -->
+              <h2 id="imagery-has-clouds-and-looking-at-a-large-area-involves-multiple-scenes-that-usually-don-t-match-up-well-">Imagery has clouds. And looking at a large area involves multiple scenes that usually don&#39;t match up well.</h2>
+<h4 id="solution-mosaics">Solution: mosaics</h4>
+<p>mosaics blend together imagery from multiple scenes into a single, cloudfree image.</p>
+<h5 id="digitalglobe-vivid-planet-labs-seasonal-mosaics">DigitalGlobe Vivid+, Planet Labs seasonal mosaics</h5>
+
+              <!-- endbuild -->
+            </div>
+          </div>
+          <div class="distribution-card small-12 large-9 large-offset-1">
+            <div class="distribution-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/host_icon.svg">
+            </div>
+            <div class="distribution-text large-9 medium-9 small-10">
+              <!-- build:distribution-mosaic-hosting -->
+              <h2 id="large-image-files-are-hard-to-use-on-the-web">Large image files are hard to use on the web</h2>
+<h4 id="solution-hosted-imagery-and-mosaics">Solution: Hosted imagery and mosaics</h4>
+<p>Hosted imagery and mosaics are tiled basemaps that can be easily integrated into your web application</p>
+<h5 id="astro-digital-fetch">Astro Digital Fetch</h5>
+
+              <!-- endbuild -->
+            </div>
+          </div>
+          <div class="distribution-card small-12 large-9 large-offset-1">
+            <div class="distribution-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/cloud_icon.svg">
+            </div>
+            <div class="distribution-text large-9 medium-9 small-10">
+            <!-- build:distribution-cloud-hosting -->
+            <h2 id="massive-datasets-and-intensive-analysis-are-difficult-to-preform-on-client-software">Massive datasets and intensive analysis are difficult to preform on client software</h2>
+<h4 id="solution-cloud-hosting-and-analytics">Solution: Cloud Hosting and Analytics</h4>
+<p>Cloud Hosting and Analytics services allow users to run heavy computation across many images and only download the end product  </p>
+<h5 id="landsat-on-aws-google-earth-engine">Landsat on AWS, Google Earth Engine</h5>
+
+            <!-- endbuild -->
+            </div>
+          </div>
+          <div class="distribution-card small-12 large-9 large-offset-1">
+            <div class="distribution-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/catalog_icon.svg">
+            </div>
+            <div class="distribution-text large-9 medium-9 small-10">
+            <!-- build:distribution-hosted-catalogs -->
+            <h2 id="large-organizations-may-have-trouble-tracking-imagery-purchased-by-different-units-or-for-different-projects">Large organizations may have trouble tracking imagery purchased by different units or for different projects</h2>
+<h4 id="solution-hosted-catalogs">Solution: Hosted catalogs</h4>
+<p>Hosted catalogs allow users across an organization to browse and re-download any imagery you&#39;ve already purchased</p>
+<h5 id="airbus-datadoors">Airbus DataDoors</h5>
+
+            <!-- endbuild -->
+            </div>
+          </div>
+          <div class="distribution-card small-12 large-9 large-offset-1">
+            <div class="distribution-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/search_icon.svg">
+            </div>
+            <div class="distribution-text large-9 medium-9 small-10">
+          <!-- build:distribution-unified-search -->
+          <h2 id="searching-across-the-archives-of-multiple-imagery-providers-is-hard-and-time-consuming">Searching across the archives of multiple imagery providers is hard and time consuming</h2>
+<h4 id="solution-unified-search-platforms">Solution: Unified search platforms</h4>
+<p>Unified search platforms provide results from multiple vendors and platforms, allowing choice of best available option. </p>
+<h5 id="digitalglobe-unified-commercial-platform">DigitalGlobe Unified Commercial platform</h5>
+
+          <!-- endbuild -->
+            </div>
+          </div>
+      </div>
+    </div>
+    </section>
+    <section id="section-4">
+    <div id="applications-section">
+      <div id="application-intro" class="row">
+        <div class="small-12 large-9 large-offset-1 column">
+          <!-- build:applications-intro -->
+          <h1 id="impact-">Impact.</h1>
+<hr>
+<h2 id="these-changes-in-capture-analysis-and-distribution-will-have-profound-impacts-on-the-global-development-community-">These changes in capture, analysis, and distribution will have profound impacts on the Global Development Community.</h2>
+
+          <!-- endbuild -->
+        </div>
+      </div>
+
+      <div id="roads-application-intro" class="row">
+        <div class="small-12 large-9 large-offset-1 column">
+          <!-- build:roads-application-intro -->
+          <h3 id="infrastructure-projects">Infrastructure Projects</h3>
+<p>More regular imagery makes it possible to monitor the progress of infrastructure projects. High resolution imagery and video can help to measure traffic on roads and road quality. Satellite data and analysis can provide the underlying data to inform infrasturcture investments.</p>
+<p>In countries lacking infrastructure maps, imagery can offer a cheap way to map the national road network. The highest resolution imagery (0.5 meters) allows for the detection of narrow, unpaved footpaths. These become invisible at 1.5 meters, at which point the gridded residential roads are the smallest observable feature. This grid remains recognizable at 2.5 meters, but is more likely to confuse with the surrounding vegetation. At 5-meter resolution, even the relatively large secondary road which cuts through the neighborhood becomes difficult to reliably distinguish, making the single primary road which travels the length of Palawan the only visible linear feature.</p>
+
+          <!-- endbuild -->
+        </div>
+      </div>
+      <!-- roads-centric resolution comparison -->
+      <div id="palawan-roads-comparison" class="img-comparison" ></div>
+
+      <div id="agriculture-application-intro" class="row">
+        <div class="small-12 large-9 large-offset-1 column">
+          <!-- build:agriculture-application-intro -->
+          <h3 id="forest-and-agriculture">Forest and Agriculture</h3>
+<p>Due to the massive size and limited accessibility of forests, satellites have long an indispensable tool for forest management. Satellite imagery derived forest maps measure increases in greenhouse gas emissions from deforestation, detect illegal logging activities, evaluate the availability and use of wood as cooking fuel, and assess the environmental impact of infrastructure projects such as road construction.</p>
+<p>In agriculture, satellite imagery measures agricultural production. Imagery shows crop type and area of coverage, estimate rainfall, measure the effectiveness of irrigation systems, and evaluate the risk of droughts and floods. Satellite data is used for everything from developing insurance products for small farmers and early warning systems to detect decreasing agricultural production.</p>
+<p>High frequency multispectral imagery creates significant opportunities on Forest and Agriculture projects. Regular imaging of rural areas in developing countries will yield comparable data at regular intervals unlocking new types of analysis of forest change and trends in agricultural production. More immediate information on crop health is critical to enable warning systems of potential drops in production in food sectors. Automated change detection will be invaluable in monitoring huge swaths of forest and agricultural areas.</p>
+
+          <!-- endbuild -->
+        </div>
+      </div>
+      <!-- agriculture time series -->
+      <div id="uganda-agriculture-comparison" class="img-comparison"></div>
+
+      <div id="disaster-application-intro" class="row">
+        <div class="small-12 large-9 large-offset-1 column">
+          <!-- build:disaster-application-intro -->
+          <h3 id="disaster-reduction-and-response">Disaster Reduction and Response</h3>
+<p>Disaster events tend to affect large areas and the impact of such events can disrupt the normal functioning and organization of local authorities. Remote sensing information is immensely useful to gain oversight of the current situation after an event and to identify areas that are most affected. In the agriculture sector, remote sensing data is increasingly used for estimating crop yields to develop early warning systems for famines. Satellite image based coastline displacement and river bank erosion monitoring is also an important instrument to measure vulnerability of urban areas to flooding, storm surges, and tsunamis. While urban land cover maps are used to estimate impervious surfaces to track and manage water runoff patterns and sewer systems. Satellite imagery contributing to the mapping of informal settlements also helps access vulnerabilities.</p>
+<p>Daily imaging will make it possible to track disasters as they occur, and to &quot;rewind&quot; to immediately before a disaster. Time is a critical factor for disaster response. The quicker images can be distributed to measure impact and develop response strategies. Recent events such as the Nepal earthquake show the importance and usefulness of near real time satellite imagery. Having images taken shortly after disaster events can be immensely helpful to assist disaster response on the ground. Such images inform damage assessments and provide information on what infrastructure still exists for rescue efforts to reach affected areas. Better distribution approaches will be critical in allowing satellite data and analysis to get to responders as quickly as possible. High resolution digital elevation maps are critical for evaluating the risk of floods, landslides, and earthquakes.</p>
+
+          <!-- endbuild -->
+        </div>
+      </div>
+      <!-- landslide model slider -->
+      <div id="nepal-landslide-model">
+        <div class="range-labels">
+          <label id="landslide-model-opacity" class="range-label range-label-center"></label>
+        </div>
+        <input id="landslide-model-range" class="range" type="range" min="0" max="1.0" step="any"
+          style="position: static;"/>
+        <div id="landslide-model-map" class="static-map"></div>
+      </div>
+    </div>
+    </section>
+    <section id="section-5" class="footer small-12 large-9 large-offset-1 column" >
+        <div class="footer-content">
+         <!-- build:footer -->
+         <h2 id="this-is-a-living-open-source-report-maintained-by-development-seed-">This is a living open source report maintained by Development Seed.</h2>
+<h2 id="contribute-to-the-report-on-github-">Contribute to the report on Github.</h2>
+
+         <!-- endbuild -->
+        </div>
+    </section>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+    -->
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+    <script src='assets/vendor/jquery.js'></script>
+    <script src="assets/vendor/jquery.scrollTo.js"></script>
+    <script src="assets/vendor/waypoints.js"></script>
+    <!-- build:js assets/scripts/vendor.js -->
+    <script src="assets/scripts/vendor.js"></script>
+    <!-- endbuild -->
+    <!-- build:js assets/scripts/bundle.js -->
+    <script src="assets/scripts/bundle.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

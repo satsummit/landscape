@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - "0.12"
+
+env:
+  global:
+  - GH_REF=github.com/satellites-imagery/landscape.git
+  - DEPLOY_BRANCH=master
+  
+cache:
+  directories:
+    - node_modules
+
+before_install:
+- chmod +x ./.build_scripts/deploy.sh
+- chmod +x ./.build_scripts/lint.sh
+
+before_script:
+- ./.build_scripts/lint.sh
+- npm test
+
+script:
+- npm run build
+
+after_success:
+- ./.build_scripts/deploy.sh

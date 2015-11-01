@@ -1,0 +1,82 @@
+.nav-container {
+  display: none;
+  nav {
+    height: 3.5em;
+    position: relative;
+    background-color: tint($body-color, 95%);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 1003;
+    li {
+      display: inline;
+      list-style: none;
+      a {
+        width: auto;
+        color: $dark-blue;
+        font-size: 1.2em;
+        font-weight: 400;
+        line-height: 1em;
+        text-align: center;
+        text-decoration: none;
+        margin-top: .5em;
+        padding: .45em .65em;
+        display: inline-block;
+        transition:.5s;
+        &:hover, &.selected {
+          color: $dark-blue;
+          border-bottom: 3px solid $dark-blue;
+        }
+      }
+    }
+
+    .logos {
+      float: right;
+      display: inline-block;
+      margin: 0;
+      img {
+        margin-top:.75em;
+        line-height: 1em;
+        height: 32px;
+        margin-right:1.5em;
+      }
+      @include small {
+        float: none;
+        text-align: center;
+        display: block;
+        margin: 0 0 .5em;
+      }
+    }
+    .devseed {
+      width: 188px;
+      height: 32px;
+      @include small {
+        width: 141px;
+        height: 24px;
+      }
+    }
+  }
+
+  .sticky {
+    width: 100%;
+    position: fixed;
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 54.5em) {
+  .nav-container {
+    nav {
+      height: 2.5em;
+      li {
+        a {
+          font-size: 1em;
+          padding: .25em .3em;
+        }
+      }
+      .logos {
+        display: none;
+      }
+    }
+  }
+}

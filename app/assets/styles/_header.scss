@@ -1,0 +1,74 @@
+.hero {
+  height: 100%;
+  position: relative;
+
+}
+
+.hero-block {
+  margin: 0;
+  padding: .75em 2em;
+  background-color: tint($body-color, 95%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  h3 {
+    font-weight: 400;
+    line-height: 1em;
+    color: $dark-blue;
+    margin: 0;
+    display: inline-block;
+    @include small {
+      text-align: center;
+      display: block;
+    }
+  }
+
+  .logos {
+    float: right;
+    display: inline-block;
+    margin: 0;
+
+    img {
+      line-height: 1em;
+      height: 32px;
+      margin-left: 2em;
+    }
+
+    @include small {
+      float: none;
+      text-align: center;
+      display: block;
+      margin: 0 0 .5em;
+    }
+  }
+
+  .devseed {
+    width: 188px;
+    height: 32px;
+    @include small {
+      width: 141px;
+      height: 24px;
+    }
+  }
+}
+
+#introduction {
+  float:left;
+  text-align: center;
+}
+
+#intro-slide-content{
+  top: 6em;
+  position: relative;
+}
+
+.header-slide{
+  background-color: $dark-blue;
+  float: left;
+  height: 650px;
+  @include small{
+    height:350;
+  }
+}
