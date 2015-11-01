@@ -1,9 +1,9 @@
 # Satellite Strategy
-Satellite State of Play - a strategy document for the World Bank
+Satellite State of Play - a strategy document on Satellite imagery
 
-We will use this repo for internal tickets and milestone tracking. This repo will also be the staging area for the final site.
+This site was created from the viewpoint of the development community, but offers a genera overview of current market dynamics.
 
-We will use the [Project Space](https://developmentseed.teamwork.com/projects/137114/overview) for all communications to and collaboration with the World Bank.
+All code is MIT licensed, and the text content is public domain (CC0). Please feel free to send edits and updates via Pull Requests.
 
 ## Development environment
 
