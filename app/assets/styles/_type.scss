@@ -107,11 +107,11 @@ input.range {
 .header-slide h1, .header-slide h2{
   color: tint($body-color, 95%);
   line-height: 2.4rem;
-  margin: 2rem 2rem 4rem 2rem; 
+  margin: 2rem 2rem 4rem 2rem;
   font-size:2.4rem;
     @include small{
     line-height: 2.3rem;
-    margin: 2rem 2rem 4rem 2rem; 
+    margin: 2rem 2rem 4rem 2rem;
     font-size:2.3rem;
   }
 }
@@ -124,4 +124,8 @@ label.impact{
   :hover{
     color: tint($mid-blue, 60%);
   };
+}
+
+.intro {
+  background-color: rgba(136, 138, 136, 0.22);
 }
