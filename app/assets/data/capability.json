@@ -10,7 +10,8 @@
     "multispectral": "Yes",
     "open": "No",
     "live": "Live",
-    "short": "SPOT 6/7"
+    "short": "SPOT 6/7",
+    "link": "#"
   },
   {
     "company": "Airbus",
@@ -23,7 +24,8 @@
     "multispectral": "Yes",
     "open": "No",
     "live": "Live",
-    "short": "Pléiades"
+    "short": "Pléiades",
+    "link": "#"
   },
   {
     "company": "DigitalGlobe",
@@ -36,7 +38,8 @@
     "multispectral": "Yes",
     "open": "No",
     "live": "Live",
-    "short": "DG WV3"
+    "short": "DG WV3",
+    "link": "#"
   },
   {
     "company": "DigitalGlobe",
@@ -49,7 +52,8 @@
     "multispectral": "Yes",
     "open": "No",
     "live": "Live",
-    "short": "DG WV2"
+    "short": "DG WV2",
+    "link": "#"
   },
   {
     "company": "Blackbridge",
@@ -62,7 +66,36 @@
     "multispectral": "Yes",
     "open": "No",
     "live": "Live",
-    "short": "RapidEye"
+    "short": "RapidEye",
+    "link": "#"
+  },
+  {
+    "company": "NASA",
+    "sensor": "rgb",
+    "revisit": "18",
+    "platform": "LandSat 1, 2 & 3",
+    "cost": "0",
+    "resolution": "80",
+    "acquisition": null,
+    "multispectral": "Yes",
+    "open": "Yes",
+    "live": "Decommisioned",
+    "short": "Landsat 1, 2 & 3",
+    "link": "http://landsat.usgs.gov/about_landsat3.php"
+  },
+  {
+    "company": "NASA",
+    "sensor": "rgb",
+    "revisit": "18",
+    "platform": "LandSat 4 & 5",
+    "cost": "0",
+    "resolution": "75",
+    "acquisition": null,
+    "multispectral": "Yes",
+    "open": "Yes",
+    "live": "Decommisioned",
+    "short": "Landsat 4 & 5",
+    "link": "http://landsat.usgs.gov/about_landsat5.php"
   },
   {
     "company": "NASA/USGS",
@@ -75,7 +108,22 @@
     "multispectral": "Yes",
     "open": "Yes",
     "live": "Live",
-    "short": "Landsat 8"
+    "short": "Landsat 8",
+    "link": "http://landsat.usgs.gov/landsat8.php"
+  },
+  {
+    "company": "NASA",
+    "sensor": "pan,rgb,nir,swir",
+    "revisit": "1.5",
+    "platform": "MODIS",
+    "cost": "0",
+    "resolution": "500",
+    "acquisition": null,
+    "multispectral": "Yes",
+    "open": "Yes",
+    "live": "Live",
+    "short": "MODIS",
+    "link": "http://modis.gsfc.nasa.gov/"
   },
   {
     "company": "ESA",
@@ -88,7 +136,8 @@
     "multispectral": "Yes",
     "open": "Yes",
     "live": "Live",
-    "short": "Sentinel 2"
+    "short": "Sentinel 2",
+    "link": "#"
   },
   {
     "company": "Skybox",
@@ -101,7 +150,8 @@
     "multispectral": "Yes",
     "open": "No",
     "live": "Planned",
-    "short": "Skybox"
+    "short": "Skybox",
+    "link": "#"
   },
   {
     "company": "Planet Labs",
@@ -114,6 +164,7 @@
     "multispectral": "No",
     "open": "No",
     "live": "Planned",
-    "short": "Planet Labs"
+    "short": "Planet Labs",
+    "link": "#"
   }
 ]
