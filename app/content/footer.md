@@ -1,2 +1,1 @@
-## This is a living open source report maintained by Development Seed. 
-## Contribute to the report on Github.
+## This product is part of a World Bak Group project to map the landscape of satellite capabilties. Content is released under Creative Commons Zero, and code under MIT license. Please see [repository](http://github.com/satsummit) for contributions to the report.
