@@ -8,11 +8,11 @@ Conventional models of identifying, buying and delivering imagery are giving way
 
 ### New business models are making imagery more accessible to development partners. New open data sources are coming available.
 
-Freemium models - Providers are considering new pricing options that make older imagery available for free or at significant discounts. Discussions are underway to develop new licensing models that allow products licensed to the World Bank to be accessed by World Bank clients in country.
+Partnership purchase - Providers are considering new pricing options that make older imagery available for free or at significant discounts. For example, discussions are underway to streamline new licensing models that allow products licensed to the development partner to be accessed by development partner's clients in country.
 
 Imagery "rental" - As providers offer analytical and processing services they will create business and pricing models to accompany these services. In some cases analytical tools may come at a premium. Eventually these services will drop in cost. Providers will offer analytical products derived from imagery for less than the cost of the raw imagery itself.
 
-New open satellite systems - Several new satellite systems are coming on line, offering open information for development use.
+New open satellite systems - Several new satellite systems are coming on line, offering open information for development use. E.g.:
 
 - ESA’s Copernicus system will deploy six Sentinel satellites between 2014 and 2021 to monitor land, ocean, emergency response, atmosphere, security and climate change.
 

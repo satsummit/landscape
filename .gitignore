@@ -7,3 +7,4 @@ bower_components
 test/bower_components
 npm-debug.log
 app/assets/scripts/config/local.js
+app/index.html

@@ -1,2 +1,1 @@
-## This is a living open source report maintained by Development Seed. 
-## Contribute to the report on Github.
+## This knowledge product is part of a World Bank Group initiative to map the landscape of satellite capabilties. We see this as a public good, and in the near future we aim to release it under Creative Commons Zero for content, and MIT license for code. Until the repository is open, please reach out to brunosanchez@worldbank.org to provide any feedback.

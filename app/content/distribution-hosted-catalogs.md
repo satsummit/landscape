@@ -2,4 +2,4 @@
 
 #### Solution: Hosted catalogs
 Hosted catalogs allow users across an organization to browse and re-download any imagery you've already purchased
-##### Airbus DataDoors
+##### E.g. Airbus DataDoors
