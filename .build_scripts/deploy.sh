@@ -2,6 +2,9 @@
 set -e # halt script on error
 
 # If this is the deploy branch, push it up to gh-pages
+echo "TRAVIS_PULL_REQUEST: " $TRAVIS_PULL_REQUEST
+echo "TRAVIS_BRANCH: " $TRAVIS_BRANCH
+echo "DEPLOY_BRANCH: " ${DEPLOY_BRANCH}
 if [ $TRAVIS_PULL_REQUEST = "false" ] && [ $TRAVIS_BRANCH = ${DEPLOY_BRANCH} ]; then
   echo "Get ready, we're pushing to gh-pages!"
   cd dist
