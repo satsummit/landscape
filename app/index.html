@@ -58,9 +58,6 @@
               <a href="http://www.worldbank.org/" target="_blank">
                 <img class="worldbank" src="assets/graphics/layout/wbg_black.svg" alt="Development Seed logotype" />
               </a>
-              <a href="https://developmentseed.org" target="_blank">
-                <img class="devseed" src="assets/graphics/layout/logo_horizontal_white.svg" alt="Development Seed logotype" />
-              </a>
             </div>
             <ul>
               <li><a class="nav-link" href="#Capture">Capture</a></li>
@@ -109,7 +106,7 @@
         <div id="introduction" class="small-12 large-9 row intro">
         <!-- build:introduction -->
         <h2 id="we-have-better-systems-to-capture-analyze-and-distribute-data-about-the-earth-this-is-fundamentally-improving-and-creating-opportunities-for-impact-in-global-development-">We have better systems to capture, analyze, and distribute data about the earth. This is fundamentally improving, and creating, opportunities for impact in global development.</h2>
-<p>This is an overview of current and upcoming sources of data, processing pipelines and data products. It is aimed to offer non GIS experts an exploration of the unfolding revolution of earth observation, with an emphasis on development. The content is created, offered and maintained in the open. See <a href="#">contributors</a>.</p>
+<p>This is an exploratory overview of current and upcoming sources of data, processing pipelines and data products. It is aimed to offer non GIS experts an exploration of the unfolding revolution of earth observation, with an emphasis on development. See <a href="#footer">footer</a> for license and contributors.</p>
 
         <!-- endbuild -->
         </div>
@@ -123,17 +120,24 @@
 <hr>
 <h2 id="sharper-richer-every-day-">Sharper. Richer. Every Day.</h2>
 <p>Satellite platforms are getting better and cheaper to build and launch. New platforms have higher resolution, collect images with greater frequency and collect new types of data, allowing new insights.</p>
-<h2 id="typical-image-purchase-">Typical image purchase.</h2>
-<p>A typical image ready for usage as a service (bought or downloaded) is several processing steps already applied. Band images are combined to produce a color image in calibrated flux units (called <em>Level 1</em> processing), and the image is geolocated and ortho-rectified following an elevation model of the terrain or Ground Control Points (GCP) with a certain Accuracy, under a geodetic reference frame (E.g. Mercator). For big areas, several captures need to be stitched together. This product is usually referred as <em>Level 2</em> or similar.</p>
-<h3 id="data-license">Data License</h3>
-<p>An important factor on satellite images is the License of the data. It is important to understand the limitation, reusability and shareability of the data. From open data, like Landsat, there are no restriction of use. For a typical high-resolution image purchase, usage is restricted to a project, and only rendered maps are publishable. Sometimes tracing rights for open platforms is granted, but License terms vary widely on a user or usage base.</p>
+<h4 id="typical-serviced-image-">Typical serviced image.</h4>
+<p>A typical serviced satellite image (bought or downloaded) includes several processing steps. From the raw image (<em>Level 0</em>) band images are combined to produce a color image in calibrated units (called <em>Level 1</em> processing), and the image is geolocated and ortho-rectified following an elevation model of the terrain or Ground Control Points (GCP) with a certain Accuracy, under a geodetic reference frame (E.g. Mercator). For big areas, several captures need to be stitched together. This product is usually referred as <em>Level 2</em> or similar. In many cases, the end user often only sees the a map image, either in a report, or as an interactive map on the web, like the maps in this page.</p>
+<h5 id="data-license">Data License</h5>
+<p>An important factor on satellite images is the License of the data. It is important to understand the limitations, reusability and shareability of the data. From open data, like Landsat, there are no restriction of use. For a typical high-resolution image purchase, usage is restricted to a project, and only rendered maps are publishable. Sometimes tracing rights for open platforms is granted, but License terms vary widely on a user or usage base.</p>
+<h5 id="tasking-versus-archive">Tasking versus Archive</h5>
+<p>Typically serviced data come from filtering the requested locations and selecting available times on the satellite archives. Sometimes new images need to be collected (e.g. for monitoring, disaster recovery or similar). In these cases prices and quality are very different since it&#39;s subject to orbital, cloud coverage or other constrains.</p>
 
         <!-- endbuild -->
       </div>
     </div>
 
     <!-- capabilities scatterplot -->
-    <div id="capabilities" class="graphic"></div>
+    <div id="capture-title" class="row">
+      <h3>Satellite providers</h3>
+        <div id="capabilities" class="graphic"></div>
+
+    </div>
+
 
     <!-- capabilities table -->
     <div class="row">
@@ -148,12 +152,8 @@
 <h4 id="high-resolution-commercial-imagery-is-available-up-to-31m-resolution-">High resolution commercial imagery is available up to .31m resolution.</h4>
 <p>While there is still a premium for the highest resolution imagery (&lt;0.50m), medium to low resolution is suitable for many applications, and increasingly affordable or available at no cost.</p>
 <h4 id="what-resolution-do-i-need-">What resolution do I need?</h4>
-<p>These imagery sample can help to select the right imagery for your project.</p>
+<p>These imagery sample below can help to select the right imagery for your project.</p>
 <p>In an urban environment like Fortaleza, free Landsat imagery (15m) shows the extent of the city. Medium resolution imagery like RapidEye (5m) shows roads. With Worldview 3 (.31m) and Pleiades (.5m) images you can count beach umbrellas.</p>
-<h4 id="resolution-versus-accuracy">Resolution versus accuracy</h4>
-<p><strong>Resolution</strong> refers to the size one pixel in the image has on the ground. For example 15 meters means that one pixel on the image corresponds to a square of 15 by 15 meters on the ground.</p>
-<p><strong>Pansharpening</strong>. Often satellites take images of lower resolution in many bands (e.g. Multispectral red, green and blue for a color image), and then have another channel with much wider spectral range (i.e. &quot;panchromatic&quot;) with finer resolution. By means of a mathematical relations, it is possible to sharpen the multispectral image with the panchromatic resolution. This process is called <strong>pan-sharpening</strong>, and it is commonly applied in many use cases.</p>
-<p><strong>Accuracy</strong>. Resolution refers to the size of the pixel. Accuracy refers to the possible difference between the locations of the images and their actual location. A usual standard is a 90% likelihood within a Circular Area around the location (CE90). To ensure accuracy, satellite images are ortho-rectified for orography with either an elevation model, or using Ground Control Points (GCP).</p>
 
         <!-- endbuild -->
       </div>
@@ -161,12 +161,24 @@
     <!-- resolution satellite imagery comparison -->
     <div id="resolution-comparison" class="img-comparison"></div>
 
+    <div id="resolution2" class="row">
+      <div class="small-12 large-9 large-offset-1 column">
+        <!-- build:resolution2 -->
+        <h4 id="resolution-versus-accuracy">Resolution versus accuracy</h4>
+<p><strong>Resolution</strong> refers to the size one pixel in the image has on the ground. For example 15 meters means that one pixel on the image corresponds to a square of 15 by 15 meters on the ground.</p>
+<p><strong>Pansharpening</strong>. Often satellites take images of lower resolution in many bands (e.g. Multispectral red, green and blue for a color image), and then have another channel with much wider spectral range (i.e. &quot;panchromatic&quot;) with finer resolution. By means of a mathematical relations, it is possible to <em>pan-sharpen</em> the multispectral image with the panchromatic resolution.</p>
+<p><strong>Accuracy</strong>. Resolution refers to the size of the pixel. Accuracy refers to the possible difference between the reported locations on the images and their actual location in the real world. A usual standard is a 90% likelihood within a Circular Area around the location (CE90). To ensure accuracy, satellite images are ortho-rectified for orography with either an elevation model, or using Ground Control Points (GCP).</p>
+
+        <!-- endbuild -->
+      </div>
+    </div>
+
     <div id="revisit" class="row">
       <div class="small-12 large-9 large-offset-1 column">
         <!-- build:revisit -->
         <h3 id="revisit-temporal-resolution-">Revisit (Temporal Resolution)</h3>
 <p>Increased capture capacity for large satellites and new microsatellite platforms offer frequent revisit rates and more extensive image capture, allowing high frequency monitoring of changes on earth. More regular data makes it easier to study change over time, to track the progress of projects, and to “rewind” to the days leading up to a disaster.</p>
-<p>Planet Labs high frequency imagery over Canada shows the progress of the growing season, week by week.</p>
+<p>Planet Labs high frequency imagery over Canada below shows the progress of the growing season, week by week.</p>
 
         <!-- endbuild -->
       </div>
@@ -196,9 +208,9 @@
 <hr>
 <h2 id="deeper-and-cheaper-analysis-on-the-cloud-">Deeper and cheaper analysis on the cloud.</h2>
 <h4 id="massive-cloud-computing-resources-and-analytical-tools-for-working-with-big-datasets-make-it-possible-extract-new-information-from-imagery-">Massive cloud computing resources and analytical tools for working with big datasets make it possible extract new information from imagery.</h4>
-<p>The combination of new sensors, deeper archives, and better computing ability make it possible draw sophisticated information from satellite imagery. Development organizations can now process imagery on the cloud and don&#39;t need to invest in expensive hardware and software.</p>
+<p>The combination of new sensors, deeper archives, and better computing ability make it possible to draw sophisticated information from satellite imagery. Development partners can now process imagery on the cloud and don&#39;t need to invest in expensive hardware and software.</p>
 <h3 id="insights-from-invisible-light">Insights from invisible light</h3>
-<p>Many satellites capture wavelengths such as infrared or ultraviolet light that can help to understand characteristics of the substances below.  Different substances reflect these light frequencies in different ways. Common satellite analysis techniques combines visible and invisible light bands (called &quot;spectral bands&quot;) to highlight certain characteristics. For example, spectral bands covering frequencies in the middle-infrared wavelength regions are responsive to moisture content in vegetation and soil, while near infrared wavelength regions tend to emphasize vegetation health and&#8212; at a courser scale&#8212; overall biomass.</p>
+<p>Many satellites capture wavelengths such as infrared or ultraviolet light that can help to understand characteristics of the surface substances.  Different objects reflect these light frequencies in different ways. Common satellite analysis techniques combines visible and invisible light bands (called &quot;spectral bands&quot;) to characterize it. For example, spectral bands covering frequencies in the middle-infrared wavelength regions are responsive to moisture content in vegetation, forest canopy and soil, while near infrared wavelength regions tend to emphasize vegetation health and&#8212; at a courser scale&#8212; overall biomass.</p>
 <p>Taken together, the spectral response of each band creates a unique signature, referred to as its spectral curve. The information it communicates can help to separate different types of land cover or derive information about the conditions within a single type of land cover.</p>
 
         <!-- endbuild -->
@@ -226,7 +238,7 @@
 <table>
 <thead>
 <tr>
-<th>Combination</th>
+<th>Combination Name</th>
 <th>Red Wavelength</th>
 <th>Green Wavelength</th>
 <th>Blue Wavelength</th>
@@ -235,7 +247,7 @@
 </thead>
 <tbody>
 <tr>
-<td>Natural Color</td>
+<td>Natural Color (actual RGB)</td>
 <td>0.64-0.67&#xb5;m</td>
 <td>0.53-0.59&#xb5;m</td>
 <td>0.45-0.51&#xb5;m</td>
@@ -312,7 +324,7 @@
 
           <!-- build:spectral-analysis-mathematic -->
           <h4 id="mathematic-spectral-transformations">Mathematic spectral transformations</h4>
-<p>In addition to False Color composition, spectral bands can be combined mathematically to emphasize a particular set of characteristics. These techniques draw from all relevant bands, rather than the three band limits of false color analysis, to draw out very specific characteristics. These techniques involve greater processing of raw data in order to minimize band characteristics that are not relevant to a particular case and by selectively enhancing the signal in areas where complementary band characteristics align. While false color can be used to identify agricultural fields, mathematic transformations can detect the health of each field. While false color can distinguish mud from water, mathematic transformations can tell you how wet the mud is.</p>
+<p>In addition to False Color composition, spectral bands can be combined mathematically to emphasize a particular set of characteristics. These techniques draw from all relevant bands, rather than the three band limits of false color analysis, to draw out very specific characteristics. These techniques involve greater processing of raw data in order to leverage all available data to cluster signals and minimize noise. While false color can be used to identify agricultural fields, mathematic transformations can detect the health of each field. While false color can distinguish mud from water, mathematic transformations can tell you how wet the mud is.</p>
 
           <!-- endbuild -->
 
@@ -366,7 +378,7 @@
       <div class="small-12 large-9 large-offset-1 column">
         <!-- build:advanced-analysis-intro -->
         <h3 id="advanced-analysis">Advanced analysis</h3>
-<p>Advanced analytical techniques go beyond band math. Advanced techniques compare data pixel by pixel, compare imagery taken at different times or different angles, or combining multiple source datasets. These techniques often result in data products like 3D terrain maps, the footprints of buildings, or the surface type of the road network. These techniques are computationally intensive and require significant processing resources. The availability of cloud computing has made these techniques more practical for development organizations.</p>
+<p>Advanced analytical techniques go beyond inter-band math. Advanced techniques compare data pixel by pixel, compare imagery taken at different times or different angles, or combining multiple source datasets. These techniques often result in data products like 3D terrain maps, the footprints of buildings, or the surface type of the road network. These techniques are most computationally intensive and require significant processing resources. The availability of elastic cloud computing has made these techniques more practical for development organizations.</p>
 
         <!-- endbuild -->
         <div id="analysis-comparison" class="analysis-chart">
@@ -429,9 +441,9 @@
 <h3 id="enterprise-grade-services-offer-fasters-access-to-new-imagery-archival-images-and-derived-data-products-">Enterprise grade services offer fasters access to new imagery, archival images and derived data products.</h3>
 <p>Conventional models of identifying, buying and delivering imagery are giving way to new cloud based selection and delivery models. Users can search through archival content from multiple suppliers to find the best suited imagery, buy the imagery through an enterprise subscription and have it delivered online. New delivery models are not limited to raw imagery. As the value of raw pixels declines, there is greater innovation and competition to provide data products derived from imagery.</p>
 <h3 id="new-business-models-are-making-imagery-more-accessible-to-development-partners-new-open-data-sources-are-coming-available-">New business models are making imagery more accessible to development partners. New open data sources are coming available.</h3>
-<p>Freemium models - Providers are considering new pricing options that make older imagery available for free or at significant discounts. Discussions are underway to develop new licensing models that allow products licensed to the World Bank to be accessed by World Bank clients in country.</p>
+<p>Partnership purchase - Providers are considering new pricing options that make older imagery available for free or at significant discounts. For example, discussions are underway to streamline new licensing models that allow products licensed to the development partner to be accessed by development partner&#39;s clients in country.</p>
 <p>Imagery &quot;rental&quot; - As providers offer analytical and processing services they will create business and pricing models to accompany these services. In some cases analytical tools may come at a premium. Eventually these services will drop in cost. Providers will offer analytical products derived from imagery for less than the cost of the raw imagery itself.</p>
-<p>New open satellite systems - Several new satellite systems are coming on line, offering open information for development use.</p>
+<p>New open satellite systems - Several new satellite systems are coming on line, offering open information for development use. E.g.:</p>
 <ul>
 <li><p>ESA’s Copernicus system will deploy six Sentinel satellites between 2014 and 2021 to monitor land, ocean, emergency response, atmosphere, security and climate change.</p>
 </li>
@@ -442,7 +454,8 @@
           <!-- endbuild -->
         </div>
       <div class="distribution">
-          <div class="distribution-card small-12 large-9 large-offset-1">
+          <h3>Key distribution concepts</h3>
+            <div class="distribution-card small-12 large-9 large-offset-1">
             <div class="distribution-img large-3 medium-3 small-12">
               <img src="assets/graphics/content/mosaic_icon.svg">
             </div>
@@ -450,8 +463,8 @@
               <!-- build:distribution-mosaics -->
               <h2 id="imagery-has-clouds-and-looking-at-a-large-area-involves-multiple-scenes-that-usually-don-t-match-up-well-">Imagery has clouds. And looking at a large area involves multiple scenes that usually don&#39;t match up well.</h2>
 <h4 id="solution-mosaics">Solution: mosaics</h4>
-<p>mosaics blend together imagery from multiple scenes into a single, cloudfree image.</p>
-<h5 id="digitalglobe-vivid-planet-labs-seasonal-mosaics">DigitalGlobe Vivid+, Planet Labs seasonal mosaics</h5>
+<p>mosaics blend together imagery from multiple scenes into a single, cloudfree seam-less image.</p>
+<h5 id="e-g-digitalglobe-vivid-planet-labs-seasonal-mosaics">E.g. DigitalGlobe Vivid+, Planet Labs seasonal mosaics</h5>
 
               <!-- endbuild -->
             </div>
@@ -464,8 +477,8 @@
               <!-- build:distribution-mosaic-hosting -->
               <h2 id="large-image-files-are-hard-to-use-on-the-web">Large image files are hard to use on the web</h2>
 <h4 id="solution-hosted-imagery-and-mosaics">Solution: Hosted imagery and mosaics</h4>
-<p>Hosted imagery and mosaics are tiled basemaps that can be easily integrated into your web application</p>
-<h5 id="astro-digital-fetch">Astro Digital Fetch</h5>
+<p>Hosted imagery and mosaics are tiled basemaps that can be easily integrated into web applications</p>
+<h5 id="e-g-astro-digital-fetch">E.g. Astro Digital Fetch</h5>
 
               <!-- endbuild -->
             </div>
@@ -479,7 +492,7 @@
             <h2 id="massive-datasets-and-intensive-analysis-are-difficult-to-preform-on-client-software">Massive datasets and intensive analysis are difficult to preform on client software</h2>
 <h4 id="solution-cloud-hosting-and-analytics">Solution: Cloud Hosting and Analytics</h4>
 <p>Cloud Hosting and Analytics services allow users to run heavy computation across many images and only download the end product  </p>
-<h5 id="landsat-on-aws-google-earth-engine">Landsat on AWS, Google Earth Engine</h5>
+<h5 id="e-g-landsat-on-aws-google-earth-engine">E.g. Landsat on AWS, Google Earth Engine</h5>
 
             <!-- endbuild -->
             </div>
@@ -493,7 +506,7 @@
             <h2 id="large-organizations-may-have-trouble-tracking-imagery-purchased-by-different-units-or-for-different-projects">Large organizations may have trouble tracking imagery purchased by different units or for different projects</h2>
 <h4 id="solution-hosted-catalogs">Solution: Hosted catalogs</h4>
 <p>Hosted catalogs allow users across an organization to browse and re-download any imagery you&#39;ve already purchased</p>
-<h5 id="airbus-datadoors">Airbus DataDoors</h5>
+<h5 id="e-g-airbus-datadoors">E.g. Airbus DataDoors</h5>
 
             <!-- endbuild -->
             </div>
@@ -506,8 +519,8 @@
           <!-- build:distribution-unified-search -->
           <h2 id="searching-across-the-archives-of-multiple-imagery-providers-is-hard-and-time-consuming">Searching across the archives of multiple imagery providers is hard and time consuming</h2>
 <h4 id="solution-unified-search-platforms">Solution: Unified search platforms</h4>
-<p>Unified search platforms provide results from multiple vendors and platforms, allowing choice of best available option. </p>
-<h5 id="digitalglobe-unified-commercial-platform">DigitalGlobe Unified Commercial platform</h5>
+<p>Unified search platforms provide results from multiple vendors and platforms, allowing choice of best available option.</p>
+<h5 id="e-g-digitalglobe-unified-commercial-platform">E.g. DigitalGlobe Unified Commercial platform</h5>
 
           <!-- endbuild -->
             </div>
@@ -531,9 +544,9 @@
       <div id="roads-application-intro" class="row">
         <div class="small-12 large-9 large-offset-1 column">
           <!-- build:roads-application-intro -->
-          <h3 id="infrastructure-projects">Infrastructure Projects</h3>
+          <h3 id="accounting-of-transportation-networks">Accounting of transportation networks</h3>
 <p>More regular imagery makes it possible to monitor the progress of infrastructure projects. High resolution imagery and video can help to measure traffic on roads and road quality. Satellite data and analysis can provide the underlying data to inform infrasturcture investments.</p>
-<p>In countries lacking infrastructure maps, imagery can offer a cheap way to map the national road network. The highest resolution imagery (0.5 meters) allows for the detection of narrow, unpaved footpaths. These become invisible at 1.5 meters, at which point the gridded residential roads are the smallest observable feature. This grid remains recognizable at 2.5 meters, but is more likely to confuse with the surrounding vegetation. At 5-meter resolution, even the relatively large secondary road which cuts through the neighborhood becomes difficult to reliably distinguish, making the single primary road which travels the length of Palawan the only visible linear feature.</p>
+<p>As exemplified in the maps below, in countries lacking infrastructure maps, imagery could offer a cheap way to map the national road network. The highest commercial resolution imagery today (0.3 meters) allows for the detection of narrow, unpaved footpaths. These become invisible at 1.5 meters, at which point the gridded residential roads are the smallest observable feature. This grid remains recognizable at 2.5 meters, but is more likely to confuse with the surrounding vegetation. At 5-meter resolution, even the relatively large secondary road which cuts through the neighborhood becomes difficult to reliably distinguish, making the single primary road which travels the length of Palawan the only visible linear feature.</p>
 
           <!-- endbuild -->
         </div>
@@ -559,8 +572,8 @@
         <div class="small-12 large-9 large-offset-1 column">
           <!-- build:disaster-application-intro -->
           <h3 id="disaster-reduction-and-response">Disaster Reduction and Response</h3>
-<p>Disaster events tend to affect large areas and the impact of such events can disrupt the normal functioning and organization of local authorities. Remote sensing information is immensely useful to gain oversight of the current situation after an event and to identify areas that are most affected. In the agriculture sector, remote sensing data is increasingly used for estimating crop yields to develop early warning systems for famines. Satellite image based coastline displacement and river bank erosion monitoring is also an important instrument to measure vulnerability of urban areas to flooding, storm surges, and tsunamis. While urban land cover maps are used to estimate impervious surfaces to track and manage water runoff patterns and sewer systems. Satellite imagery contributing to the mapping of informal settlements also helps access vulnerabilities.</p>
-<p>Daily imaging will make it possible to track disasters as they occur, and to &quot;rewind&quot; to immediately before a disaster. Time is a critical factor for disaster response. The quicker images can be distributed to measure impact and develop response strategies. Recent events such as the Nepal earthquake show the importance and usefulness of near real time satellite imagery. Having images taken shortly after disaster events can be immensely helpful to assist disaster response on the ground. Such images inform damage assessments and provide information on what infrastructure still exists for rescue efforts to reach affected areas. Better distribution approaches will be critical in allowing satellite data and analysis to get to responders as quickly as possible. High resolution digital elevation maps are critical for evaluating the risk of floods, landslides, and earthquakes.</p>
+<p>Disaster events tend to affect large areas. The impact of such events can disrupt the normal functioning and organization of local authorities. Remote sensing information is immensely useful to gain oversight of the current situation after an event and to identify areas that are most affected. In the agriculture sector, remote sensing data is increasingly used for estimating crop yields to develop early warning systems for famines. Satellite image based coastline displacement and river bank erosion monitoring is also an important instrument to measure vulnerability of urban areas to flooding, storm surges, and tsunamis. While urban land cover maps are used to estimate impervious surfaces to track and manage water runoff patterns and sewer systems. Satellite imagery contributing to the mapping of informal settlements also helps access vulnerabilities.</p>
+<p>Daily imaging will make it possible to prepare for, and track disasters as they occur. To &quot;rewind&quot; to immediately before a disaster, and support the recovery process. Time is a critical factor for disaster response. The quicker images can be distributed to measure impact and develop response strategies. Recent events such as the Nepal earthquake show the importance and usefulness of near real time satellite imagery. Having images taken shortly after disaster events can be immensely helpful to assist disaster response on the ground. Such images inform damage assessments and provide information on what infrastructure still exists for rescue efforts to reach affected areas. Better distribution approaches will be critical in allowing satellite data and analysis to get to responders as quickly as possible. Furthermore, before disasters happen, satellite images can provide means to reduce the vulnerabilities, and prepare for different scenarios. E.g. high resolution digital elevation maps are critical for evaluating the risk of floods, landslides, and earthquakes.</p>
 
           <!-- endbuild -->
         </div>
@@ -576,10 +589,10 @@
       </div>
     </div>
     </section>
-    <section id="section-5" class="footer small-12 large-9 large-offset-1 column" >
+    <section id="footer" class="footer small-12 large-9 large-offset-1 column" >
         <div class="footer-content">
          <!-- build:footer -->
-         <h2 id="this-product-is-part-of-a-world-bak-group-project-to-map-the-landscape-of-satellite-capabilties-content-is-released-under-creative-commons-zero-and-code-under-mit-license-please-see-repository-http-github-com-satsummit-for-contributions-to-the-report-">This product is part of a World Bak Group project to map the landscape of satellite capabilties. Content is released under Creative Commons Zero, and code under MIT license. Please see <a href="http://github.com/satsummit">repository</a> for contributions to the report.</h2>
+         <h2 id="this-knowledge-product-is-part-of-a-world-bank-group-initiative-to-map-the-landscape-of-satellite-capabilties-we-see-this-as-a-public-good-and-in-the-near-future-we-aim-to-release-it-under-creative-commons-zero-for-content-and-mit-license-for-code-until-the-repository-is-open-please-reach-out-to-brunosanchez-worldbank-org-to-provide-any-feedback-">This knowledge product is part of a World Bank Group initiative to map the landscape of satellite capabilties. We see this as a public good, and in the near future we aim to release it under Creative Commons Zero for content, and MIT license for code. Until the repository is open, please reach out to brunosanchez@worldbank.org to provide any feedback.</h2>
 
          <!-- endbuild -->
         </div>

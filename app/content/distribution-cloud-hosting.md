@@ -2,4 +2,4 @@
 
 #### Solution: Cloud Hosting and Analytics
 Cloud Hosting and Analytics services allow users to run heavy computation across many images and only download the end product  
-##### Landsat on AWS, Google Earth Engine
+##### E.g. Landsat on AWS, Google Earth Engine

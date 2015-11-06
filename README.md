@@ -1,3 +1,6 @@
+DO NOT OPEN REPOSITORY UNTIL CLEARANCE FROM LEGAL DEPT.
+
+
 # Satellite Strategy
 Satellite State of Play - a strategy document on Satellite imagery
 
