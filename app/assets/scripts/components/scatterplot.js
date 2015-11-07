@@ -62,7 +62,7 @@ var Scatterplot = React.createClass({
         .range([0, width]),
 
       y: d3.scale.linear()
-        .domain(domains.y)
+        .domain([0,20])
         .range([height, 0])
     };
 
