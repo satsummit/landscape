@@ -11,12 +11,6 @@ module.exports = {
       return x;
     }
   },
-  multispectral: {
-    display: "Multispectral",
-    fn: function (x) {
-      return x;
-    }
-  },
   resolution: {
     display: "[Pan] spatial resolution (m)",
     fn: function (x) {
