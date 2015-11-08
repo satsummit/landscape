@@ -20,8 +20,8 @@
     margin: 0;
     display: inline-block;
     @include small {
-      text-align: center;
       display: block;
+      line-height: inherit;
     }
   }
 
@@ -37,8 +37,7 @@
     }
 
     @include small {
-      float: none;
-      text-align: center;
+      text-align: right;
       display: block;
       margin: 0 0 .5em;
     }
