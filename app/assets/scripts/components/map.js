@@ -39,6 +39,7 @@ module.exports = React.createClass({
     map.eachLayer(function (l) {
       map.removeLayer(l);
     });
+    if (map.tap) map.tap.disable();
 
     let id = props.options.id;
     let layer = L.mapbox.tileLayer(id, {
