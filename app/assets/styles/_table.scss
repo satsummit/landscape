@@ -16,6 +16,9 @@ $icon-color: #616161;
     width: 100%;
     border: 2px solid $mid-blue;
     margin: 2em 1em;
+    @include small{
+      display:none;
+    }
   }
 
   thead tr th,
