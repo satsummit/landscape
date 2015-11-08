@@ -40,6 +40,7 @@ module.exports = React.createClass({
       map.removeLayer(l);
     });
     if (map.tap) map.tap.disable();
+    map.scrollWheelZoom.disable();
 
     let id = props.options.id;
     let layer = L.mapbox.tileLayer(id, {
