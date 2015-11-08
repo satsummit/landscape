@@ -1,6 +1,6 @@
 module.exports = {
   resolution: {
-    display: "[Pan] spatial resolution (m)",
+    display: "Spatial resolution (m)",
     fn: function (x) {
       return x + 'm resolution';
     }
