@@ -41,7 +41,6 @@ module.exports = React.createClass({
     });
     if (map.tap) map.tap.disable();
 
-
     let id = props.options.id;
     let layer = L.mapbox.tileLayer(id, {
       format: 'png'
