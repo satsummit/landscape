@@ -22,11 +22,14 @@ hr{
   line-height: 1rem;
 }
 
-.header-slide hr{
+.header-slide hr {
   border-bottom: .3rem solid #FFF;
   width:60%;
   line-height: 1rem;
-  margin:2rem;
+  margin: 2rem;
+  @include small {
+    display: none;
+  }
 }
 
 
@@ -110,10 +113,10 @@ input.range {
   line-height: 2.4rem;
   margin: 2rem 2rem 4rem 2rem;
   font-size:2.4rem;
-    @include small{
-    line-height: 2.3rem;
-    margin: 2rem 2rem 4rem 2rem;
-    font-size:2.3rem;
+  @include small{
+    line-height: 1.8rem;
+    margin: 1rem 0;
+    font-size: 1.8rem;
   }
 }
 
