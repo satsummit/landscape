@@ -9,12 +9,11 @@
 }
 
 .inline-nav {
-  width: 100%;
-  margin: 0;
-  text-align: center;
   display: flex;
+  margin-top: 2em;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .inline-nav-el {
@@ -23,6 +22,7 @@
   @include small{
     margin: 0;
   }
+  text-align: center;
 }
 
 .button,
@@ -55,7 +55,7 @@
     color: $base-background-color;
   }
 }
-  
+
 .impact.hero-button{
       background-color:tint($mid-blue, 85%);
 
@@ -102,29 +102,15 @@
 
 // Radio selector
 .inline-radio-selector {
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  height:100px;
-  display:-moz-box;
-  -moz-box-pack:center;
-  -moz-box-align:center;
-  display:-webkit-box;
-  -webkit-box-pack:center;
-  -webkit-box-align:center;
-  display:box;
-  box-pack:center;
-  box-align:center;
-  width:100%;
-  margin-bottom:2em;
+  width: 100%;
+  margin-bottom: 1em;
 }
 
 .inline-radio-item {
-    text-align: center;
-    padding: 0;
-    margin-bottom: 2em;
-    display: inline;
-    float: left;
-    vertical-align: top;
+  text-align: center;
 }
 
 
