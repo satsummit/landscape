@@ -39,7 +39,8 @@
     @include small {
       text-align: right;
       display: block;
-      margin: 0 0 .5em;
+      margin: 0 4em .5em;
+      float: left;
     }
   }
 
