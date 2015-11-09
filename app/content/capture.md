@@ -15,3 +15,5 @@ An important factor regarding the use of satellite images is the License of the 
 ##### Tasking versus Archive
 
 Typically serviced data come from filtering the requested locations and selecting available times from the satellite archives. Sometimes new images need to be collected (e.g. for monitoring, disaster recovery or similar). In these cases prices and quality are very different since it's subject to orbital, cloud coverage or other constraints.
+
+##### Satellite Providers

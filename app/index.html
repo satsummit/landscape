@@ -60,10 +60,10 @@
         </a>
       </div>
       <ul>
-        <li><a class="nav-link" href="#Capture">Capture</a></li>
-        <li><a class="nav-link" href="#Analysis">Analysis</a></li>
-        <li><a class="nav-link" href="#Distribution">Distribution</a></li>
-        <li><a class="nav-link" href="#Impact">Impact</a></li>
+        <li><a class="nav-link" href="#section-1">Capture</a></li>
+        <li><a class="nav-link" href="#section-2">Analysis</a></li>
+        <li><a class="nav-link" href="#section-3">Distribution</a></li>
+        <li><a class="nav-link" href="#section-4">Impact</a></li>
       </ul>
     </nav>
   </div>
@@ -121,20 +121,18 @@
 <h2 id="sharper-richer-every-day-">Sharper. Richer. Every Day.</h2>
 <p>Satellite platforms are getting better and cheaper to build and launch. New platforms have higher resolution, collect images with greater frequency and collect new types of data, allowing new insights.</p>
 <h4 id="typical-serviced-image-">Typical serviced image.</h4>
-<p>A typical serviced satellite image (bought or downloaded) includes several processing steps. From the raw image (<em>Level 0</em>) band images are combined to produce a color image in calibrated units (called <em>Level 1</em> processing), and the image is geolocated and ortho-rectified following an elevation model of the terrain or Ground Control Points (GCP) with a certain Accuracy, under a geodetic reference frame (E.g. Mercator). For big areas, several captures need to be stitched together. This product is usually referred as <em>Level 2</em> or similar. In many cases, the end user often only sees the a map image, either in a report, or as an interactive map on the web, like the maps in this page.</p>
+<p>A typical serviced satellite image (bought or downloaded) includes several processing steps. From the raw image (<em>Level 0</em>) band images are combined to produce a color image in calibrated units (called <em>Level 1</em> processing), and the image is geolocated and ortho-rectified following an elevation model of the terrain or Ground Control Points (GCP) with a certain Accuracy, under a geodetic reference frame (E.g. Mercator). For big areas, several captures need to be stitched together. This product is usually referred as <em>Level 2</em> or similar. In many cases, the end user often only sees the final map image, either in a report, or as an interactive map on the web, like the maps in this page.</p>
 <h5 id="data-license">Data License</h5>
-<p>An important factor on satellite images is the License of the data. It is important to understand the limitations, reusability and shareability of the data. From open data, like Landsat, there are no restriction of use. For a typical high-resolution image purchase, usage is restricted to a project, and only rendered maps are publishable. Sometimes tracing rights for open platforms is granted, but License terms vary widely on a user or usage base.</p>
+<p>An important factor regarding the use of satellite images is the License of the data. It is important to understand the limitations, reusability and shareability of the data. For open data, like Landsat, there are no restriction of use. For a typical high-resolution image purchase, usage is restricted to a project, and only rendered maps are publishable. Sometimes tracing rights for open platforms is granted, but License terms vary widely on a user or usage base.</p>
 <h5 id="tasking-versus-archive">Tasking versus Archive</h5>
-<p>Typically serviced data come from filtering the requested locations and selecting available times on the satellite archives. Sometimes new images need to be collected (e.g. for monitoring, disaster recovery or similar). In these cases prices and quality are very different since it&#39;s subject to orbital, cloud coverage or other constrains.</p>
+<p>Typically serviced data come from filtering the requested locations and selecting available times from the satellite archives. Sometimes new images need to be collected (e.g. for monitoring, disaster recovery or similar). In these cases prices and quality are very different since it&#39;s subject to orbital, cloud coverage or other constraints.</p>
+<h5 id="satellite-providers">Satellite Providers</h5>
 
       <!-- endbuild -->
     </div>
   </div>
   <!-- capabilities scatterplot -->
-  <div id="capture-title" class="row">
-    <h3>Satellite providers</h3>
-    <div id="capabilities" class="graphic"></div>
-  </div>
+  <div id="capabilities" class="graphic"></div>
 
   <!-- capabilities table -->
   <div class="row">
@@ -143,9 +141,9 @@
   </div>
 
   <div id="notestable" class="row">
-    <div class="row">
+    <div class="small-12 large-9 large-offset-1 column">
       <!-- build:notestable -->
-      <p><em>Notes on the table</em>: <strong>Satellite</strong> refers to the main optical instrument onboard. <strong>Operational</strong> indicates satellite status. <strong>Open Data</strong> refers to no data costs or license restrictions to download and use ortho-rectified data. <strong>Spatial resolution</strong> is ground sampling at nadir for (pansharpened) data. <strong>Revisit data</strong> is time between orbital overpass from equatorial ground. <strong>Cost</strong> refers to order of magnitude cost for archived data. Typically cost can vary depending on resolution instrument, processing, minimum area, license and distributions rights, or other factors.</p>
+      <p><em>Notes on the table</em>: <strong>Satellite</strong> refers to the main optical instrument onboard. <strong>Operational</strong> indicates satellite status. <strong>Open Data</strong> refers to no data costs or license restrictions to download and use ortho-rectified data. <strong>Spatial resolution</strong> is ground sampling at nadir for (pansharpened) data. <strong>Revisit data</strong> is time between orbital overpass from equatorial ground. <strong>Cost</strong> refers to order of magnitude cost for archived data. Typically cost can vary depending on resolution, instrument, processing, minimum area, license and distributions rights, or other factors.</p>
 
       <!-- endbuild -->
     </div>
@@ -158,7 +156,7 @@
 <h4 id="high-resolution-commercial-imagery-is-available-up-to-31m-resolution-">High resolution commercial imagery is available up to .31m resolution.</h4>
 <p>While there is still a premium for the highest resolution imagery (&lt;0.50m), medium to low resolution is suitable for many applications, and increasingly affordable or available at no cost.</p>
 <h4 id="what-resolution-do-i-need-">What resolution do I need?</h4>
-<p>These imagery sample below can help to select the right imagery for your project.</p>
+<p>The imagery samples below can help select the right imagery for your project.</p>
 <p>In an urban environment like Fortaleza, free Landsat imagery (15m) shows the extent of the city. Medium resolution imagery like RapidEye (5m) shows roads. With Worldview 3 (.31m) and Pleiades (.5m) images you can count beach umbrellas.</p>
 
       <!-- endbuild -->
@@ -216,7 +214,7 @@
 <h4 id="massive-cloud-computing-resources-and-analytical-tools-for-working-with-big-datasets-make-it-possible-extract-new-information-from-imagery-">Massive cloud computing resources and analytical tools for working with big datasets make it possible extract new information from imagery.</h4>
 <p>The combination of new sensors, deeper archives, and better computing ability make it possible to draw sophisticated information from satellite imagery. Development partners can now process imagery on the cloud and don&#39;t need to invest in expensive hardware and software.</p>
 <h3 id="insights-from-invisible-light">Insights from invisible light</h3>
-<p>Many satellites capture wavelengths such as infrared or ultraviolet light that can help to understand characteristics of the surface substances.  Different objects reflect these light frequencies in different ways. Common satellite analysis techniques combines visible and invisible light bands (called &quot;spectral bands&quot;) to characterize it. For example, spectral bands covering frequencies in the middle-infrared wavelength regions are responsive to moisture content in vegetation, forest canopy and soil, while near infrared wavelength regions tend to emphasize vegetation health and&#8212; at a courser scale&#8212; overall biomass.</p>
+<p>Many satellites capture wavelengths such as infrared or ultraviolet light that can help to understand characteristics of the surface substances.  Different objects reflect these light frequencies in different ways. Common satellite analysis techniques combine visible and invisible light bands (called &quot;spectral bands&quot;) to characterize it. For example, spectral bands covering frequencies in the middle-infrared wavelength regions are responsive to moisture content in vegetation, forest canopy and soil, while near infrared wavelength regions tend to emphasize vegetation health and&#8212; at a courser scale&#8212; overall biomass.</p>
 <p>Taken together, the spectral response of each band creates a unique signature, referred to as its spectral curve. The information it communicates can help to separate different types of land cover or derive information about the conditions within a single type of land cover.</p>
 
       <!-- endbuild -->
@@ -343,7 +341,7 @@
           <div class="analysis-chart-text large-9 medium-9 small-10">
             <!-- build:spectral-analysis-comparison_NDVI -->
             <h5 id="vegetation-indices">Vegetation Indices</h5>
-<p>Multiplying the data from spectral bands in different combinations produces an index that can be used to compare every point in an image on the same scale. The most common indexes measure measure vegetation health and distinguish between types of plants, such as Normalized Difference Vegetation Index (NDVI) and Enhanced Vegetation Index (EVI).</p>
+<p>Multiplying the data from spectral bands in different combinations produces an index that can be used to compare every point in an image on the same scale. The most common indexes measure vegetation health and distinguish between types of plants, such as Normalized Difference Vegetation Index (NDVI) and Enhanced Vegetation Index (EVI).</p>
 
             <!-- endbuild -->
           </div>
@@ -444,12 +442,12 @@
           <h1 id="distribution-">Distribution.</h1>
 <hr>
 <h2 id="data-where-when-and-how-you-need-it-">Data where, when, and how you need it.</h2>
-<h3 id="enterprise-grade-services-offer-fasters-access-to-new-imagery-archival-images-and-derived-data-products-">Enterprise grade services offer fasters access to new imagery, archival images and derived data products.</h3>
+<h3 id="enterprise-grade-services-offer-faster-access-to-new-imagery-archival-images-and-derived-data-products-">Enterprise grade services offer faster access to new imagery, archival images and derived data products.</h3>
 <p>Conventional models of identifying, buying and delivering imagery are giving way to new cloud based selection and delivery models. Users can search through archival content from multiple suppliers to find the best suited imagery, buy the imagery through an enterprise subscription and have it delivered online. New delivery models are not limited to raw imagery. As the value of raw pixels declines, there is greater innovation and competition to provide data products derived from imagery.</p>
 <h3 id="new-business-models-are-making-imagery-more-accessible-to-development-partners-new-open-data-sources-are-coming-available-">New business models are making imagery more accessible to development partners. New open data sources are coming available.</h3>
-<p>Partnership purchase - Providers are considering new pricing options that make older imagery available for free or at significant discounts. For example, discussions are underway to streamline new licensing models that allow products licensed to the development partner to be accessed by development partner&#39;s clients in country.</p>
+<p>Partnership purchase - Providers are considering new pricing options that make older imagery available for free or at significant discounts. For example, discussions are underway to streamline new licensing models that allow products licensed to the development partner to be accessed by the development partner&#39;s clients in country.</p>
 <p>Imagery &quot;rental&quot; - As providers offer analytical and processing services they will create business and pricing models to accompany these services. In some cases analytical tools may come at a premium. Eventually these services will drop in cost. Providers will offer analytical products derived from imagery for less than the cost of the raw imagery itself.</p>
-<p>New open satellite systems - Several new satellite systems are coming on line, offering open information for development use. E.g.:</p>
+<p>New open satellite systems - Several new satellite systems are coming online, offering open information for development use. E.g.:</p>
 <ul>
 <li><p>ESA’s Copernicus system will deploy six Sentinel satellites between 2014 and 2021 to monitor land, ocean, emergency response, atmosphere, security and climate change.</p>
 </li>
@@ -469,7 +467,7 @@
               <!-- build:distribution-mosaics -->
               <h2 id="imagery-has-clouds-and-looking-at-a-large-area-involves-multiple-scenes-that-usually-don-t-match-up-well-">Imagery has clouds. And looking at a large area involves multiple scenes that usually don&#39;t match up well.</h2>
 <h4 id="solution-mosaics">Solution: mosaics</h4>
-<p>mosaics blend together imagery from multiple scenes into a single, cloudfree seam-less image.</p>
+<p>Mosaics blend together imagery from multiple scenes into a single, cloudfree seam-less image.</p>
 <h5 id="e-g-digitalglobe-vivid-planet-labs-seasonal-mosaics">E.g. DigitalGlobe Vivid+, Planet Labs seasonal mosaics</h5>
 
               <!-- endbuild -->
@@ -564,9 +562,9 @@
           <div class="small-12 large-9 large-offset-1 column">
             <!-- build:agriculture-application-intro -->
             <h3 id="forest-and-agriculture">Forest and Agriculture</h3>
-<p>Due to the massive size and limited accessibility of forests, satellites have long an indispensable tool for forest management. Satellite imagery derived forest maps measure increases in greenhouse gas emissions from deforestation, detect illegal logging activities, evaluate the availability and use of wood as cooking fuel, and assess the environmental impact of infrastructure projects such as road construction.</p>
-<p>In agriculture, satellite imagery measures agricultural production. Imagery shows crop type and area of coverage, estimate rainfall, measure the effectiveness of irrigation systems, and evaluate the risk of droughts and floods. Satellite data is used for everything from developing insurance products for small farmers and early warning systems to detect decreasing agricultural production.</p>
-<p>High frequency multispectral imagery creates significant opportunities on Forest and Agriculture projects. Regular imaging of rural areas in developing countries will yield comparable data at regular intervals unlocking new types of analysis of forest change and trends in agricultural production. More immediate information on crop health is critical to enable warning systems of potential drops in production in food sectors. Automated change detection will be invaluable in monitoring huge swaths of forest and agricultural areas.</p>
+<p>Due to the massive size and limited accessibility of forests, satellites have long been an indispensable tool for forest management. Satellite imagery derived forest maps measure increases in greenhouse gas emissions from deforestation, detect illegal logging activities, evaluate the availability and use of wood as cooking fuel, and assess the environmental impact of infrastructure projects such as road construction.</p>
+<p>In agriculture, satellite imagery measures agricultural productivity. Imagery shows crop type and area of coverage, estimates rainfall, measures the effectiveness of irrigation systems, and evaluates the risk of droughts and floods. Satellite data is used for everything from developing insurance products for small farmers and early warning systems to detect decreasing agricultural production.</p>
+<p>High frequency multispectral imagery creates significant opportunities for Forest and Agriculture projects. Regular imaging of rural areas in developing countries will yield comparable data at regular intervals unlocking new types of analysis of forest change and trends in agricultural production. More immediate information on crop health is critical to enable warning systems for potential drops in production in food sectors. Automated change detection will be invaluable in monitoring huge swaths of forest and agricultural areas.</p>
 
             <!-- endbuild -->
           </div>
