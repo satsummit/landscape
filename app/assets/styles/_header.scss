@@ -58,16 +58,28 @@
   text-align: center;
 }
 
-#intro-slide-content{
-  top: 6em;
+#intro-slide-content {
+  margin-top: 6em;
   position: relative;
+  @include small {
+    margin-top: 4em;
+  }
 }
 
-.header-slide{
+.header-slide {
   background-color: $dark-blue;
   float: left;
+  display: block;
   height: 650px;
-  @include small{
-    height:350;
+  @include small {
+    height: 480px;
+    text-align: center;
+  }
+}
+
+#intro {
+  @include small {
+    height: auto;
+    padding-bottom: 1rem;
   }
 }
