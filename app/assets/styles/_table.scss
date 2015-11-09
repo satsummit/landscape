@@ -6,7 +6,8 @@ $icon-color: #616161;
    table {
     width: 100%;
     border: none;
-    margin: 2em 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
   }
 
 }
@@ -15,7 +16,8 @@ $icon-color: #616161;
   table {
     width: 100%;
     border: 2px solid $mid-blue;
-    margin: 2em 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
     @include small{
       display:none;
     }

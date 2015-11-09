@@ -37,6 +37,7 @@ h2 {
   color: $dark-blue;
   font-size:1.8rem;
   margin-top:1rem;
+  line-height: 1rem;
 }
 
 
@@ -53,6 +54,7 @@ h4, h5 {
 p{
   font-weight: 200;
   font-size:1.3rem;
+  line-height: 2.3rem;
 }
 
 strong {
@@ -123,8 +125,4 @@ label.impact{
   :hover{
     color: tint($mid-blue, 60%);
   };
-}
-
-.intro {
-  background-color: rgba(136, 138, 136, 0.22);
 }
