@@ -62,6 +62,14 @@
     position: fixed;
     top: 0;
   }
+
+  @include small {
+    text-align: center;
+
+    ul {
+      margin-left: 0;
+    }
+  }
 }
 
 @media screen and (max-width: 54.5em) {

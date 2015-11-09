@@ -147,7 +147,10 @@ $icon-color: #616161;
   height:125px;
   margin-top:.3rem;
   @include small{
-    margin: .3rem 0 2rem 2rem;
+    float: none;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1em;
   }
 }
 
@@ -155,18 +158,23 @@ $icon-color: #616161;
   float:left;
   margin-left: 2em;
 
-  h5{
+  h5 {
     margin:0 0 .5rem 0rem;
     color: $highlight-orange;
     font-weight: 600;
     font-size:1em;
   }
 
-  p{
+  p {
     font-size: 1rem;
     line-height: 1.6rem;
     color: tint($dark-blue, 55%);
     font-weight:400;
+  }
+
+  @include small {
+    float: none;
+    margin-left: 0;
   }
 }
 
@@ -176,21 +184,24 @@ $icon-color: #616161;
     background-color: tint($mid-blue, 90%);
     padding:2em;
     margin-bottom:1em;
+    @include small {
+      padding: 1em;
+    }
   }
 
-  .distribution-img{
+  .distribution-img {
     float:left;
     width:150px;
-    @include small{
+    @include small {
       float:none;
+      margin: 0 auto;
     }
-/*    background-color: tint($mid-blue, 90%);*/
   }
 
   .distribution-text{
       margin-left:10em;
       @include small{
-        margin:0;
+        margin: 0;
       }
   }
 

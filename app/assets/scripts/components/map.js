@@ -31,6 +31,10 @@ module.exports = React.createClass({
     options.tileLayer = layer;
     options.attributionControl = {compact: true};
     this.map = L.mapbox.map(node, id, options);
+
+    if (this.map.tap) {
+      this.map.tap.disable();
+    }
   },
 
   componentWillReceiveProps: function (props) {
