@@ -168,8 +168,17 @@ $(function() {
   var sections = $('section');
   var navBarLinks = $('nav a');
   var navHeaderLinks = $('.inline-nav a');
+
+  function updateUrl (activeSection) {
+    var url = activeSection.data('url');
+    if (typeof url !== 'undefined') {
+      if (url == 'intro-nav') url = '';
+      window.location.hash = url;
+    };
+  };
+
   sections.waypoint({
-    handler: function(event, direction) {
+    handler: function (event, direction) {
       var activeSection;
       activeSection = $(this);
       if (direction == 'down' && activeSection[0].id == sections[0].id) {
@@ -181,10 +190,12 @@ $(function() {
         head.stop().css('top',-head.outerHeight()).animate({'top':'0'});
         nav.stop().css('top',0).animate({'top':-nav.outerHeight()-30, 'opacity':0});
       };
-      if (direction === 'up') activeSection = activeSection.prev();
+      if (direction == 'up') activeSection = activeSection.prev();
       var active_link = $('nav a[href="#' + activeSection.attr('id') + '"]');
       navBarLinks.removeClass('selected');
       active_link.addClass('selected');
+
+      updateUrl(activeSection);
     },
     offset: '25%'
   })
