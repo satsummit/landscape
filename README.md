@@ -1,3 +1,5 @@
+![](https://travis-ci.org/satsummit/landscape.svg?branch=master)
+
 DO NOT OPEN REPOSITORY UNTIL CLEARANCE FROM LEGAL DEPT.
 
 
