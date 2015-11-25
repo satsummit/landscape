@@ -1,6 +1,6 @@
 ![](https://travis-ci.org/satsummit/landscape.svg?branch=master)
 
-This knowledge product is an adaption of a World Bank Group Knowledge Product [See original version](wb/), licensed under Creative Commons Attribution License. 
+DO NOT OPEN REPOSITORY UNTIL CLEARANCE FROM LEGAL DEPT.
 
 
 # Satellite Strategy
