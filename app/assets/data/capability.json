@@ -70,18 +70,32 @@
     "link": "#"
   },
   {
-    "company": "NASA",
-    "sensor": "rgb",
+    "company": "NASA/USGS",
+    "sensor": "rg,nir",
     "revisit": "18",
-    "platform": "LandSat 1-5",
+    "platform": "LandSat 1-3",
     "cost": "0",
-    "resolution": "80",
+    "resolution": "60",
     "acquisition": null,
     "multispectral": "Yes",
     "open": "Yes",
     "live": "Decommisioned",
-    "short": "Landsat 1-5",
+    "short": "Landsat 1-3",
     "link": "http://landsat.usgs.gov/about_landsat3.php"
+  },
+  {
+    "company": "NASA/USGS",
+    "sensor": "rgb,nir,swir",
+    "revisit": "18",
+    "platform": "LandSat 4-5",
+    "cost": "0",
+    "resolution": "30",
+    "acquisition": null,
+    "multispectral": "Yes",
+    "open": "Yes",
+    "live": "Decommisioned",
+    "short": "Landsat 4-5",
+    "link": "http://landsat.usgs.gov/about_landsat5.php"
   },
   {
     "company": "NASA/USGS",
