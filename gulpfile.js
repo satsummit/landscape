@@ -81,7 +81,7 @@ gulp.task('serve', ['vendorScripts', 'javascript', 'styles', 'fonts', 'markdown'
 gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
 
 gulp.task('build', ['javascript', 'vendorScripts'], function () {
-  gulp.start(['html', 'images', 'fonts', 'extras'], function () {
+  gulp.start(['markdown', 'html', 'images', 'fonts', 'extras'], function () {
     return gulp.src('dist/**/*')
       .pipe($.size({title: 'build', gzip: true}))
       .pipe(exit());
