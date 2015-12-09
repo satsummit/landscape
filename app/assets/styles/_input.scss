@@ -1,0 +1,154 @@
+// Cribbed from https://github.com/fraserxu/react-dropdown
+@import "vendor/dropdown";
+.Dropdown-control {
+  padding: 8px 30px 8px 10px;
+  min-width: 150px;
+  .placeholder {
+    font-weight: 700;
+  }
+}
+
+.inline-nav {
+  display: flex;
+  margin-top: 2em;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.inline-nav-el {
+  padding: 0;
+  margin: 0 16px;
+  @include small{
+    margin: 0;
+  }
+  text-align: center;
+}
+
+.button,
+.button:link,
+.button:active,
+.button:visited {
+  color: $base-color;
+}
+
+.button {
+  font-size: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid lighten($border-color, 35%);
+  border-radius: 3px;;
+  text-align: center;
+  font-weight: 700;
+  background-color: $base-background-color;
+
+  @include box-shadow;
+  &:active {
+    @include inset-shadow;
+  }
+  &:hover {
+    background-color: $strong-color;
+    color: $base-background-color;
+  }
+}
+
+.impact.hero-button{
+      background-color:tint($mid-blue, 85%);
+
+  &:hover{
+    background-color: tint($mid-blue, 70%);
+  }
+ }
+
+
+.hero-button {
+  display: inline-block;
+  border-radius: 3px;
+  border: none;
+  padding: 12px 20px 8px;
+    @include small{
+      padding: 17px 7px 9px;
+    }
+
+  .icon {
+    width: 100px;
+    height: 100px;
+    // because these icons are more rectangular
+    margin-top: -12px;
+    margin-bottom: -12px;
+
+    &:hover{
+
+    };
+  }
+
+  &:hover {
+    background-color: darken($base-background-rgba, 1%);
+
+    label {
+      color: tint($highlight-orange, 60%);
+    }
+
+    .impact {
+      color: tint($dark-blue, 60%);
+    }
+  }
+
+}
+
+// Radio selector
+.inline-radio-selector {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.inline-radio-item {
+  text-align: center;
+}
+
+
+input.radio-item {
+  &:empty {
+    margin-left: -9999px;
+  }
+
+  // Styling labels
+  &:empty ~ label {
+    position: relative;
+    color:$mid-blue;
+    float: left;
+    line-height: 2.5em;
+    text-indent: 1rem;
+    margin-top: 1em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 263px;
+  }
+
+  &:checked ~ label {
+    color: #fff;
+  }
+}
+
+.radio-item-label {
+  border: 2px solid $mid-blue;
+  padding-right: 1em;
+}
+
+&:checked ~ .radio-item-label {
+    background-color: $mid-blue;
+}
+
+&:hover:not(:checked) ~ .radio-item-label {
+    background-color: tint($mid-blue, 80%);
+}

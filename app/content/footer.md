@@ -1,0 +1,1 @@
+## Site content is based on [research from the World Bank](http://wb.satsummit.io/) and subsequent contributions from other authors. Please [contribute improvements](https://github.com/satsummit/landscape). Site content is licensed [CC-BY](http://creativecommons.org/licenses/by/4.0/).

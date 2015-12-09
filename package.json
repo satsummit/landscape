@@ -1,0 +1,86 @@
+{
+  "name": "project-seed",
+  "version": "0.1.0",
+  "description": "A basic project starting template.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/developmentseed/project-seed.git"
+  },
+  "author": {
+    "name": "Development Seed",
+    "url": "https://developmentseed.org"
+  },
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/developmentseed/project-seed/issues"
+  },
+  "homepage": "https://github.com/developmentseed/project-seed",
+  "scripts": {
+    "serve": "gulp serve",
+    "build": "gulp",
+    "lint": "semistandard app/assets/scripts/**/*.js",
+    "test": "echo NO TESTS YET"
+  },
+  "browserify-shim": {
+    "jquery": "global:$"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify", {}, "browserfy-shim"
+      ],
+      "require-globify"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^5.2.0",
+    "babel": "^5.6.14",
+    "babelify": "^6.1.2",
+    "browser-sync": "^2.7.6",
+    "browserify": "^10.2.3",
+    "browserify-shim": "^3.8.10",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-cache": "^0.2.9",
+    "gulp-csso": "^1.0.0",
+    "gulp-exit": "0.0.2",
+    "gulp-html-replace": "^1.5.1",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jshint": "^1.11.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-minify-html": "^1.0.3",
+    "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^5.1.8",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^4.0.0",
+    "gulp-rev-replace": "^0.4.1",
+    "gulp-sass": "^2.0.1",
+    "gulp-size": "^1.2.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-useref": "^1.2.0",
+    "gulp-util": "^3.0.5",
+    "jshint-stylish": "^2.0.0",
+    "marked": "^0.3.3",
+    "node-bourbon": "^4.2.3",
+    "node-notifier": "^4.2.1",
+    "opn": "^1.0.2",
+    "require-globify": "^1.2.1",
+    "semistandard": "^5.0.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.2.1"
+  },
+  "dependencies": {
+    "classnames": "^2.1.3",
+    "d3": "^3.5.5",
+    "foundation-sites": "^5.5.2",
+    "lodash": "^3.9.3",
+    "mapbox": "^0.1.0",
+    "react": "^0.13.3",
+    "react-dropdown": "^0.4.1",
+    "react-radio-group": "^2.0.2",
+    "react-tooltip": "^0.3.4"
+  }
+}

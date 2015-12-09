@@ -1,0 +1,12 @@
+// This is all lifted from react-tooltip, with some exceptions.
+@import 'vendor/react-tooltip';
+
+.reactTooltip {
+  font-size: 1em;
+  line-height: 1.275em;
+  padding: 1em;
+  &.type-info {
+    color: #fff;
+    @include type($strong-color);
+  }
+}

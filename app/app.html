@@ -1,0 +1,401 @@
+<!doctype html>
+<!--[if lt IE 10]> <html class="lt-ie10 no-js"  lang=""> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Exploratory, and collaboratory, review of current and upcoming satellite tools for development, from capture, distribution, analysis and applications.">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>State of Satellite Imagery</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,500,300,300italic' rel='stylesheet' type='text/css'>
+
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+  <!-- build:css assets/styles/main.css -->
+  <link rel="stylesheet" href="assets/styles/main.css">
+  <!-- endbuild -->
+  <!-- script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script -->
+</head>
+<body>
+  <!--[if lt IE 10]>
+  <div id="nocando">
+  <h1>No can do!</h1>
+  <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+</div>
+<![endif]-->
+
+<div id="header" class="hero">
+
+  <!-- banner satellite layer -->
+  <div id="top-content">
+    <div id="intro" class="header-slide large-4 medium-4 small-12">
+      <div id="intro-slide-content" class="large-4 medium-2 small-12">
+        <!-- build:intro-slide -->
+        <!-- endbuild -->
+      </div>
+    </div>
+    <div id="banner-map" class="header-slide large-4  medium-4 small-12"></div>
+    <div id="banner-map-2" class="header-slide large-4 medium-4 small-12"></div>
+  </div>
+  <div class="hero-block">
+    <div class="logos">
+      <a href="http://www.worldbank.org/" target="_blank">
+        <img class="worldbank" src="assets/graphics/layout/wbg_black.svg" alt="Development Seed logotype" />
+      </a>
+    </div>
+    <!-- build:header -->
+    <!-- endbuild -->
+  </div>
+  <div class="nav-container">
+    <nav>
+      <div class="logos">
+        <a href="http://www.worldbank.org/" target="_blank">
+          <img class="worldbank" src="assets/graphics/layout/wbg_black.svg" alt="Development Seed logotype" />
+        </a>
+      </div>
+      <ul>
+        <li><a class="nav-link" href="#capture">Capture</a></li>
+        <li><a class="nav-link" href="#analysis">Analysis</a></li>
+        <li><a class="nav-link" href="#distribution">Distribution</a></li>
+        <li><a class="nav-link" href="#impact">Impact</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<section id="intro-nav" class="row" data-url="intro-nav">
+
+  <div id="navigation" class="small-12 large-9 large-offset-1 column">
+    <ul class="inline-nav">
+
+      <li class="inline-nav-el">
+        <a href="#capture" class="hero-button">
+          <label>Capture</label>
+          <img class="icon" src="assets/graphics/layout/capture.png" />
+        </a>
+      </li>
+
+      <li class="inline-nav-el">
+        <a href="#analysis" class="hero-button">
+          <label>Analysis</label>
+          <img class="icon" src="assets/graphics/layout/analysis.png" />
+        </a>
+      </li>
+
+      <li class="inline-nav-el">
+        <a href="#distribution" class="hero-button">
+          <label>Distribution</label>
+          <img class="icon" src="assets/graphics/layout/delivery.png" />
+        </a>
+      </li>
+      <li class="inline-nav-el">
+        <a href="#impact" class="hero-button">
+          <label>Impact</label>
+          <img class="icon" src="assets/graphics/layout/impact.png" />
+        </a>
+      </li>
+
+    </ul>
+  </div>
+  <div id="introduction" class="small-12 large-9 large-offset-1 column intro">
+    <!-- build:introduction -->
+    <!-- endbuild -->
+  </div>
+</section>
+
+<section id="capture" data-url="capture">
+  <div id="capture" class="row">
+    <div class="small-12 large-9 large-offset-1 column">
+      <!-- build:capture -->
+      <!-- endbuild -->
+    </div>
+  </div>
+  <!-- capabilities scatterplot -->
+  <div id="capabilities" class="graphic"></div>
+
+  <!-- capabilities table -->
+  <div class="row">
+    <div id="capabilities-table" class="values-table small-12 large-9 large-offset-1 column table-block table-centered sortable">
+    </div>
+  </div>
+
+  <div id="notestable" class="row">
+    <div class="small-12 large-9 large-offset-1 column">
+      <!-- build:notestable -->
+      <!-- endbuild -->
+    </div>
+  </div>
+
+  <div id="resolution" class="row">
+    <div class="small-12 large-9 large-offset-1 column">
+      <!-- build:resolution -->
+      <!-- endbuild -->
+    </div>
+  </div>
+  <!-- resolution satellite imagery comparison -->
+  <div id="resolution-comparison" class="img-comparison"></div>
+
+  <div id="resolution2" class="row">
+    <div class="small-12 large-9 large-offset-1 column">
+      <!-- build:resolution2 -->
+      <!-- endbuild -->
+    </div>
+  </div>
+
+  <div id="revisit" class="row">
+    <div class="small-12 large-9 large-offset-1 column">
+      <!-- build:revisit -->
+      <!-- endbuild -->
+    </div>
+  </div>
+
+  <!-- resolution satellite imagery comparison -->
+  <div id="revisit-comparison"></div>
+
+  <div id="sensors" class="row">
+    <div class="small-12 large-9 large-offset-1 column">
+      <!-- build:sensors -->
+      <!-- endbuild -->
+    </div>
+  </div>
+  <!-- ndvi, color composite, and resolution satellite imagery comparison -->
+  <div id="toggled-resolution-comparison" class="img-comparison"></div>
+</section>
+
+<section id="analysis" data-url="analysis">
+  <div id="analysis" class="row add-space">
+    <div class="small-12 large-9 large-offset-1 column">
+      <!-- build:spectral-analysis-intro -->
+      <!-- endbuild -->
+      <div id="analysis-comparison" class="analysis-chart">
+
+        <div class="analysis-chart-row">
+          <div class="analysis-chart-img large-3 medium-3 small-12">
+            <img src="assets/graphics/content/falsecolor652-thumb.png">
+          </div>
+          <div class="analysis-chart-text large-9 medium-9 small-12">
+            <!-- build:spectral-analysis-comparison-false-color -->
+            <!-- endbuild -->
+          </div>
+        </div>
+
+      </div>
+
+      <div class="values-table table-block bullet-block">
+        <!-- build:band-combinations-table -->
+        <!-- endbuild -->
+      </div>
+
+      <!-- build:spectral-analysis-mathematic -->
+      <!-- endbuild -->
+
+      <div id="analysis-comparison" class="analysis-chart">
+
+        <div class="analysis-chart-row">
+          <div class="analysis-chart-img large-3 medium-3 small-12">
+            <img src="assets/graphics/content/ndvi-thumb.png">
+          </div>
+          <div class="analysis-chart-text large-9 medium-9 small-10">
+            <!-- build:spectral-analysis-comparison_NDVI -->
+            <!-- endbuild -->
+          </div>
+        </div>
+
+
+        <div class="analysis-chart-row">
+          <div class="analysis-chart-img large-3 medium-3 small-12">
+            <img src="assets/graphics/content/pca-thumb.png">
+          </div>
+          <div class="analysis-chart-text large-9 medium-9 small-10">
+            <!-- build:spectral-analysis-comparison-pca -->
+            <!-- endbuild -->
+          </div>
+        </div>
+
+        <div class="analysis-chart-row">
+          <div class="analysis-chart-img large-3 medium-3 small-12">
+            <img src="assets/graphics/content/tasscap-thumb.png">
+          </div>
+          <div class="analysis-chart-text large-9 medium-9 small-10">
+            <!-- build:spectral-analysis-comparison-Kauth_Thomas -->
+            <!-- endbuild -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="advanced-analysis">
+      <div class="small-12 large-9 large-offset-1 column">
+        <!-- build:advanced-analysis-intro -->
+        <!-- endbuild -->
+        <div id="analysis-comparison" class="analysis-chart">
+
+          <div class="analysis-chart-row">
+            <div class="analysis-chart-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/feature_extraction.png">
+            </div>
+            <div class="analysis-chart-text large-9 medium-9 small-10">
+              <!-- build:advanced-analysis-comparison-elevation -->
+              <!-- endbuild -->
+            </div>
+          </div>
+
+
+          <div class="analysis-chart-row">
+            <div class="analysis-chart-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/change_detection.png">
+            </div>
+            <div class="analysis-chart-text large-9 medium-9 small-10">
+              <!-- build:advanced-analysis-comparison-detection -->
+              <!-- endbuild -->
+            </div>
+          </div>
+
+
+          <div class="analysis-chart-row">
+            <div class="analysis-chart-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/similar_objects.png">
+            </div>
+            <div class="analysis-chart-text large-9 medium-9 small-10">
+              <!-- build:advanced-analysis-comparison-extraction -->
+              <!-- endbuild -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <section id="distribution" data-url="distribution">
+      <div id="distribution" class="row">
+        <div class="small-12 large-9 large-offset-1 column">
+          <!-- build:delivery -->
+          <!-- endbuild -->
+        </div>
+        <div class="distribution column">
+         <h3 class="small-12 large-9 large-offset-1">Key distribution concepts</h3>
+          <div class="distribution-card small-12 large-9 large-offset-1">
+            <div class="distribution-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/mosaic_icon.svg">
+            </div>
+            <div class="distribution-text large-9 medium-9 small-12">
+              <!-- build:distribution-mosaics -->
+              <!-- endbuild -->
+            </div>
+          </div>
+          <div class="distribution-card small-12 large-9 large-offset-1">
+            <div class="distribution-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/host_icon.svg">
+            </div>
+            <div class="distribution-text large-9 medium-9 small-12">
+              <!-- build:distribution-mosaic-hosting -->
+              <!-- endbuild -->
+            </div>
+          </div>
+          <div class="distribution-card small-12 large-9 large-offset-1">
+            <div class="distribution-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/cloud_icon.svg">
+            </div>
+            <div class="distribution-text large-9 medium-9 small-12">
+              <!-- build:distribution-cloud-hosting -->
+              <!-- endbuild -->
+            </div>
+          </div>
+          <div class="distribution-card small-12 large-9 large-offset-1">
+            <div class="distribution-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/catalog_icon.svg">
+            </div>
+            <div class="distribution-text large-9 medium-9 small-12">
+              <!-- build:distribution-hosted-catalogs -->
+              <!-- endbuild -->
+            </div>
+          </div>
+          <div class="distribution-card small-12 large-9 large-offset-1">
+            <div class="distribution-img large-3 medium-3 small-12">
+              <img src="assets/graphics/content/search_icon.svg">
+            </div>
+            <div class="distribution-text large-9 medium-9 small-12">
+              <!-- build:distribution-unified-search -->
+              <!-- endbuild -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="impact" data-url="impact">
+      <div id="applications-section">
+        <div id="application-intro" class="row">
+          <div class="small-12 large-9 large-offset-1 column">
+            <!-- build:applications-intro -->
+            <!-- endbuild -->
+          </div>
+        </div>
+
+        <div id="roads-application-intro" class="row">
+          <div class="small-12 large-9 large-offset-1 column">
+            <!-- build:roads-application-intro -->
+            <!-- endbuild -->
+          </div>
+        </div>
+        <!-- roads-centric resolution comparison -->
+        <div id="palawan-roads-comparison" class="img-comparison" ></div>
+
+        <div id="agriculture-application-intro" class="row">
+          <div class="small-12 large-9 large-offset-1 column">
+            <!-- build:agriculture-application-intro -->
+            <!-- endbuild -->
+          </div>
+        </div>
+        <!-- agriculture time series -->
+        <div id="uganda-agriculture-comparison" class="img-comparison"></div>
+
+        <div id="disaster-application-intro" class="row">
+          <div class="small-12 large-9 large-offset-1 column">
+            <!-- build:disaster-application-intro -->
+            <!-- endbuild -->
+          </div>
+        </div>
+        <!-- landslide model slider -->
+        <div id="nepal-landslide-model">
+          <div class="range-labels">
+            <label id="landslide-model-opacity" class="range-label range-label-center"></label>
+          </div>
+          <input id="landslide-model-range" class="range" type="range" min="0" max="1.0" step="any"
+          style="position: static;"/>
+          <div id="landslide-model-map" class="static-map"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer" class="footer small-12 large-9 large-offset-1 column" >
+      <div class="footer-content">
+        <!-- build:footer -->
+        <!-- endbuild -->
+      </div>
+    </section>
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-328064-19', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+    <script src='assets/vendor/jquery.js'></script>
+    <script src="assets/vendor/jquery.scrollTo.js"></script>
+    <script src="assets/vendor/waypoints.js"></script>
+    <!-- build:js assets/scripts/vendor.js -->
+    <script src="assets/scripts/vendor.js"></script>
+    <!-- endbuild -->
+    <!-- build:js assets/scripts/bundle.js -->
+    <script src="assets/scripts/bundle.js"></script>
+    <!-- endbuild -->
+  </body>
+  </html>
