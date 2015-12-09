@@ -1,14 +1,24 @@
 ![](https://travis-ci.org/satsummit/landscape.svg?branch=master)
 
-DO NOT OPEN REPOSITORY UNTIL CLEARANCE FROM LEGAL DEPT.
-
-
 # Satellite Strategy
 Satellite State of Play - a strategy document on Satellite imagery
 
-This site was created from the viewpoint of the development community, but offers a genera overview of current market dynamics.
+This site was created from the viewpoint of the development community, but offers a general overview of current market dynamics.
 
-All code is MIT licensed, and the text content is public domain (CC0). Please feel free to send edits and updates via Pull Requests.
+All code is MIT licensed, and the text content is [CC-BY](http://creativecommons.org/licenses/by/4.0/). Please feel free to send edits and updates via Pull Requests.
+
+## Editing Copy
+
+You can access text files in `app/content`. All files should be in [github-flavored markdown](https://help.github.com/articles/github-flavored-markdown/). To add a new section, create a new markdown file in `app/content` and add a corresponding build script in `app/app.html`.
+
+For example, to create a file on market opportunities, add a file called `app/content/opportunities.md`. Then modify `app/app.html` with the following code at the location where your copy should go.
+
+```(html)
+<!-- build:opportunities -->
+<!-- endbuild -->
+```
+
+Note: the filename (minus `.md`) should be what comes after `build:`.
 
 ## Development environment
 
@@ -27,19 +37,6 @@ There are two commands, both run via npm.
 
 - `npm run build` or `gulp build` or `gulp` - clean & build everything and put it into dist folder
 - `npm run serve` or `gulp serve` - serve the pages and utilize live reload on changes to styles, fonts, images, scripts and HTML.
-
-## Editing Copy
-
-You can access text files in `app/content`. All files should be in [github-flavored markdown](https://help.github.com/articles/github-flavored-markdown/). To add a new section, create a new markdown file in `app/content` and add a corresponding build script in `app/app.html`.
-
-For example, to create a file on market opportunities, add a file called `app/content/opportunities.md`. Then modify `app/app.html` with the following code at the location where your copy should go.
-
-```(html)
-<!-- build:opportunities -->
-<!-- endbuild -->
-```
-
-Note: the filename (minus `.md`) should be what comes after `build:`.
 
 ## Assets Structure
 should be in [github-flavored markdown](https://help.github.com/articles/github-flavored-markdown/).
