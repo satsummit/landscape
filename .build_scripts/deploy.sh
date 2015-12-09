@@ -8,6 +8,7 @@ echo "DEPLOY_BRANCH: " ${DEPLOY_BRANCH}
 if [ $TRAVIS_PULL_REQUEST = "false" ] && [ $TRAVIS_BRANCH = ${DEPLOY_BRANCH} ]; then
   echo "Get ready, we're pushing to gh-pages!"
   cd dist
+  ls -la
   git init
   git config user.name "Travis-CI"
   git config user.email "travis@somewhere.com"
