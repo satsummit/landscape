@@ -115,6 +115,7 @@
 
 
 input.radio-item {
+  float: left;
   &:empty {
     margin-left: -9999px;
   }

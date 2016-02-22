@@ -173,7 +173,7 @@ $(function() {
     var url = activeSection.data('url');
     if (typeof url !== 'undefined') {
       if (url == 'intro-nav') url = '';
-      window.location.hash = url;
+      window.history.pushState(url, url, '#' + url);
     };
   };
 
