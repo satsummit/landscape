@@ -34,6 +34,7 @@ module.exports = React.createClass({
 
     if (this.map.tap) {
       this.map.tap.disable();
+      this.map.dragging.disable();
     }
   },
 
