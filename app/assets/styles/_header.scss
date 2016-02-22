@@ -31,14 +31,14 @@
 
     img {
       line-height: 1em;
-      height: 32px;
+      height: 31px;
       margin-left: 2em;
     }
 
     @include small {
       text-align: right;
       display: block;
-      margin: 0 4em .5em;
+      margin: 0 7.5em .5em;
       float: left;
     }
   }
