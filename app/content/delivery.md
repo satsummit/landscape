@@ -14,6 +14,6 @@ Imagery "rental" - As providers offer analytical and processing services they wi
 
 New open satellite systems - Several new satellite systems are coming online, offering open information for development use. E.g.:
 
-- ESA’s Copernicus system will deploy six Sentinel satellites between 2014 and 2021 to monitor land, ocean, emergency response, atmosphere, security and climate change.
+- The European Union's Copernicus system will deploy six Sentinel satellites between 2014 and 2021 to monitor land, ocean, emergency response, atmosphere, security and climate change.
 
 - NASA’s satellite launches last year with data to come online with information on climate change. Data from the Global Precipitation Measurement Core Observatory, Orbiting Carbon Observatory-2, and Soil Moisture Active Passive are now coming online.
