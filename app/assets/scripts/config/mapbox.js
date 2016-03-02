@@ -27,6 +27,12 @@ module.exports = {
       zoom: 14,
       accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
     }, {
+      id: 'stateofsatellite.8lhv1knt',
+      displayAttrib1: 'Sentinel-2',
+      displayAttrib2: '10m',
+      zoom: 14,
+      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+    }, {
       id: 'stateofsatellite.mm0pljb0',
       displayAttrib1: 'Blackbridge RapidEye',
       displayAttrib2: '5m',
