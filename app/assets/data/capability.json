@@ -166,5 +166,33 @@
     "live": "Planned",
     "short": "Planet Labs",
     "link": "#"
+  },
+  {
+    "company": "UrtheCast",
+    "sensor": null,
+    "revisit": "30",
+    "platform": "ISS",
+    "cost": null,
+    "resolution": "5",
+    "acquisition": null,
+    "multispectral": "Yes",
+    "open": "No",
+    "live": "Live",
+    "short": "UC ISS",
+    "link": "#"
+  },
+  {
+    "company": "UrtheCast",
+    "sensor": null,
+    "revisit": "3",
+    "platform": "Deimos-1",
+    "cost": null,
+    "resolution": "22",
+    "acquisition": null,
+    "multispectral": "Yes",
+    "open": "No",
+    "live": "Live",
+    "short": "UC Deimos-1",
+    "link": "#"
   }
 ]
