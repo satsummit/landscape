@@ -212,7 +212,7 @@
     {
       "company": "UrtheCast",
       "sensor": "rgb,nir",
-      "revisit": null,
+      "revisit": "2",
       "platform": "Deimos-2",
       "cost": null,
       "resolution": "0.75",
