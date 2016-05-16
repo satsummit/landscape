@@ -166,5 +166,61 @@
     "live": "Planned",
     "short": "Planet Labs",
     "link": "#"
-  }
+  },
+  {
+      "company": "UrtheCast",
+      "sensor": "rgb,nir",
+      "revisit": "15",
+      "platform": "Theia",
+      "cost": null,
+      "resolution": "5",
+      "acquisition": null,
+      "multispectral": "Yes",
+      "open": "No",
+      "live": "Live",
+      "short": "UC Theia",
+      "link": "https://www.urthecast.com/sensors#theia"
+    },
+    {
+      "company": "UrtheCast",
+      "sensor": null,
+      "revisit": "15",
+      "platform": "Iris",
+      "cost": null,
+      "resolution": "1",
+      "acquisition": null,
+      "multispectral": "No",
+      "open": "No",
+      "live": "Live",
+      "short": "UC Iris",
+      "link": "https://www.urthecast.com/sensors#iris"
+    },
+    {
+      "company": "UrtheCast",
+      "sensor": "rg,nir",
+      "revisit": "3",
+      "platform": "Deimos-1",
+      "cost": null,
+      "resolution": "22",
+      "acquisition": null,
+      "multispectral": "Yes",
+      "open": "No",
+      "live": "Live",
+      "short": "UC Deimos-1",
+      "link": "https://www.urthecast.com/sensors#deimos-1"
+    },
+    {
+      "company": "UrtheCast",
+      "sensor": "rgb,nir",
+      "revisit": null,
+      "platform": "Deimos-2",
+      "cost": null,
+      "resolution": "0.75",
+      "acquisition": null,
+      "multispectral": "Yes",
+      "open": "No",
+      "live": "Live",
+      "short": "UC Deimos-2",
+      "link": "https://www.urthecast.com/sensors#deimos-2"
+    }
 ]
