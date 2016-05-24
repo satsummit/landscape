@@ -1,0 +1,70 @@
+---
+layout: base
+---
+
+<main class="page__body" role="main">
+  <div class="inner">
+
+    <h1 class="section__title">{{ page.title }}</h1>
+    {% if page.introduction %}
+    <div class="section__introduction">
+      <p>{{ page.introduction }}</p>
+    </div>
+    {% endif %}
+
+    {{ content  }}
+
+
+    {% comment %}
+      The following code prints the page's sections if there's a
+      collections with the page's name.
+    {% endcomment %}
+
+    {% if site[page.id] %}
+      {% for col in site[page.id] %}
+        <section>
+          <h1 id="{{ col.id }}">{{ col.title }}</h1>
+          {{ col.content }}
+        </section>
+      {% endfor %}
+    {% endif %}
+
+
+    {% comment %}
+      The previous/next navigation is dynamically built checking if the pages
+      actually exist.
+    {% endcomment %}
+
+    {% assign currFound = false %}
+    {% for p in site.pages %}
+      {% if currFound %}
+        {% unless next %}
+          {% assign next = p %}
+        {% endunless %}
+      {% endif %}
+
+      {% if p.id == page.id %}
+        {% assign currFound = true %}
+      {% endif %}
+
+      {% unless currFound %}
+        {% assign prev = p %}
+      {% endunless %}
+    {% endfor %}
+
+    <div class="page__navigation">
+      {% if prev %}
+      <a href="{{ site.baseurl }}{{ prev.url }}">Previous</a>
+      {% else %}
+      <a href="#" class="disabled">Previous -- disabled</a>
+      {% endif %}
+
+      {% if next %}
+      <a href="{{ site.baseurl }}{{ next.url }}">Next</a>
+      {% else %}
+      <a href="#" class="disabled">Next -- disabled</a>
+      {% endif %}
+    </div>
+
+  </div>
+</main>

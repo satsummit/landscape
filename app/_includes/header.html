@@ -1,0 +1,29 @@
+<header class="page__header" role="banner">
+  <div class="inner">
+    <div class="page__headline">
+      <h1 class="page__title">
+        <a href="{{ site.baseurl }}" title="Visit homepage">Sat Summit</a>
+      </h1>        
+    </div>
+    <nav class="page__prime-nav" role="navigation">
+
+      <ul class="nav-sections">
+      {% for p in site.pages %}
+        <li class="nav-sections__item-wrapper">
+          <a href="{{ site.baseurl }}{{ p.url }}" title="Visit page">{{ p.title }}</a>
+          {% if site[p.id] %}
+            <ul>
+            {% for col in site[p.id] %}
+              <li>
+                <a href="{{ site.baseurl }}{{ p.url }}#{{ col.id }}" title="Visit page">{{ col.title }}</a>
+              </li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+      </ul>
+
+    </nav>
+  </div>
+</header>
