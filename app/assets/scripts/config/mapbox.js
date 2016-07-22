@@ -25,31 +25,31 @@ module.exports = {
       displayAttrib1: 'Landsat',
       displayAttrib2: '15m',
       zoom: 14,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }, {
       id: 'stateofsatellite.8lhv1knt',
       displayAttrib1: 'Sentinel-2',
       displayAttrib2: '10m',
       zoom: 14,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }, {
       id: 'stateofsatellite.mm0pljb0',
       displayAttrib1: 'Blackbridge RapidEye',
       displayAttrib2: '5m',
       zoom: 15,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }, {
       id: 'stateofsatellite.8snvobt9',
       displayAttrib1: 'Airbus Pleiades',
       displayAttrib2: '0.5m',
       zoom: 18,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }, {
       id: 'stateofsatellite.mm0pp69n',
       displayAttrib1: 'DigitalGlobe WV3',
       displayAttrib2: '0.31m',
       zoom: 19,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }]
   },
 
@@ -59,19 +59,19 @@ module.exports = {
       displayAttrib1: 'Growing JUN 15',
       displayAttrib2: '4.2m',
       zoom: 14,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }, {
       id: 'stateofsatellite.njdb4053',
       displayAttrib1: 'Harvest AUG 15',
       displayAttrib2: '2.7m',
       zoom: 14,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }, {
       id: 'stateofsatellite.njdb6g05',
       displayAttrib1: 'Post-harvest OCT 14',
       displayAttrib2: '4.2m',
       zoom: 14,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }]
   },
 
@@ -99,7 +99,7 @@ module.exports = {
       displayAttrib1: 'SPOT 6, Mar 2015',
       displayAttrib2: '1.5m',
       zoom: 17,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }, {
       id: 'ugandaResAirbus5',
       ugandaResTruecolor: 'stateofsatellite.na0hk86f',
@@ -108,7 +108,7 @@ module.exports = {
       displayAttrib1: 'SPOT 5, Dec 2007',
       displayAttrib2: '2.5m',
       zoom: 17,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }, {
       id: 'ugandaResBlackbridge',
       ugandaResTruecolor: 'stateofsatellite.n9bdifj5',
@@ -117,7 +117,7 @@ module.exports = {
       displayAttrib1: 'RapidEye, Jan 2012',
       displayAttrib2: '5m',
       zoom: 17,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }]
   },
 
@@ -127,25 +127,25 @@ module.exports = {
       displayAttrib1: 'Footpaths',
       displayAttrib2: '0.5m',
       zoom: 19,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }, {
       id: 'stateofsatellite.n9bcn84n',
       displayAttrib1: 'Residential Roads',
       displayAttrib2: '1.5m',
       zoom: 19,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }, {
       id: 'stateofsatellite.n9bd59bm',
       displayAttrib1: 'Secondary Roads',
       displayAttrib2: '2.5m',
       zoom: 19,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }, {
       id: 'stateofsatellite.n9bdabh7',
       displayAttrib1: 'Primary Roads',
       displayAttrib2: '5m',
       zoom: 19,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }]
   },
 
@@ -163,14 +163,14 @@ module.exports = {
       ugandaAgNdvi: 'stateofsatellite.n9i1dj49',
       displayAttrib1: 'Jan Signature (SPOT 6)',
       zoom: 15,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }, {
       id: 'ugandaAgMarch',
       ugandaAgTruecolor: 'stateofsatellite.n9i0k87l',
       ugandaAgNdvi: 'stateofsatellite.n9i14027',
       displayAttrib1: 'Mar Signature (RapidEye)',
       zoom: 15,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }]
   },
 
@@ -179,12 +179,12 @@ module.exports = {
       id: 'stateofsatellite.n9c6jfgk',
       displayAttrib1: 'Landslide Model',
       zoom: 8,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }, {
       id: 'stateofsatellite.n9ion355',
       displayAttrib1: 'Basemap',
       zoom: 8,
-      accessToken: 'pk.eyJ1Ijoic3RhdGVvZnNhdGVsbGl0ZSIsImEiOiJlZTM5ODI5NGYwZWM2MjRlZmEyNzEyMWRjZWJlY2FhZiJ9.omsA8QDSKggbxiJjumiA_w'
+      accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }]
   }
 
