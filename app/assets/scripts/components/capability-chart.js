@@ -5,7 +5,6 @@ let Scatterplot = require('./scatterplot');
 let indicators = require('../../data/capability-translation-chart');
 
 var Capabilities = React.createClass({
-
   displayName: 'Capabilities',
 
   propTypes: {
@@ -48,7 +47,6 @@ var Capabilities = React.createClass({
   },
 
   render: function () {
-
     let {
       x,
       y,

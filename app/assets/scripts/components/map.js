@@ -2,8 +2,8 @@ let React = require('react');
 let L = window.L;
 
 module.exports = React.createClass({
-
   displayName: 'Map',
+
   propTypes: {
     id: React.PropTypes.string,
     options: React.PropTypes.object,

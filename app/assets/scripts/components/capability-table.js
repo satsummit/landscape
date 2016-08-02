@@ -3,7 +3,6 @@ let _ = require('lodash');
 let indicators = require('../../data/capability-translation');
 
 var CapabilitiesTable = React.createClass({
-
   displayName: 'CapabilitiesTable',
 
   propTypes: {

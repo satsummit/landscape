@@ -17,32 +17,22 @@
   }
 }
 
-html, body {
-  height: 100%;
-  overflow: visible;
+/* ==========================================================================
+   Page
+   ========================================================================== */
+
+.page__header,
+.page__footer {
+  background-color: #eee;
+  padding: 2rem;
 }
 
-body {
-  font-size: 100%;
-  font-weight: 400;
+.page__body {
+  padding: 2rem;
 }
 
-// These must be direct descendants of body,
-// or descendants of element with height: inherit;
-.graphic {
-  width: 100%;
-  height: 70%;
-}
-
-// Scss starts here!
-.header {
-  padding-top: 160px;
-  background: url("/assets/graphics/layout/DevelopmentSeed.png") no-repeat center;
-  font-style: italic;
-  font-size: 22px;
-}
-
-.range {
-  position:absolute;
-  width:100%;
+.nav-sections {
+  ul {
+    margin-left: 2rem; 
+  }
 }

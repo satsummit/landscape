@@ -1,0 +1,51 @@
+{% if page.title %}
+  {% capture meta_title %}{{ page.title }} — State of Satellite Imagery{% endcapture %}
+{% else %}
+  {% capture meta_title %}State of Satellite Imagery{% endcapture %}
+{% endif %}
+
+{% if page.introduction %}
+  {% assign meta_introduction = page.introduction %}
+{% else %}
+  {% assign meta_introduction = "Satellite State of Play - a strategy document on satellite imagery." %}
+{% endif %}
+
+{% if page.image %}
+  {% assign meta_image = page.image %}
+{% else %}
+  {% assign meta_image = "/assets/graphics/meta/default-meta-image.png" %}
+{% endif %}
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="{{ meta_introduction }}" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+<title>{{ meta_title }}</title>
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@hotosm" />
+<meta name="twitter:title" content="{{ meta_title }}">
+<meta name="twitter:description" content="{{ meta_introduction }}" />
+<meta name="twitter:image:src" content="{{ site.baseurl }}{{ meta_image }}" />
+<!--/ Twitter --> 
+
+<!-- OG -->
+<meta property="og:site_name" content="State of Satellite Imagery" />
+<meta property="og:title" content="{{ meta_title }}" />
+<meta property="og:url" content="{{ site.baseurl }}{{ page.url | remove:'index.html' }}" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="{{ meta_introduction }}" />
+<meta property="og:image" content="{{ site.baseurl }}{{ meta_image }}" />
+<!--/ OG -->
+
+<link rel="shortcut icon" href="{{ site.baseurl }}/assets/graphics/meta/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/graphics/meta/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/assets/graphics/meta/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/assets/graphics/meta/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="{{ site.baseurl }}/assets/graphics/meta/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}/assets/graphics/meta/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="{{ site.baseurl }}/assets/graphics/meta/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}/assets/graphics/meta/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="{{ site.baseurl }}/assets/graphics/meta/apple-touch-icon-152x152.png" />

@@ -1,82 +1,74 @@
-![](https://travis-ci.org/satsummit/landscape.svg?branch=master)
-
 # Satellite Strategy
+
 Satellite State of Play - a strategy document on satellite imagery
 
-This site was created from the viewpoint of the development community, but offers a general overview of current market dynamics. This knowledge product is an adaption of a World Bank Group Knowledge Product [See original version](http://wb.satsummit.io/), licensed under Creative Commons Attribution License.
+This site was created from the viewpoint of the development community, but offers a general overview of current market dynamics. This knowledge product is an adaption of a World Bank Group Knowledge Product See original version, licensed under Creative Commons Attribution License.
 
-All code is MIT licensed, and the text content is [CC-BY](http://creativecommons.org/licenses/by/4.0/). Please feel free to send edits and updates via Pull Requests.
-
-## Editing Copy
-
-You can access text files in `app/content`. All files should be in [github-flavored markdown](https://help.github.com/articles/github-flavored-markdown/). To add a new section, create a new markdown file in `app/content` and add a corresponding build script in `app/app.html`.
-
-For example, to create a file on market opportunities, add a file called `app/content/opportunities.md`. Then modify `app/app.html` with the following code at the location where your copy should go.
-
-```(html)
-<!-- build:opportunities -->
-<!-- endbuild -->
-```
-
-Note: the filename (minus `.md`) should be what comes after `build:`.
+All code is MIT licensed, and the text content is CC-BY. Please feel free to send edits and updates via Pull Requests.
 
 ## Development environment
+The development environment is the same for both parts and has the following dependencies:
 
-To set up the development environment for this website, you'll need to install the following on your system:
+- Node (v4.2.x) & Npm ([nvm](https://github.com/creationix/nvm) usage is advised)
+- Ruby and [Bundler](http://bundler.io/), preferably through something like [rvm](https://rvm.io/)
 
-- [Node and npm](http://nodejs.org/)
-- Gulp ( $ npm install -g gulp )
+> The versions mentioned are the ones used during development. It could work with newer ones.
 
 After these basic requirements are met, run the following commands in the website's folder:
-
 ```
 $ npm install
 ```
 
-There are two commands, both run via npm.
-
-- `npm run build` or `gulp build` or `gulp` - clean & build everything and put it into dist folder
-- `npm run serve` or `gulp serve` - serve the pages and utilize live reload on changes to styles, fonts, images, scripts and HTML.
-
-## Assets Structure
-should be in [github-flavored markdown](https://help.github.com/articles/github-flavored-markdown/).
+### Getting started
 ```
-app/assets/
-|
-+- scripts/: The user scripts
-|  |
-|  +- config/: configuration files (see configuration section)
-|
-+- styles/: The sass styles
-|
-+- vendor/: Any third-party script that can't be required()
-|
-+- graphics/: Images for the site divided in:
-|  |
-|  +- layout/: Images for layout elements (Ex: background images)
-|  +- meta/: Images for the meta tags (Mostly icons and facebook images)
-|  +- content/: Content image
-|
+$ npm run serve
+```
+Compiles the sass files, javascript, and launches the server making the site available at `http://localhost:3000/`  
+The system will watch files and execute tasks whenever one of them changes.  
+The site will automatically refresh since it is bundled with livereload.
+
+#### Adding new pages
+Any top level page added should be directly inside `app/`, its name prefixed with a number to set order, and have the following front matter (example):
+```
+layout: article
+id: introduction
+permalink: introduction/
+
+title: Introduction
+```
+All the top level pages will show up in the main menu. The `title` is used for the link text.
+
+For the sublevel sections a collection should be created in `_config.yml` whose name matches to top-level page `id`:
+```
+collections:
+  introduction:
+    output: false
+```
+It is important the the `output` is set to `false` because these documents will be loaded as sections of the top-level page.
+
+In the collection's folder (in the example's case `_introduction`) the files should also be prefixed with a number to ensure order.
+Each document should have the following yaml front matter information:
+```
+layout: article
+id: beyond
+
+title: Beyond optical sensors
 ```
 
-### How scripts are built
+**Example file structure:**
+```
+/
+  10_index.md
+  20_introduction.md
+  _introduction/
+    210_new.md
+    220_beyond.md
+```
 
-The script build, which uses `browserify`, outputs two js files: `bundle.js` and
-`vendor.js`:
- - `bundle.js`, created by the `javascript` task in deployment and by
-   `watchify` during development, contains all the app-specific code:
-   `app/scripts/main.js` and all the scripts it `require`s that are local to
-   this app.
- - `vendor.js`, created by the `vendorBundle` task, contains all the external
-   dependencies of the app: namely, all the packages you install using `npm
-   install --save ...`.
+## Deployment
+The .travis.yml file enables the usage of [Travis](http://travis.org) as a test and deployment system.  
+In this particular case, Travis will be looking for any changes to the repo and when a change is made to the `master` branch, Travis will build the documentation and deploy it to the `gh-pages` branch.
 
-## Travis for testing and deployment
-The .travis.yml file enables the usage of [Travis](http://travis.org) as a test and deployment system. In this particular case, Travis will be looking for any changes to the repo and when a change is made to the `master` branch, Travis will build the project and deploy it to the `gh-pages` branch.
-
-## semistandard for linting
-We're using [semistandard](https://github.com/Flet/semistandard) for linting.
-
+## Linting
+Code follows the `semistandard` code style and should be linted.
 - `npm run lint` - will run linter and warn of any errors.
-
-There are linting plugins for popular editors listed in the semistandard repo. 

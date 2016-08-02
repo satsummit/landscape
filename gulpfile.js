@@ -1,8 +1,8 @@
 'use strict';
-
 var fs = require('fs');
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var del = require('del');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var watchify = require('watchify');
@@ -13,52 +13,56 @@ var sourcemaps = require('gulp-sourcemaps');
 var gutil = require('gulp-util');
 var exit = require('gulp-exit');
 var rev = require('gulp-rev');
-var htmlReplace = require('gulp-html-replace');
 var revReplace = require('gulp-rev-replace');
 var notifier = require('node-notifier');
-var rename = require('gulp-rename');
-var marked = require('marked');
+var cp = require('child_process');
+var YAML = require('yamljs');
+var SassString = require('node-sass').types.String;
 
-////////////////////////////////////////////////////////////////////////////////
-//--------------------------- Variables --------------------------------------//
-//----------------------------------------------------------------------------//
+// /////////////////////////////////////////////////////////////////////////////
+// --------------------------- Variables -------------------------------------//
+// ---------------------------------------------------------------------------//
 
 // The package.json
 var pkg;
 
-////////////////////////////////////////////////////////////////////////////////
-//------------------------- Helper functions ---------------------------------//
-//----------------------------------------------------------------------------//
-
-function readMarkdown () {
-  var path = 'app/content';
-  var replace = {};
-  var files = fs.readdirSync(path).filter(function(a) {
-    return a.slice(-3) === '.md';
-  }).forEach(function(a) {
-    replace[a.slice(0,-3)] = marked(fs.readFileSync(path + '/' + a, 'utf8'));
-  });
-  return replace;
+// Environment
+// Set the correct environment, which controls what happens in config.js
+if (!process.env.DS_ENV) {
+  if (process.env.TRAVIS_BRANCH && process.env.TRAVIS_BRANCH !== process.env.DEPLOY_BRANCH) {
+    process.env.DS_ENV = 'staging';
+  } else if (process.env.TRAVIS_BRANCH && process.env.TRAVIS_BRANCH === process.env.DEPLOY_BRANCH) {
+    process.env.DS_ENV = 'production';
+  } else {
+    process.env.DS_ENV = 'development';
+  }
 }
+
+var prodBuild = false;
+
+// /////////////////////////////////////////////////////////////////////////////
+// ------------------------- Helper functions --------------------------------//
+// ---------------------------------------------------------------------------//
 
 function readPackage () {
   pkg = JSON.parse(fs.readFileSync('package.json'));
 }
 readPackage();
 
-////////////////////////////////////////////////////////////////////////////////
-//------------------------- Callable tasks -----------------------------------//
-//----------------------------------------------------------------------------//
+// /////////////////////////////////////////////////////////////////////////////
+// ------------------------- Callable tasks ----------------------------------//
+// ---------------------------------------------------------------------------//
 
 gulp.task('default', ['clean'], function () {
+  prodBuild = true;
   gulp.start('build');
 });
 
-gulp.task('serve', ['vendorScripts', 'javascript', 'styles', 'fonts', 'markdown'], function () {
+gulp.task('serve', ['vendorScripts', 'javascript', 'styles', 'jekyll'], function () {
   browserSync({
     port: 3000,
     server: {
-      baseDir: ['.tmp', 'app'],
+      baseDir: ['.tmp', '_site'],
       routes: {
         '/node_modules': './node_modules'
       }
@@ -67,43 +71,43 @@ gulp.task('serve', ['vendorScripts', 'javascript', 'styles', 'fonts', 'markdown'
 
   // watch for changes
   gulp.watch([
-    'app/index.html',
+    'app/**/*.html',
+    'app/**/*.md',
     'app/assets/graphics/**/*',
-    '.tmp/assets/fonts/**/*'
-  ]).on('change', reload);
+    '!app/assets/graphics/collecticons/**/*'
+  ], ['jekyll', reload]);
+
+  gulp.watch('app/assets/graphics/collecticons/**', ['collecticons']);
 
   gulp.watch('app/assets/styles/**/*.scss', ['styles']);
-  gulp.watch('app/assets/fonts/**/*', ['fonts']);
-  gulp.watch(['app/content/*.md', 'app/app.html'], ['markdown']);
   gulp.watch('package.json', ['vendorScripts']);
 });
 
-gulp.task('clean', require('del').bind(null, ['.tmp', 'dist']));
-
-gulp.task('build', ['javascript', 'vendorScripts'], function () {
-  gulp.start(['markdown', 'html', 'images', 'fonts', 'extras'], function () {
-    return gulp.src('dist/**/*')
-      .pipe($.size({title: 'build', gzip: true}))
-      .pipe(exit());
-  });
+gulp.task('clean', function () {
+  return del(['.tmp', '_site'])
+    .then(function () {
+      $.cache.clearAll();
+    });
 });
 
-////////////////////////////////////////////////////////////////////////////////
-//------------------------- Browserify tasks ---------------------------------//
-//------------------- (Not to be called directly) ----------------------------//
-//----------------------------------------------------------------------------//
+// /////////////////////////////////////////////////////////////////////////////
+// ------------------------- Browserify tasks --------------------------------//
+// ------------------- (Not to be called directly) ---------------------------//
+// ---------------------------------------------------------------------------//
 
 // Compiles the user's script files to bundle.js.
-// When including the file in the app.html we need to refer to bundle.js not
+// When including the file in the index.html we need to refer to bundle.js not
 // main.js
-gulp.task('javascript', ['config'], function() {
-  var watcher  = watchify(browserify({
+gulp.task('javascript', function () {
+  var watcher = watchify(browserify({
     entries: ['./app/assets/scripts/main.js'],
     debug: true,
-    cache: {}, packageCache: {}, fullPaths: true
+    cache: {},
+    packageCache: {},
+    fullPaths: true
   }));
 
-  function bundler() {
+  function bundler () {
     if (pkg.dependencies) {
       watcher.external(Object.keys(pkg.dependencies));
     }
@@ -113,9 +117,12 @@ gulp.task('javascript', ['config'], function() {
           title: 'Oops! Browserify errored:',
           message: e.message
         });
-          console.log('Sass error:', e);
-          // Allows the watch to continue.
-          this.emit('end');
+        console.log('Javascript error:', e);
+        if (prodBuild) {
+          process.exit(1);
+        }
+        // Allows the watch to continue.
+        this.emit('end');
       })
       .pipe(source('bundle.js'))
       .pipe(buffer())
@@ -135,7 +142,7 @@ gulp.task('javascript', ['config'], function() {
 
 // Vendor scripts. Basically all the dependencies in the package.js.
 // Therefore be careful and keep the dependencies clean.
-gulp.task('vendorScripts', function() {
+gulp.task('vendorScripts', function () {
   // Ensure package is updated.
   readPackage();
   var vb = browserify({
@@ -152,10 +159,67 @@ gulp.task('vendorScripts', function() {
     .pipe(reload({stream: true}));
 });
 
+// /////////////////////////////////////////////////////////////////////////////
+// ------------------------ Collecticon tasks --------------------------------//
+// -------------------- (Font generation related) ----------------------------//
+// ---------------------------------------------------------------------------//
+gulp.task('collecticons', function (done) {
+  var args = [
+    'node_modules/collecticons-processor/bin/collecticons.js',
+    'compile',
+    'app/assets/graphics/collecticons/',
+    '--font-embed',
+    '--font-dest', 'app/assets/fonts',
+    '--font-name', 'Collecticons',
+    '--font-types', 'woff',
+    '--style-format', 'sass',
+    '--style-dest', 'app/assets/styles/',
+    '--style-name', 'collecticons',
+    '--class-name', 'collecticons',
+    '--author-name', 'Development Seed',
+    '--author-url', 'https://developmentseed.org/',
+    '--no-preview'
+  ];
 
-////////////////////////////////////////////////////////////////////////////////
-//--------------------------- Helper tasks -----------------------------------//
-//----------------------------------------------------------------------------//
+  return cp.spawn('node', args, {stdio: 'inherit'})
+    .on('close', done);
+});
+
+// /////////////////////////////////////////////////////////////////////////////
+// -------------------------- Jekyll tasks -----------------------------------//
+// ---------------------------------------------------------------------------//
+gulp.task('jekyll', function (done) {
+  var args = ['exec', 'jekyll', 'build'];
+
+  switch (process.env.DS_ENV) {
+    case 'development':
+      args.push('--config=_config.yml,_config-dev.yml');
+      break;
+    case 'staging':
+      args.push('--config=_config.yml,_config-stage.yml');
+      break;
+    case 'production':
+      args.push('--config=_config.yml');
+      break;
+  }
+
+  return cp.spawn('bundle', args, {stdio: 'inherit'})
+    .on('close', done);
+});
+
+// //////////////////////////////////////////////////////////////////////////////
+// --------------------------- Helper tasks -----------------------------------//
+// ----------------------------------------------------------------------------//
+
+gulp.task('build', ['collecticons'], function () {
+  gulp.start(['vendorScripts', 'javascript', 'styles', 'jekyll'], function () {
+    gulp.start(['html', 'images'], function () {
+      return gulp.src('_site/**/*')
+        .pipe($.size({title: 'build', gzip: true}))
+        .pipe(exit());
+    });
+  });
+});
 
 gulp.task('styles', function () {
   return gulp.src('app/assets/styles/main.scss')
@@ -165,64 +229,45 @@ gulp.task('styles', function () {
         message: e.message
       });
       console.log('Sass error:', e.toString());
+      if (prodBuild) {
+        process.exit(1);
+      }
       // Allows the watch to continue.
       this.emit('end');
     }))
     .pipe($.sourcemaps.init())
     .pipe($.sass({
-      outputStyle: 'nested', // libsass doesn't support expanded yet
+      outputStyle: 'expanded',
       precision: 10,
-      includePaths: ['.'].concat(require('node-bourbon').includePaths)
+      functions: {
+        'urlencode($url)': function (url) {
+          var v = new SassString();
+          v.setValue(encodeURIComponent(url.getValue()));
+          return v;
+        }
+      },
+      includePaths: require('node-bourbon').with('node_modules/jeet/scss')
     }))
-    // Power to the user. Sass provides enough mixins to handle prefix.
-    /*.pipe($.postcss([
-      require('autoprefixer-core')({browsers: ['last 1 version']})
-    ]))*/
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/assets/styles'))
     .pipe(reload({stream: true}));
 });
 
-gulp.task('config', function () {
-  // If we're not on the production deployment, copy `config.staging.js` over
-  // as `config.local.js` if one doesn't already exist.
-  if (!fs.existsSync(__dirname + '/app/assets/scripts/config/local.js')) {
-    if (!process.env.TRAVIS_BRANCH
-    || process.env.TRAVIS_BRANCH !== process.env.DEPLOY_BRANCH) {
-      gulp.src('app/assets/scripts/config/staging.js')
-        .pipe(rename('local.js'))
-        .pipe(gulp.dest('app/assets/scripts/config'));
-    }
-  }
-});
-
-gulp.task('markdown', function() {
-  var replace = readMarkdown();
-  return gulp.src('app/app.html')
-    .pipe(htmlReplace(readMarkdown(), {
-      keepUnassigned: true,
-      keepBlockTags: true
-    }))
-    .pipe(rename('index.html'))
-    .pipe(gulp.dest('app'));
-});
-
-gulp.task('html', ['styles'], function () {
-  var assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
-  return gulp.src(['app/app.html', 'app/index.html'])
-    .pipe(assets)
+// After being rendered by jekyll process the html files. (merge css files, etc)
+gulp.task('html', function () {
+  var jkConf = YAML.load('_config.yml');
+  return gulp.src('_site/**/*.html')
+    .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.csso()))
-    .pipe(rev())
-    .pipe(assets.restore())
-    .pipe($.useref())
-    .pipe(revReplace())
-    //.pipe($.if('app.html', $.minifyHtml({conditionals: true, loose: true})))
-    .pipe(gulp.dest('dist'));
+    .pipe($.if(/\.(css|js)$/, rev()))
+    .pipe(revReplace({prefix: jkConf.baseurl}))
+    .pipe(gulp.dest('_site'));
 });
 
+// Compress images.
 gulp.task('images', function () {
-  return gulp.src('app/assets/graphics/**/*')
+  return gulp.src(['_site/assets/graphics/**/*'])
     .pipe($.cache($.imagemin({
       progressive: true,
       interlaced: true,
@@ -230,25 +275,5 @@ gulp.task('images', function () {
       // as hooks for embedding and styling
       svgoPlugins: [{cleanupIDs: false}]
     })))
-    .pipe(gulp.dest('dist/assets/graphics'));
-});
-
-gulp.task('fonts', function () {
-  return gulp.src('app/assets/fonts/**/*')
-    .pipe(gulp.dest('.tmp/assets/fonts'))
-    .pipe(gulp.dest('dist/assets/fonts'));
-});
-
-gulp.task('extras', function () {
-  return gulp.src([
-    'app/**/*',
-    '!app/app.html',
-    '!app/index.html',
-    '!app/assets/graphics/**',
-    'app/assets/vendor/**',
-    '!app/assets/styles/**',
-    '!app/assets/scripts/**'
-  ], {
-    dot: true
-  }).pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('_site/assets/graphics'));
 });

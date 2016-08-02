@@ -13,7 +13,6 @@ var Axis = React.createClass({
   },
 
   render: function () {
-
     let {
       orientation,
       scale,
@@ -59,9 +58,7 @@ var Axis = React.createClass({
         )}
 
       </g>
-
     );
-
   }
 });
 

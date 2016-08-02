@@ -3,8 +3,8 @@ let MapComponent = require('./map');
 let _ = require('lodash');
 
 module.exports = React.createClass({
-
   displayName: 'ResolutionComparison',
+
   propTypes: {
     maps: React.PropTypes.array,
     token: React.PropTypes.string,
@@ -25,7 +25,6 @@ module.exports = React.createClass({
   },
 
   render: function () {
-
     let maxZoom = _.reduce(this.props.maps,
                            (a, b) => a.zoom > b.zoom ? a.zoom : b.zoom);
 
@@ -69,7 +68,6 @@ module.exports = React.createClass({
         </div>
 
       </div>
-
     );
   }
 });

@@ -3,8 +3,8 @@ let MapComponent = require('./map');
 let _ = require('lodash');
 
 module.exports = React.createClass({
-
   displayName: 'ToggledResolutionComparison',
+
   propTypes: {
     maps: React.PropTypes.array,
     imgTypes: React.PropTypes.array,
@@ -49,9 +49,9 @@ module.exports = React.createClass({
         if (this.state.active.id === msg.sensorCon && this.state.key === msg.imgCon) {
           messageBox = (<div className = 'image-comparison-message'
             dangerouslySetInnerHTML = {{__html: msg.msgStr}}></div>);
-        };
-      };
-    };
+        }
+      }
+    }
 
     return (
       <div className='inherit-height'>

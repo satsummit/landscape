@@ -5,7 +5,6 @@ let _ = require('lodash');
 let Axis = require('./axis');
 
 var Scatterplot = React.createClass({
-
   displayName: 'Scatterplot',
 
   propTypes: {
@@ -21,8 +20,8 @@ var Scatterplot = React.createClass({
 
   getInitialState: function () {
     return {
-      scales: { x: (x) => x, y: (x) => x},
-      domains: { x: [0, 0], y: [0, 0] },
+      scales: {x: (x) => x, y: (x) => x},
+      domains: {x: [0, 0], y: [0, 0]},
       points: []
     };
   },
@@ -91,7 +90,6 @@ var Scatterplot = React.createClass({
   },
 
   render: function () {
-
     let {
       points,
       scales,

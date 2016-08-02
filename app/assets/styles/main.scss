@@ -1,30 +1,50 @@
-// Charset
+/* ==========================================================================
+   Main
+   ========================================================================== */
+
+/**
+ * Following Necolas' Principles of writing consistent, idiomatic CSS:
+ * https://github.com/necolas/idiomatic-css
+ */
+
+/* Charset */
+
 @charset "UTF-8";
 
-// Libs
+/* Libraries
+   ========================================================================== */
+
+/**
+ * Bourbon for extended SASS functionality:
+ * http://bourbon.io/
+ */
+
 @import "bourbon";
-// Reset and normalize
+
+/**
+ * Jeet, a grid system designed for humans:
+ * http://jeet.gs/
+ */
+
+@import "jeet/index";
+
+
+/* Reboot
+   ========================================================================== */
+
 @import "normalize";
 @import "reset";
+
+/**
+ * Using Kenneth Ormandy's OpenType features—ligatures, kerning, and
+ * more—to Normalize.css:
+ * https://github.com/kennethormandy/normalize-opentype.css
+ */
+
 @import "normalize-opentype";
 
-// Foundation
-@import "../../../node_modules/foundation-sites/scss/foundation";
+/* Custom
+   ========================================================================== */
 
-@import "variables";
-@import "type";
-
-// Layout
+@import "collecticons";
 @import "base";
-@import "page";
-@import "header";
-@import "footer";
-@import "nav";
-@import "map";
-@import "input";
-@import "table";
-@import "list";
-
-@import "scatterplot";
-@import "tooltip";
-@import "image-comparison";
