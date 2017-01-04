@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	{% include head.html  %}
+
+	<body>
+
+		{% include header.html %}
+
+		<div class="container">
+		  <div class="container-sidenav">
+				{% include sidenav.html %}
+
+		    <div class="container-article">
+		      <article class="article-padding">
+
+						<!-- Generate Navigation Links-->
+						{% if page.prev == "Introduction" %}
+							{% assign prev-link = '' %}
+						{% else %}
+							{% for s in site.sections %}
+								{% if page.prev == s.title %}
+									{% assign prev-link = s.permalink %}
+								{% endif %}
+								{% if s.title == page.next %}
+									{% assign next-link = s.permalink %}
+								{% endif %}
+							{% endfor %}
+						{% endif %}
+
+						<div class="breadcrumbs">
+							{% if page.parent == 'intro' %}
+								<a href="{{site.baseurl}}/">Introduction</a> / <a href="{{page.permalink}}">{{page.title}}</a>
+							{% elsif page.parent %}
+								<a href="{{site.baseurl}}/{{page.parent}}">{{page.parent | capitalize}}</a> / <a href="{{site.baseurl}}/{{page.permalink}}">{{page.title}}</a>
+							{% endif %}
+						</div>
+
+		      	{{ content }}
+		      </article>
+
+				{% include footer.html %}
+		    </div>
+		  </div>
+		</div>
+
+	</body>
+
+<!-- build:js /assets/scripts/vendor.js -->
+<script src="/assets/scripts/vendor.js"></script>
+<!-- endbuild -->
+<!-- build:js /assets/scripts/bundle.js -->
+<script src="/assets/scripts/bundle.js"></script>
+<!-- endbuild -->
+
+</html>

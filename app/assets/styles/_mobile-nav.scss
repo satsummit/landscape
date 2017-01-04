@@ -1,0 +1,70 @@
+.nav--trigger {
+    background-color: $lighter-blue;
+    color: white;
+    position: absolute;
+    display: inline-block;
+    line-height: 2.6;
+    padding: 0 5rem 0 1.1rem;
+    height: 100%;
+    top: 0;
+    right: 0;
+    border-left: 4px solid white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: 0.15rem;
+    cursor: pointer;
+    &:hover {
+        background-color: lighten($lighter-blue, 15);
+    }
+    @include medium {
+    display: none;
+    }
+}
+
+.leaflet-bottom {
+    z-index: 1;
+}
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Stay on top */
+    top: 0;
+    right: -1px;
+    background-color: white; /* Black*/
+    border-left: 1px solid rgba(0,0,0,0.2);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}

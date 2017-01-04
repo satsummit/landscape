@@ -1,14 +1,17 @@
-source: app
-# To exclude inside app/
+# Site settings
+title: Jekyll Seed
+safe:           false
+source:         app
 exclude:
   - assets/scripts
+  - assets/vendor
   - assets/styles
-  - assets/graphics/collecticons
-baseurl: http://landscape.satsummit.io
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+  - README.md
+timezone: America/New_York
+highlighter: false 
+
+baseurl: ""
 
 collections:
-  introduction:
-    output: false
+  sections:
+    output: true

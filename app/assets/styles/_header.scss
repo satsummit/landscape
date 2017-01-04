@@ -1,0 +1,93 @@
+.hero {
+  position: relative;
+}
+
+.hero-block {
+  margin: 0;
+  padding: 1em 2em .75em;
+  background-color: $dark-blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  h3 {
+    font-weight: 800;
+    line-height: 2em;
+    color: white;
+    margin: 0;
+    display: inline-block;
+  }
+
+  .logos {
+    float: right;
+    display: inline-block;
+    margin: 0;
+
+    img {
+      line-height: 1em;
+      height: 31px;
+      margin-left: 2em;
+    }
+  }
+
+  .devseed {
+    width: 188px;
+    height: 32px;
+  }
+
+  a {
+    color: white;
+    font-weight: 800;
+  }
+}
+
+.contribute-block {
+  display: none;
+  @include medium {
+    background-color: $lighter-blue;
+    position: absolute;
+    display: inline-block;
+    line-height: 4em;
+    padding: 0 5rem 0 0rem;
+    height: 100%;
+    top: 0;
+    right: 0;
+    border-left: 4px solid white;
+    transition: 0.2s all;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.15rem;
+    &:hover {
+      background-color: lighten($lighter-blue, 15);
+    }
+  }
+}
+
+#introduction {
+  float:left;
+  text-align: center;
+}
+
+#intro-slide-content {
+  margin-top: 6em;
+  position: relative;
+}
+
+.header-slide {
+  background-color: $dark-blue;
+  float: left;
+  display: block;
+  height: 650px;
+}
+
+#intro {
+}
+
+.collecticon-github {
+  vertical-align: middle;
+  margin-right: 0.75rem;
+  font-size: 4rem;
+  opacity: 0.2;
+}

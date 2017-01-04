@@ -1,0 +1,87 @@
+.article-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-content: stretch;    
+}
+
+@mixin footers {
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: $lighter-blue;
+  transition: 0.2s all;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  h2 {
+    color: white;
+    font-weight: 800;
+    padding: 2rem 0 0 6rem;
+    margin-bottom: 0.25em;
+  }
+  p {
+    padding: 0 3rem 2rem 6rem;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 2rem;
+    margin-bottom: 0;
+  }
+  &:hover {
+    background-color: lighten($lighter-blue, 15);
+  }
+}
+
+.article-footer__flex {
+  flex: 1;
+  -webkit-flex: 1;
+  width: 100%;
+}
+
+.article-footer__right {
+  float: right;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-left: 4px solid white;
+  @include footers
+  h2 {
+    padding: 2rem 0 0 1rem;
+  }
+  p {
+    padding: 0 3rem 2rem 1rem;
+  }
+}
+
+.article-footer__left {
+  float: left;
+  @include footers
+}
+
+.article-footer__full {
+  @include footers
+  width: 100%;
+}
+
+.collecticon-chevron-left {
+  position: absolute;
+  font-weight: 800;
+  font-size: 4rem;
+  top: 2.5rem;
+  left: 1rem;
+  opacity: 0.2;
+}
+
+.collecticon-chevron-right {
+  position: absolute;
+  font-weight: 800;
+  font-size: 4rem;
+  top: 2.5rem;
+  right: 1rem;
+  opacity: 0.3;
+}
+
+.article-footer__fwidth {
+  width: 100%;
+}
