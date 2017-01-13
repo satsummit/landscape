@@ -107,7 +107,7 @@ var Scatterplot = React.createClass({
     // TODO: React does not currently support the image tag.
     // We get around this by using the dangerouslySetInnerHTML method,
     // but there is probably a better way.
-    let image = `<image class="satellite-icon" width="${ic.width}" height="${ic.height}" x="${-ic.width * 0.4}" y="${-ic.height * 0.6}" xlink:href="assets/graphics/content/satellite-sprite.png" />`
+    let image = `<image class="satellite-icon" width="${ic.width}" height="${ic.height}" x="${-ic.width * 0.4}" y="${-ic.height * 0.6}" xlink:href="../../assets/graphics/content/satellite-sprite.png" />`
 
     return (
       <g>

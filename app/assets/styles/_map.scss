@@ -6,7 +6,7 @@
 
 .static-map {
   width: 100%;
-  height: 400px;
+  height: 600px;
   position: absolute;
   left: 0;
   @include small {
@@ -15,8 +15,8 @@
 }
 
 .map-container {
-  height: 400px;
-  margin: 2rem 0;
+  height: 600px;
+  margin: 2rem 0 4rem;
 }
 
 .static-map__right {

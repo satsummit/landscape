@@ -8,11 +8,11 @@ import _ from 'lodash'
 import Map from './components/map'
 import maps from './config/mapbox'
 
-import CapabilityChart from './components/capability-chart'
-// import CapabilityTable from './components/capability-table'
+// import CapabilityChart from './components/capability-chart'
+import CapabilityTable from './components/capability-table'
 import capabilities from '../data/capability.json'
-// import ResolutionComparison from './components/resolution-comparison'
-// import ToggledResolutionComparison from './components/toggled-resolution-comparison'
+import ResolutionComparison from './components/resolution-comparison'
+import ToggledResolutionComparison from './components/toggled-resolution-comparison'
 
 // Header Interactives
 function openNav() {
@@ -55,24 +55,24 @@ function createCapabilityChart () {
 }
 
 function createCapabilityTable () {
-  let container = document.querySelector('#capabilities-table')
+  let container = document.querySelector('#capabilityTable')
   render(<CapabilityTable data={capabilities} />, container)
 }
 
 function createResolutionComparison () {
-  let container = document.querySelector('#resolution-comparison')
+  let container = document.querySelector('#resolutionComparison')
   render(<ResolutionComparison maps={maps.resolutionComparison.maps}
     token={maps.token} center={[-3.72596, -38.49375]}/>, container)
 }
 
 function createRevisitComparison () {
-  let container = document.querySelector('#revisit-comparison')
+  let container = document.querySelector('#revisitComparison')
   render(<ResolutionComparison maps={maps.revisitComparison.maps}
     token={maps.token} center={[49.8744, -112.9654]}/>, container)
 }
 
 function createToggledResolutionComparison () {
-  let container = document.querySelector('#toggled-resolution-comparison')
+  let container = document.querySelector('#toggledResolutionComparison')
   render(<ToggledResolutionComparison imgTypes={maps.ugandaResolutionComparison.imgTypes}
     maps={maps.ugandaResolutionComparison.maps} token={maps.token}
     center={[0.5037, 33.2964]} messages={maps.ugandaResolutionComparison.messages}/>, container)
@@ -197,7 +197,7 @@ if (document.querySelector('#revisitComparison')) {
   createRevisitComparison()
 }
 
-if (document.querySelector('toggledResolutionComparison')) {
+if (document.querySelector('#toggledResolutionComparison')) {
   createToggledResolutionComparison()
 }
 

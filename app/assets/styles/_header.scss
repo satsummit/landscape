@@ -2,9 +2,22 @@
   position: relative;
 }
 
+.icon-centerer {
+  display: inline-block;
+}
+
+.collecticon-satsummit-logo-symbol-pos {
+  position: absolute;
+  font-size: 4rem;
+  vertical-align: middle;
+  left: 0;
+  top: 0;
+  opacity: 0.25;
+}
+
 .hero-block {
   margin: 0;
-  padding: 1em 2em .75em;
+  padding: 0.75em 2em .75em;
   background-color: $dark-blue;
   position: fixed;
   top: 0;
@@ -12,12 +25,18 @@
   width: 100%;
   z-index: 999;
 
-  h3 {
-    font-weight: 800;
+  h1 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.15rem;
     line-height: 2em;
     color: white;
     margin: 0;
     display: inline-block;
+    transition: 0.4s all;
+    &:hover{
+      opacity: 0.8;
+    }
   }
 
   .logos {
@@ -36,10 +55,11 @@
     width: 188px;
     height: 32px;
   }
+}
 
+.hero-block__title {
   a {
     color: white;
-    font-weight: 800;
   }
 }
 
@@ -63,6 +83,7 @@
       background-color: lighten($lighter-blue, 15);
     }
   }
+  @include linkColors(white, white)
 }
 
 #introduction {

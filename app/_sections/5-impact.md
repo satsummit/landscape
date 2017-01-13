@@ -10,18 +10,14 @@ next: Forest and Agriculture
 
 ---
 
-# Analysis.
+# Impact.
 
 ---
 
-## Deeper and cheaper analysis on the cloud.
+#### These changes in capture, analysis, and distribution will have profound impacts on the Global Development Community.
 
-#### Massive cloud computing resources and analytical tools for working with big datasets make it possible extract new information from imagery.
+Accounting of transportation networks
 
-The combination of new sensors, deeper archives, and better computing ability make it possible to draw sophisticated information from satellite imagery. Development partners can now process imagery on the cloud and don't need to invest in expensive hardware and software.
+More regular imagery makes it possible to monitor the progress of infrastructure projects. High resolution imagery and video can help to measure traffic on roads and road quality. Satellite data and analysis can provide the underlying data to inform infrasturcture investments.
 
-### Insights from invisible light
-
-Many satellites capture wavelengths such as infrared or ultraviolet light that can help to understand characteristics of the surface substances.  Different objects reflect these light frequencies in different ways. Common satellite analysis techniques combine visible and invisible light bands (called "spectral bands") to characterize it. For example, spectral bands covering frequencies in the middle-infrared wavelength regions are responsive to moisture content in vegetation, forest canopy and soil, while near infrared wavelength regions tend to emphasize vegetation health and&#8212; at a courser scale&#8212; overall biomass.
-
-Taken together, the spectral response of each band creates a unique signature, referred to as its spectral curve. The information it communicates can help to separate different types of land cover or derive information about the conditions within a single type of land cover.
+As exemplified in the maps below, in countries lacking infrastructure maps, imagery could offer a cheap way to map the national road network. The highest commercial resolution imagery today (0.3 meters) allows for the detection of narrow, unpaved footpaths. These become invisible at 1.5 meters, at which point the gridded residential roads are the smallest observable feature. This grid remains recognizable at 2.5 meters, but is more likely to confuse with the surrounding vegetation. At 5-meter resolution, even the relatively large secondary road which cuts through the neighborhood becomes difficult to reliably distinguish, making the single primary road which travels the length of Palawan the only visible linear feature.

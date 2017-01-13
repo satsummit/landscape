@@ -15,26 +15,18 @@
 		      <article class="article-padding">
 
 						<!-- Generate Navigation Links-->
-						{% if page.prev == "Introduction" %}
-							{% assign prev-link = '' %}
-						{% else %}
-							{% for s in site.sections %}
-								{% if page.prev == s.title %}
-									{% assign prev-link = s.permalink %}
-								{% endif %}
-								{% if s.title == page.next %}
-									{% assign next-link = s.permalink %}
-								{% endif %}
-							{% endfor %}
-						{% endif %}
-
-						<div class="breadcrumbs">
-							{% if page.parent == 'intro' %}
-								<a href="{{site.baseurl}}/">Introduction</a> / <a href="{{page.permalink}}">{{page.title}}</a>
-							{% elsif page.parent %}
-								<a href="{{site.baseurl}}/{{page.parent}}">{{page.parent | capitalize}}</a> / <a href="{{site.baseurl}}/{{page.permalink}}">{{page.title}}</a>
+						{% for s in site.sections %}
+							{% if page.prev == "Introduction" %}
+								{% assign prev-link = '' %}
+							{% elsif page.prev == s.title %}
+								{% assign prev-link = s.permalink %}
 							{% endif %}
-						</div>
+							{% if s.title == page.next %}
+								{% assign next-link = s.permalink %}
+							{% endif %}
+						{% endfor %}
+
+						{% include mobile-subnav.html %}
 
 		      	{{ content }}
 		      </article>

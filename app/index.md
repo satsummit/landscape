@@ -1,19 +1,20 @@
 ---
 layout: default
 title: Introduction
+permalink: 
 prev: 
-next: New and Planned Sensors
+next: Capture
 
 ---
 
-# Better satellites
+## Better satellites
 
 <div class="map-container">
 	<div id="banner-map" class="static-map static-map__left"></div>
 	<div id="banner-map-2" class="static-map static-map__right"></div>
 </div>
 
-## This is in develompent. Good things to come.
+### This is in development. Good things to come.
 
 We have better systems to capture, analyze, and distribute data about the earth. This is fundamentally improving, and creating, opportunities for impact in global development.
 

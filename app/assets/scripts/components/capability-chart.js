@@ -27,7 +27,7 @@ var Capabilities = React.createClass({
     this.handleResize = _.debounce(function () {
       let node = ReactDOM.findDOMNode(self)
       self.setState({
-        width: node.offsetWidth,
+        width: (node.offsetWidth + 100),
         height: node.offsetHeight
       })
     }, 100)
@@ -65,8 +65,8 @@ var Capabilities = React.createClass({
     let data = this.props.data
 
     let margins = {
-      left: 20,
-      right: 20,
+      left: 220,
+      right: 60,
       top: 80,
       bottom: 120
     }

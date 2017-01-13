@@ -10,18 +10,22 @@ next: Key Concepts
 
 ---
 
-# Analysis.
+# Distribution.
 
 ---
 
-## Deeper and cheaper analysis on the cloud.
+## Data where, when, and how you need it.
 
-#### Massive cloud computing resources and analytical tools for working with big datasets make it possible extract new information from imagery.
+Enterprise grade services offer faster access to new imagery, archival images and derived data products.
 
-The combination of new sensors, deeper archives, and better computing ability make it possible to draw sophisticated information from satellite imagery. Development partners can now process imagery on the cloud and don't need to invest in expensive hardware and software.
+Conventional models of identifying, buying and delivering imagery are giving way to new cloud based selection and delivery models. Users can search through archival content from multiple suppliers to find the best suited imagery, buy the imagery through an enterprise subscription and have it delivered online. New delivery models are not limited to raw imagery. As the value of raw pixels declines, there is greater innovation and competition to provide data products derived from imagery.
 
-### Insights from invisible light
+New business models are making imagery more accessible to development partners. New open data sources are coming available.
+Partnership purchase - Providers are considering new pricing options that make older imagery available for free or at significant discounts. For example, discussions are underway to streamline new licensing models that allow products licensed to the development partner to be accessed by the development partner's clients in country.
+Imagery "rental" - As providers offer analytical and processing services they will create business and pricing models to accompany these services. In some cases analytical tools may come at a premium. Eventually these services will drop in cost. Providers will offer analytical products derived from imagery for less than the cost of the raw imagery itself.
 
-Many satellites capture wavelengths such as infrared or ultraviolet light that can help to understand characteristics of the surface substances.  Different objects reflect these light frequencies in different ways. Common satellite analysis techniques combine visible and invisible light bands (called "spectral bands") to characterize it. For example, spectral bands covering frequencies in the middle-infrared wavelength regions are responsive to moisture content in vegetation, forest canopy and soil, while near infrared wavelength regions tend to emphasize vegetation health and&#8212; at a courser scale&#8212; overall biomass.
+New open satellite systems - Several new satellite systems are coming online, offering open information for development use. E.g.:
 
-Taken together, the spectral response of each band creates a unique signature, referred to as its spectral curve. The information it communicates can help to separate different types of land cover or derive information about the conditions within a single type of land cover.
+- The European Union's Copernicus system will deploy six Sentinel satellites between 2014 and 2021 to monitor land, ocean, emergency response, atmosphere, security and climate change.
+
+- NASA’s satellite launches last year with data to come online with information on climate change. Data from the Global Precipitation Measurement Core Observatory, Orbiting Carbon Observatory-2, and Soil Moisture Active Passive are now coming online.

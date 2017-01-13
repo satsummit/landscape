@@ -41,7 +41,7 @@ module.exports = React.createClass({
     return (
       <div className='inherit-height'>
 
-        <div className='inline-radio-selector'>
+        <div className='inline-radio-selector resolution-map-selectors'>
           {this.props.maps.map((map, i) =>
             <div className='inline-radio-item' key={'radio-selector-' + i}>
               <input type='radio'

@@ -1,0 +1,258 @@
+$table-background-color: tint($mid-blue, 90%);
+$icon-color: #616161;
+
+.unlined-table{
+
+   table {
+    width: 100%;
+    border: none;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+}
+
+.table-block {
+  table {
+    width: 100%;
+    border: 2px solid $mid-blue;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    @include small{
+      display:none;
+    }
+  }
+
+  thead tr th,
+  tbody tr td {
+    vertical-align: middle;
+    font-size: 0.9rem;
+    line-height: 1rem;
+    text-align: left;
+    padding: 1rem;
+  }
+
+  thead tr th,
+  strong {
+    color: $icon-color;
+  }
+
+  td{
+    font-weight: 400;
+    color: tint($mid-blue, 60%);
+    font-size:.8rem;
+  }
+
+}
+
+.values-table{
+
+  tr:nth-of-type(odd) {
+    background: tint($mid-blue, 98%);
+  }
+
+  tr:nth-of-type(even) {
+    background: tint($mid-blue, 90%);
+  }
+
+  thead tr th{
+  background: $mid-blue;
+  border-bottom: 2px solid $mid-blue;
+  color:#fff;
+  }
+
+  h4{
+    @include small{
+      display:none;
+    }
+  }
+
+}
+
+.table-align-top {
+  tbody tr td {
+    vertical-align: top;
+  }
+}
+
+
+.table-centered {
+  tbody tr td,
+  thead tr th {
+    text-align: center;
+  }
+  tbody tr td:first-child {
+    text-align: left;
+    font-weight:600;
+    color:$mid-blue;
+    border-right: 2px solid $mid-blue;
+  }
+}
+
+.sortable {
+  table thead tr th {
+    cursor: pointer;
+    span {
+      cursor: pointer;
+    }
+  }
+}
+
+.icon-table {
+
+  table thead {
+    display: none;
+  }
+
+  tr,
+  tr:nth-of-type(even) {
+    background: tint($mid-blue, 98%);
+  }
+
+  tr td {
+    padding: .75em 1em 1.75em;
+
+    text-align: center;
+    &:last-child {
+      text-align: left;
+    }
+
+    img {
+      margin-bottom: .5em;
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+
+.table-fixed-layout {
+  width: 100%;
+
+  table {
+    table-layout: fixed;
+  }
+
+  tr td:first-child {
+    width: 160px;
+    @include small {
+      width: 100px;
+    }
+  }
+}
+
+.analysis-chart-img{
+  float:left;
+  width:125px;
+  height:125px;
+  margin-top:.3rem;
+  @include small{
+    float: none;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 1em;
+  }
+}
+
+.analysis-chart-text{
+  float:left;
+  margin-left: 2em;
+
+  h5 {
+    margin:0 0 .5rem 0rem;
+    color: $mid-orange;
+    font-weight: 600;
+    font-size:1em;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color: tint($dark-blue, 55%);
+    font-weight:400;
+  }
+
+  @include small {
+    float: none;
+    margin-left: 0;
+  }
+}
+
+.distribution {
+
+  .distribution-card{
+    background-color: tint($mid-blue, 90%);
+    padding:2em;
+    margin-bottom:1em;
+    @include small {
+      padding: 1em;
+    }
+  }
+
+  .distribution-img {
+    float:left;
+    width:150px;
+    @include small {
+      float:none;
+      margin: 0 auto;
+    }
+  }
+
+  .distribution-text{
+      margin-left:10em;
+      @include small{
+        margin: 0;
+      }
+  }
+
+  table{
+    margin-left:0;
+    margin-top:1rem;
+    border:none;
+    background-color: tint($mid-blue, 98%);
+  }
+
+  table thead{
+    background-color: tint($mid-blue, 98%);
+  }
+
+  h2{
+    font-size: 1.2em;
+    line-height: 1.3em;
+    color: tint($dark-blue, 30%);
+  }
+
+  h4{
+    color: $mid-orange;
+    line-height: 1em;
+    padding-bottom: .5em;
+    border-bottom:1px solid tint($mid-blue, 70%);
+    margin-bottom: 0.5em;
+
+  }
+
+  h5{
+    font-size:1em;
+  }
+
+  p{
+    font-size: 1.2em;
+    margin-bottom: 0;
+  }
+
+  .table-block table{
+  margin: 0;
+  border: none;
+  }
+
+  .values-table thead tr th{
+  background-color: transparent;
+  }
+
+  table thead tr th, table thead tr td{
+    font-size: 1em;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+
+}
