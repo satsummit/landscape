@@ -6,7 +6,6 @@ a {
 }
 
 li {
-  list-style: none;
 }
 
 .container-article {
@@ -119,6 +118,7 @@ table {
   background-color: #fafafa;
   border: 1px solid rgba(0,0,0,0.2);
   max-width: 100%;
+  margin: 2rem 0 3rem;
 }
 
 thead {
@@ -130,12 +130,13 @@ th {
   font-size: 0.9rem;
   color: white;
   background-color: $mid-green;
-  transition: all 0.2s;
   border-bottom: 3px solid darken($mid-green, 20);
+}
+
+.capability-table-item {
   cursor: pointer;
-  &:hover {
-    background-color: lighten($mid-green, 10);
-    border-bottom: 3px solid darken($mid-green, 10);
+  &:hover{
+    background-color: lighten($mid-green, 5);
   }
 }
 
@@ -194,8 +195,50 @@ hr {
 .resolution-map-selectors {
   position: absolute;
   z-index: 100;
+  margin-top: 1em;
+  left: 1rem;
+  border: 1px solid grey;
+  border-radius: 3px;
+  background-color: white;
 }
 
 .radio-item {
   display: block;
+}
+
+.image-container-solution {
+  span {
+    font-style: italic;
+  }
+}
+
+.inline-radio-title {
+  text-align: center;
+  background-color: $mid-blue;
+  color: white;
+  border-bottom: 1px solid darken($mid-blue, 20);
+  h3 {
+    padding: 0.5rem 0;
+    margin-bottom: 0;
+  }
+}
+
+.landslide-model-slider {
+  width: 250px;
+  position: absolute;
+  z-index: 4000;
+  margin: 1rem 0 0 1rem;
+  padding: 0.75rem 1rem 0.5rem 1rem;
+  border: 1px solid grey;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.range-labels {
+
+}
+
+#landslide-model-range {
+  margin-top: 0.5rem;
+  width: 100%;
 }

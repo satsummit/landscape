@@ -5,18 +5,18 @@ permalink: impact/forest-and-agriculture.html
 title: "Forest and Agriculture"
 parent: impact
 
-prev: Impact
+prev: Accounting of Transportation Networks
 next: Disaster Reduction and Response
 
 ---
 
-# Forest and Agriculture.
+# Forest and Agriculture
 
 ---
 
-<div id=""></div>
-
 Due to the massive size and limited accessibility of forests, satellites have long been an indispensable tool for forest management. Satellite imagery derived forest maps measure increases in greenhouse gas emissions from deforestation, detect illegal logging activities, evaluate the availability and use of wood as cooking fuel, and assess the environmental impact of infrastructure projects such as road construction.
+
+<div id="uganda-agriculture-comparison"></div>
 
 In agriculture, satellite imagery measures agricultural productivity. Imagery shows crop type and area of coverage, estimates rainfall, measures the effectiveness of irrigation systems, and evaluates the risk of droughts and floods. Satellite data is used for everything from developing insurance products for small farmers to early warning systems for detecting decreasing agricultural production.
 

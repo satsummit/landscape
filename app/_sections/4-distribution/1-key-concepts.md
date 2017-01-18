@@ -10,12 +10,13 @@ next: Additional Concepts
 
 ---
 
-# Key Concepts.
+# Key Concepts
 
 ---
 
-- Imagery has clouds. And looking at a large area involves multiple scenes that usually don't match up well.
-_Solution: mosaics_
+
+
+{% include side-image.html definition="Imagery has clouds. And looking at a large area involves multiple scenes that usually don't match up well." image="mosaic_icon.svg" solution="mosiacs" %}
 
 - Mosaics blend together imagery from multiple scenes into a single, cloudfree seam-less image. E.g. DigitalGlobe Vivid+, _Planet Labs seasonal mosaics_
 

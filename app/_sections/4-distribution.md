@@ -10,11 +10,11 @@ next: Key Concepts
 
 ---
 
-# Distribution.
+## Distribution
 
 ---
 
-## Data where, when, and how you need it.
+# Data where, when, and how you need it.
 
 Enterprise grade services offer faster access to new imagery, archival images and derived data products.
 

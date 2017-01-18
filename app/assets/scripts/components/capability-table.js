@@ -52,7 +52,8 @@ var CapabilitiesTable = React.createClass({
             {headers.map((header, i) =>
               <th key={'capability-table-header-' + i}
                 onClick={this._sort}
-                data-sort={header.sort}>{header.display} &#9660;</th>
+                data-sort={header.sort}
+                className='capability-table-item'>{header.display} &#9660;</th>
             )}
           </tr>
         </thead>

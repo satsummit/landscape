@@ -35,6 +35,10 @@ module.exports = React.createClass({
     options.attributionControl = {compact: true}
     this.map = L.mapbox.map(node, id, options)
 
+    if (this.map.zoomControl) {
+      this.map.zoomControl.setPosition('topright')
+    }
+
     if (this.map.tap) {
       this.map.tap.disable()
       this.map.dragging.disable()

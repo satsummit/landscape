@@ -73,16 +73,7 @@ module.exports = React.createClass({
 
         {messageBox}
 
-        <div className='map-container'>
-          <div id='resolution-map' className='static-map'>
-            <MapComponent
-              options={options}
-              id={'resolution-' + options.id}
-            />
-          </div>
-        </div>
-
-        <div className='inline-radio-selector-embedded'>
+        <div className='inline-radio-selector-embedded resolution-map-selectors'>
           {this.props.imgTypes.map((imgType, i) =>
             <div className='inline-radio-item-embedded' key={'radio-selector-' + i}>
               <input type='radio'
@@ -96,6 +87,15 @@ module.exports = React.createClass({
                 className='radio-item-label'>{imgType.display}</label>
             </div>
           )}
+        </div>
+
+        <div className='map-container'>
+          <div id='resolution-map' className='static-map'>
+            <MapComponent
+              options={options}
+              id={'resolution-' + options.id}
+            />
+          </div>
         </div>
 
       </div>

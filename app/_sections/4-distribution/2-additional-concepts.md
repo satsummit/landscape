@@ -10,7 +10,7 @@ next: Impact
 
 ---
 
-# Additional Concepts.
+# Additional Concepts
 
 ---
 

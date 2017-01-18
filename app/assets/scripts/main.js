@@ -61,13 +61,13 @@ function createCapabilityTable () {
 
 function createResolutionComparison () {
   let container = document.querySelector('#resolutionComparison')
-  render(<ResolutionComparison maps={maps.resolutionComparison.maps}
+  render(<ResolutionComparison title='Spatial Resolution' maps={maps.resolutionComparison.maps}
     token={maps.token} center={[-3.72596, -38.49375]}/>, container)
 }
 
 function createRevisitComparison () {
   let container = document.querySelector('#revisitComparison')
-  render(<ResolutionComparison maps={maps.revisitComparison.maps}
+  render(<ResolutionComparison title='Temporal Resolution' maps={maps.revisitComparison.maps}
     token={maps.token} center={[49.8744, -112.9654]}/>, container)
 }
 
@@ -201,19 +201,19 @@ if (document.querySelector('#toggledResolutionComparison')) {
   createToggledResolutionComparison()
 }
 
-if (document.querySelector('roadsComparison')) {
+if (document.querySelector('#palawan-roads-comparison')) {
   createRoadsComparisonPalawan()
 }
 
-if (document.querySelector('agricultureComparison')) {
+if (document.querySelector('#uganda-agriculture-comparison')) {
   createAgricultureComparisonUganda()
 }
 
-if (document.querySelector('landslideModel')) {
+if (document.querySelector('#landslide-model-map')) {
   createLandslideModel()
 }
 
-if (document.querySelector('comparisonSlider')) {
+if (document.querySelector('#comparisonSlider')) {
   createComparisonSlider()
 }
 
@@ -223,7 +223,6 @@ if (document.querySelector('comparisonSlider')) {
 // createResolutionComparison()
 // createRevisitComparison()
 // createToggledResolutionComparison()
-// createRoadsComparisonPalawan()
 // createAgricultureComparisonUganda()
 // createLandslideModel()
 // createComparisonSlider()
