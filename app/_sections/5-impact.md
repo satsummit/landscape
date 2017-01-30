@@ -14,4 +14,4 @@ next: Accounting of Transportation Networks
 
 ---
 
-#### These changes in capture, analysis, and distribution will have profound impacts on the Global Development Community.
+#### Changes in capture, analysis, and distribution of satellite imagery will have profound impacts on the Global Development Community.
