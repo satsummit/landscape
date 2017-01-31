@@ -26,8 +26,6 @@ An important factor regarding the use of satellite images is the License of the 
 
 ### Satellite Providers
 
-<img src="../assets/graphics/content/satellite-chart.svg" class="satellite-chart"/>
-
 <div class="table-container">
   <div id="capabilityTable" class=""></div>
 </div>
