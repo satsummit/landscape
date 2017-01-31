@@ -5,7 +5,7 @@ permalink: capture/
 title: Capture
 type: title-page
 
-prev: 
+prev: Introduction
 next: Spatial and Temporal Resolution
 
 ---
@@ -23,6 +23,10 @@ A typical serviced satellite image (bought or downloaded) includes several proce
 ### Data license
 
 An important factor regarding the use of satellite images is the License of the data. It is important to understand the limitations, reusability and distribution restrictions of the data. For open data, like Landsat, there are no restriction on use. For high-resolution image purchases, however, usage is typically restricted to a project, and only rendered maps are publishable. Tracing rights for open platforms are sometimes granted, but License terms vary widely on a user or usage basis.
+
+### Satellite Providers
+
+<img src="../assets/graphics/content/satellite-chart.svg" class="satellite-chart"/>
 
 <div class="table-container">
   <div id="capabilityTable" class=""></div>

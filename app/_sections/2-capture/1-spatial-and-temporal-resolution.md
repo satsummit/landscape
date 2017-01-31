@@ -35,7 +35,7 @@ Accuracy refers to the possible difference between the reported locations on the
 The imagery samples below can help select the right imagery for your project.
 In an urban environment like Fortaleza, free pan-sharpened Landsat imagery (15m) shows the extent of the city. Medium resolution imagery like RapidEye (5m) shows roads. With Worldview 3 (.3m) and Pleiades (.5m) images you can count beach umbrellas.
 
-<div id="resolutionComparison"></div>
+<div id="resolutionComparison" class="extra-bottom-margin"></div>
 
 ### What temporal resolution do I need?
 

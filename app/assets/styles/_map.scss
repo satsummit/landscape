@@ -10,13 +10,17 @@
   position: absolute;
   left: 0;
   @include small {
-    height: 320px;
+    height: 500px;
   }
 }
 
 .map-container {
   height: 600px;
-  margin: 2rem 0 4rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  @include small {
+    height: 500px;
+  }
 }
 
 .static-map__right {
