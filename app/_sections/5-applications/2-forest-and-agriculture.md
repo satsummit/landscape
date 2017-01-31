@@ -1,9 +1,9 @@
 ---
 layout: default
 scripts:
-permalink: impact/forest-and-agriculture.html
+permalink: applications/forest-and-agriculture.html
 title: "Forest and Agriculture"
-parent: impact
+parent: applications 
 
 prev: Accounting of Transportation Networks
 next: Disaster Reduction and Response

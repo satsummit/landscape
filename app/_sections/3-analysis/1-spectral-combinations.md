@@ -1,8 +1,8 @@
 ---
 layout: default
 scripts:
-permalink: analysis/spectral-combinations.html
-title: "Spectral Combinations"
+permalink: analysis/spectral-bands.html
+title: "Spectral Bands"
 parent: analysis
 
 prev: Analysis
@@ -10,9 +10,15 @@ next: Advanced Analysis
 
 ---
 
-# Spectral Combinations
+# Spectral Bands
 
 ---
+
+Many modern satellites collect infrared and ultraviolet light not visible to the human eye. This information can be used to measure vegetation health, to monitor biomass, or to track forest fires. Newer laser and Radar-based sensors precisely scan the earth, eliminating weather dependencies, producing 3D earth models, and enabling better change detection.
+
+In this imagery over rural Uganda, near-infrared sensors augment imagery to highlight vegetation (False Color) and to measure the health of that vegetation (NDVI). These images show a range of imagery resolutions from different growing seasons.
+
+<div id="toggledResolutionComparison"></div>
 
 There are several well-known combinations that are optimized to provide maximum contrast between categories of interest under various use cases.
 
@@ -20,13 +26,11 @@ There are several well-known combinations that are optimized to provide maximum 
 | --- | --- | --- |
 | Natural Color (actual RGB) | 0.64-0.67&#xb5;m | 0.53-0.59&#xb5;m | 0.45-0.51&#xb5;m | 4 3 2 |
 | False Color (urban) | 2.11-2.29&#xb5;m | 1.57-1.65&#xb5;m | 0.64-0.67&#xb5;m | 7 6 4 |
-| Color Infrared (vegetation) | 0.85-0.88&#xb5;m | 0.64-0.67&#xb5;m | 0.53-0.59&#xb5;m | 5 4 3 |
 | Agriculture | 0.85-0.88&#xb5;m | 0.64-0.67&#xb5;m | 0.53-0.59&#xb5;m | 5 4 3 |
 | Atmospheric Penetration | 2.11-2.29&#xb5;m | 1.57-1.65&#xb5;m | 0.85-0.88&#xb5;m | 7 6 5 |
 | Healthy Vegetation | 0.85-0.88&#xb5;m | 1.57-1.65&#xb5;m | 0.45-0.51&#xb5;m | 5 6 2 |
 | Land/Water | 0.85-0.88&#xb5;m | 1.57-1.65&#xb5;m | 0.64-0.67&#xb5;m | 5 6 4 |
 | Natural With Atmospheric Removal | 2.11-2.29&#xb5;m | 0.85-0.88&#xb5;m | 0.53–0.59&#xb5;m | 7 5 3 |
-| Shortwave Infrared | 2.11-2.29&#xb5;m | 0.85-0.88&#xb5;m | 0.53–0.59&#xb5;m | 7 5 3 |
 | Vegetation Analysis | 1.57-1.65&#xb5;m | 0.85-0.88&#xb5;m | 0.64-0.67&#xb5;m | 6 5 4 |
 
 #### Mathematic spectral transformations

@@ -1,11 +1,11 @@
 ---
 layout: default
 scripts:
-permalink: impact/accounting-of-transportation-networks.html
+permalink: applications/accounting-of-transportation-networks.html
 title: "Accounting of Transportation Networks"
-parent: impact
+parent: applications
 
-prev: Impact
+prev: Applications
 next: Forest and Agriculture
 
 ---

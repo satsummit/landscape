@@ -1,9 +1,9 @@
 ---
 layout: default
 scripts:
-permalink: impact/disaster-reduction-and-response.html
+permalink: applications/disaster-reduction-and-response.html
 title: "Disaster Reduction and Response"
-parent: impact
+parent: applications 
 
 prev: Forest and Agriculture
 next: Tools

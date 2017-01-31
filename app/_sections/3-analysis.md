@@ -5,7 +5,7 @@ permalink: analysis/
 title: Analysis
 type: title-page
 
-prev: Spectral Bands
+prev: Spatial and Temporal Resolution
 next: Spectral Combinations
 
 ---
