@@ -10,7 +10,7 @@ next: Tools
 
 ---
 
-# Disaster reduction and response
+# Disaster Reduction and Response
 
 ---
 

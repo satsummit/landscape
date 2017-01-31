@@ -10,13 +10,13 @@ next: null
 
 ---
 
-# Analysis.
+# Analysis
 
 ---
 
-## Deeper and cheaper analysis on the cloud.
+## Deeper and cheaper analysis on the cloud
 
-#### Massive cloud computing resources and analytical tools for working with big datasets make it possible extract new information from imagery.
+#### Massive cloud computing resources and analytical tools for working with big datasets make it possible extract new information from imagery
 
 The combination of new sensors, deeper archives, and better computing ability make it possible to draw sophisticated information from satellite imagery. Development partners can now process imagery on the cloud and don't need to invest in expensive hardware and software.
 

@@ -14,7 +14,7 @@ next: Spectral Combinations
 
 ---
 
-# Deeper and cheaper analysis in the cloud
+# Deeper and Cheaper Analysis in the Cloud
 
 #### Massive cloud computing resources and analytical tools for working with big datasets make it possible extract new information from imagery
 

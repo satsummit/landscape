@@ -14,7 +14,7 @@ next: Key Concepts
 
 ---
 
-# Data where, when, and how you need it
+# Data Where, When, and How You Need It
 
 Enterprise grade services offer faster access to new imagery, archival images and derived data products.
 

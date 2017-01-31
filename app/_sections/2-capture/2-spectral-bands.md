@@ -10,7 +10,7 @@ next: Analysis
 
 ---
 
-# Spectral Bands.
+# Spectral Bands
 
 ---
 
