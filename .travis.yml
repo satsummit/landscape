@@ -5,7 +5,6 @@ env:
   global:
   - GH_REF=github.com/satsummit/landscape.git
   - DEPLOY_BRANCH=master
-  - secure: "LJl9vE/IhdmiA/k3flK3N1KK3Vnnhrk+19YCHeYTbs6ZIRiv3RaTLO57uAc4MqvzdCZw6N4Ky1NO9+Mto08/GNIriUGfBU+tsqc1I6og++fJkjySbZ6d3MXytdismhz1AzIG09wOQg2uDSzGG2Ua4nAI+2PZyiNmyAz//Vr+pkdC9xfDNZESbW0XG+xyHUhhlrbvGhyF1u7Fno/Vf0bcUmDQxdXYZsHIAF/VxsptgRjxHPb/VDq9bHhFEtS16+zUp6Jc255XOZpUMn5+7DHk9RlN6Ki85yTnmEsdXWwDGr6B/nyt9b8IdsNAc7vbzLqWLRgCV5VKDh5phbOjvFJG51S8Jrc1Yz6vU2HgN5fuw0v03jhIl6M6uF5BbQMzLQQRrKpr7hXNBf0ymy9cHpCvnRCSLWWT3BO61OnCZJaCfpAPVXOye2BoZfPZIVDBpqxRV7gMVETJQuvsBE6pUILPk7M4jXiCq0nUreWhyVq5MaPvQvB/6ypa6TvRXTV6AB8GysQsqw4+Jc1GneFpM6YFHN5kMVBdXAI3EypxkTH1X/aEhMEA/27y1NbDt+K3MmTY2nFhUf/RYN/fqWXo910hw1xkX7iUcazvOP4hXATwaHRiFFpVxDcS/4SyMtxmJWMg7UzBLgTKqHkJrNph1RCoszCwJPAxNHlT10PEItJ9f0Q="
 cache:
   directories:
   - node_modules
