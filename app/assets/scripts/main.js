@@ -8,7 +8,7 @@ import _ from 'lodash'
 import Map from './components/map'
 import maps from './config/mapbox'
 
-// import CapabilityChart from './components/capability-chart'
+import CapabilityChart from './components/capability-chart'
 import CapabilityTable from './components/capability-table'
 import capabilities from '../data/capability.json'
 import ResolutionComparison from './components/resolution-comparison'
@@ -75,12 +75,12 @@ function createToggledResolutionComparison () {
   let container = document.querySelector('#toggledResolutionComparison')
   render(<ToggledResolutionComparison imgTypes={maps.ugandaResolutionComparison.imgTypes}
     maps={maps.ugandaResolutionComparison.maps} token={maps.token}
-    center={[0.5037, 33.2964]} messages={maps.ugandaResolutionComparison.messages}/>, container)
+    center={[0.5037, 33.2964]} title='Spectral Bands' messages={maps.ugandaResolutionComparison.messages}/>, container)
 }
 
 function createRoadsComparisonPalawan () {
   let container = document.querySelector('#palawan-roads-comparison')
-  render(<ResolutionComparison maps={maps.palawanRoadsComparison.maps}
+  render(<ResolutionComparison title='Visible Road Networks by Resolution' maps={maps.palawanRoadsComparison.maps}
     token={maps.token} center={[10.14524, 119.2151]}/>, container)
 }
 
