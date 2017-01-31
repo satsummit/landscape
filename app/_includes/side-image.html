@@ -1,0 +1,16 @@
+<div class="image-container">
+	<div class="image-container-left">
+		<img class="" src="../assets/graphics/content/{{ include.image }}" />
+	</div>
+	<div class="image-container-right">
+		<dt><h4>{{ include.title }}</h4></dt>
+		<dd class="image-container-defintion">
+			{{ include.definition }}
+		</dd>
+		{% if include.solution %}
+			<dd class="image-container-solution">
+				Solution: <span>{{ include.solution }}</span>
+			</dd>
+		{% endif %}
+	</div>
+</div>

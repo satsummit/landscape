@@ -1,46 +1,57 @@
+@charset "utf-8";
 
-$base-font-family: 'Roboto', Helvetica, Arial, sans-serif;
+// Our variables
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
 
-//color palette
-$dark-blue: #091E2C;
-$mid-blue: #45535A;
+$spacing-unit:     30px;
+
+$dark-blue: #0C1B34;
+$mid-blue: #7A8497;
+$lighter-blue: #525C6F;
+$mid-green: #81A365;
 $highlight-blue: #60888F;
-$off-white: #F6F6EA;
-$highlight-orange: #A54023;
+$mid-orange: #F9634E;
 
-$base-color: #131313;
-$body-color: #000;
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
 
-$base-background-color: #FEFEFE;
-$base-background-rgba: rgba(254, 254, 254, .9);
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
 
-$strong-color: rgb(9, 45, 58);
-$strong-rgba: rgba(9, 45, 58, .8);
+// Width of the content area
+$content-width:    800px;
 
-$inactive: #D1D3D4;
+$on-palm:          600px;
+$on-laptop:        800px;
 
-$input-background: #939393;
-$border-color: lighten(#5E5E5E, 15%);
+/* Use media queries like this:
+ @include media-query($on-palm) {
+     .wrapper {
+         padding-right: $spacing-unit / 2;
+         padding-left: $spacing-unit / 2;
+     }
+ }*/
 
-$table-font-size: .9rem;
-$table-line-height: 1.6em;
-
-@mixin box-shadow {
-  box-shadow: 0px 1px 5px 0px rgba(0,0,0,.1);
-}
-
-@mixin inset-shadow {
-  box-shadow: inset 0px 1px 5px 0px rgba(0,0,0,.3);
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
 }
 
 @mixin small {
-  @media only screen and (max-width: 40em) {
+  @media only screen and (max-width: 50em) {
     @content;
   }
 }
 
 @mixin medium {
-  @media only screen and (min-width: 40.063em) {
+  @media only screen and (min-width: 50.063em) {
     @content;
   }
 }
@@ -56,4 +67,22 @@ $table-line-height: 1.6em;
     @content;
   }
 }
+
+@mixin linkColors($regular, $active) {
+  color: $regular;
+  &:visited {
+    color: $regular;
+  }
+  &:active {
+    color: $active;
+  }
+  &:hover {
+    color: $active;
+    text-decoration: none;
+  }
+  &:focus {
+    color: $active;
+  }
+}
+
 

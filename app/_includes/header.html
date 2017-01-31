@@ -1,0 +1,29 @@
+<header id="header" class="hero">
+	<div class="hero-block">
+	  <h1 class="hero-block__title"><a href="{{site.baseurl}}/" class="icon-centerer"><i class="collecticon collecticon-satsummit-logo-symbol-pos"></i> Satellites in Global Development</a></h1>
+		<!-- Mobile Nav -->
+		<div id="mySidenav" class="sidenav">
+		  <a href="javascript:void(0)" class="closebtn">&times;</a>
+			<ul class="secondnav">
+			  <li class="sidebar--title sidebar--title__first {% if page.title == 'Introduction' %}siderbar--item__active{% endif %}"><a href="/">Introduction</a></li>
+			  {% for s in site.sections %}
+			    {% if s.parent %}
+			      <li class="sidebar--subsection {% if page.title == s.title %}siderbar--item__active{% endif %}"><a href="{{site.baseurl}}/{{s.permalink}}">{{s.title}}</a></li>
+			    {% else %}
+			      <li class="sidebar--title {% if page.title == s.title %}siderbar--item__active{% endif %}"><a href="{{site.baseurl}}/{{s.permalink}}">{{s.title}}</a></li>
+			    {% endif %}
+			  {% endfor %}
+			</ul>
+		</div>
+
+	  <!-- Mobile Nav Opener -->
+		<nav class="nav--trigger"><i class="collecticon collecticon-hamburger-menu"></i></nav>
+
+	  <!-- Contribute Block -->
+	  <a href="https://github.com/satsummit/landscape" target="_blank">
+	    <div class="contribute-block">
+	    	<i class="collecticon collecticon-github"></i>CONTRIBUTE
+	    </div>
+	  </a>
+	</div>
+</header>

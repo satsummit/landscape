@@ -1,4 +1,4 @@
-$table-background-color: tint($body-color, 90%);
+$table-background-color: tint($mid-blue, 90%);
 $icon-color: #616161;
 
 .unlined-table{
@@ -26,8 +26,8 @@ $icon-color: #616161;
   thead tr th,
   tbody tr td {
     vertical-align: middle;
-    font-size: $table-font-size;
-    line-height: $table-line-height;
+    font-size: 0.9rem;
+    line-height: 1rem;
     text-align: left;
     padding: 1rem;
   }
@@ -39,7 +39,7 @@ $icon-color: #616161;
 
   td{
     font-weight: 400;
-    color: tint($body-color, 60%);
+    color: tint($mid-blue, 60%);
     font-size:.8rem;
   }
 
@@ -48,7 +48,7 @@ $icon-color: #616161;
 .values-table{
 
   tr:nth-of-type(odd) {
-    background: tint($body-color, 98%);
+    background: tint($mid-blue, 98%);
   }
 
   tr:nth-of-type(even) {
@@ -106,7 +106,7 @@ $icon-color: #616161;
 
   tr,
   tr:nth-of-type(even) {
-    background: tint($body-color, 98%);
+    background: tint($mid-blue, 98%);
   }
 
   tr td {
@@ -160,7 +160,7 @@ $icon-color: #616161;
 
   h5 {
     margin:0 0 .5rem 0rem;
-    color: $highlight-orange;
+    color: $mid-orange;
     font-weight: 600;
     font-size:1em;
   }
@@ -209,11 +209,11 @@ $icon-color: #616161;
     margin-left:0;
     margin-top:1rem;
     border:none;
-    background-color: tint($body-color, 98%);
+    background-color: tint($mid-blue, 98%);
   }
 
   table thead{
-    background-color: tint($body-color, 98%);
+    background-color: tint($mid-blue, 98%);
   }
 
   h2{
@@ -223,7 +223,7 @@ $icon-color: #616161;
   }
 
   h4{
-    color: $highlight-orange;
+    color: $mid-orange;
     line-height: 1em;
     padding-bottom: .5em;
     border-bottom:1px solid tint($mid-blue, 70%);

@@ -1,9 +1,17 @@
 /*
  * App config overrides for staging.
- *
- * The travis build will copy this file as `config.local.js` whenever it's
- * running on a branch other than the DEPLOY_BRANCH.
  */
+
+// set staging-specific options here.
 module.exports = {
+  environment: 'staging'
 
 };
+
+// copy over any production settings that weren't specifically set above
+var production = require('./production');
+for (var p in production) {
+  if (typeof module.exports[p] === 'undefined') {
+    module.exports[p] = production[p];
+  }
+}

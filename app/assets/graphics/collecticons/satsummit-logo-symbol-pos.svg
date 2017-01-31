@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="256px" height="160px" viewBox="0 0 256 160" enable-background="new 0 0 256 160" xml:space="preserve">
+<path fill="#2423DD" d="M176,32l-32,32V16L128,0l-16,16v48L80,32H0v96h80l32-32v64h32V96l32,32h80V32H176z M32,112H16V48h16V112z
+	 M64,112H48V48h16V112z M208,112h-16V48h16V112z M240,112h-16V48h16V112z"/>
+</svg>

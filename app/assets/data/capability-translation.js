@@ -1,10 +1,4 @@
 module.exports = {
-  live: {
-    display: "Operational",
-    fn: function (x) {
-      return x;
-    }
-  },
   open: {
     display: "Open Data",
     fn: function (x) {

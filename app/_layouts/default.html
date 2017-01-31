@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	{% include head.html  %}
+
+	<body>
+
+		{% include header.html %}
+
+		<div class="container">
+		  <div class="container-sidenav">
+				{% include sidenav.html %}
+
+		    <div class="container-article">
+		      <article class="article-padding">
+
+						<!-- Generate Navigation Links-->
+						{% for s in site.sections %}
+							{% if page.prev == "Introduction" %}
+								{% assign prev-link = '' %}
+							{% elsif page.prev == s.title %}
+								{% assign prev-link = s.permalink %}
+							{% endif %}
+							{% if s.title == page.next %}
+								{% assign next-link = s.permalink %}
+							{% endif %}
+						{% endfor %}
+
+						{% include mobile-subnav.html %}
+
+		      	{{ content }}
+		      </article>
+
+				{% include footer.html %}
+		    </div>
+		  </div>
+		</div>
+
+	</body>
+
+<!-- build:js /assets/scripts/vendor.js -->
+<script src="/assets/scripts/vendor.js"></script>
+<!-- endbuild -->
+<!-- build:js /assets/scripts/bundle.js -->
+<script src="/assets/scripts/bundle.js"></script>
+<!-- endbuild -->
+
+</html>

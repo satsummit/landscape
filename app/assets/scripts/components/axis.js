@@ -1,6 +1,6 @@
-let React = require('react');
-let classNames = require('classnames');
-let _ = require('lodash');
+import React from 'react'
+import classNames from 'classnames'
+import _ from 'lodash'
 
 var Axis = React.createClass({
   displayName: 'Axis',
@@ -13,34 +13,33 @@ var Axis = React.createClass({
   },
 
   render: function () {
-
     let {
       orientation,
       scale,
       domain,
       format
-    } = this.props;
+    } = this.props
 
-    let [x1, x2] = _.map(domain, scale);
+    let [x1, x2] = _.map(domain, scale)
 
-    let y1 = 0;
-    let y2 = 0;
+    let y1 = 0
+    let y2 = 0
 
     if (orientation === 'vertical') {
-      y1 = x1;
-      y2 = x2;
-      x1 = 0;
-      x2 = 0;
+      y1 = x1
+      y2 = x2
+      x1 = 0
+      x2 = 0
     }
 
-    if (!format) { format = scale; }
+    if (!format) { format = scale }
 
     if (isNaN(x1) || isNaN(x2) || isNaN(y1) || isNaN(y2) ||
         typeof scale.ticks !== 'function') {
-      return <g></g>;
+      return <g></g>
     }
 
-    let ticks = scale.ticks(4);
+    let ticks = scale.ticks(4)
 
     return (
       <g className={classNames('axis', orientation)}>
@@ -55,14 +54,10 @@ var Axis = React.createClass({
             textAnchor={orientation === 'vertical' ? 'end' : 'middle'} >
             {format(tick)}
           </text>
-
         )}
-
       </g>
-
-    );
-
+    )
   }
-});
+})
 
 module.exports = Axis;

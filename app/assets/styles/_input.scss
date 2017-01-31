@@ -29,7 +29,7 @@
 .button:link,
 .button:active,
 .button:visited {
-  color: $base-color;
+  color: $dark-blue;
 }
 
 .button {
@@ -40,19 +40,19 @@
   position: relative;
   text-decoration: none;
   display: inline-block;
-  border: 1px solid lighten($border-color, 35%);
+  border: 1px solid lighten(black, 35%);
   border-radius: 3px;;
   text-align: center;
   font-weight: 700;
-  background-color: $base-background-color;
+  background-color: red;
 
-  @include box-shadow;
+/*  @include box-shadow;
   &:active {
     @include inset-shadow;
-  }
+  }*/  
   &:hover {
-    background-color: $strong-color;
-    color: $base-background-color;
+    background-color: blue;
+    color: red;
   }
 }
 
@@ -87,10 +87,10 @@
   }
 
   &:hover {
-    background-color: darken($base-background-rgba, 1%);
+    background-color: blue;
 
     label {
-      color: tint($highlight-orange, 60%);
+      color: orange;
     }
 
     .impact {
@@ -102,10 +102,6 @@
 
 // Radio selector
 .inline-radio-selector {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
   margin-bottom: 1em;
 }
 
@@ -127,7 +123,7 @@ input.radio-item {
     float: left;
     line-height: 2.5em;
     text-indent: 1rem;
-    margin-top: 1em;
+    margin-top: 0em;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -142,14 +138,14 @@ input.radio-item {
 }
 
 .radio-item-label {
-  border: 2px solid $mid-blue;
   padding-right: 1em;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 &:checked ~ .radio-item-label {
-    background-color: $mid-blue;
+    background-color: lighten($mid-blue,20)
 }
 
 &:hover:not(:checked) ~ .radio-item-label {
-    background-color: tint($mid-blue, 80%);
+    background-color: lighten($mid-blue, 25);
 }

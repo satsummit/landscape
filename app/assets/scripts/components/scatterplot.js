@@ -1,8 +1,8 @@
-let React = require('react');
-let d3 = require('d3');
-let ReactTooltip = require('react-tooltip');
-let _ = require('lodash');
-let Axis = require('./axis');
+import React from 'react'
+import d3 from 'd3'
+import ReactTooltip from 'react-tooltip'
+import _ from 'lodash'
+import Axis from './axis'
 
 var Scatterplot = React.createClass({
 
@@ -21,10 +21,10 @@ var Scatterplot = React.createClass({
 
   getInitialState: function () {
     return {
-      scales: { x: (x) => x, y: (x) => x},
+      scales: {x: (x) => x, y: (x) => x},
       domains: { x: [0, 0], y: [0, 0] },
       points: []
-    };
+    }
   },
 
   // Hardcoded based on size of icon we're using.
@@ -35,26 +35,26 @@ var Scatterplot = React.createClass({
       props.height !== this.props.height ||
       props.xIndicator !== this.props.xIndicator ||
       props.yIndicator !== this.props.yIndicator) {
-      this.setState(this._calcScales(_.extend({}, this.props, props)));
+      this.setState(this._calcScales(_.extend({}, this.props, props)))
     }
   },
 
   _calcScales: function ({width, height, data, xIndicator, yIndicator, xFormat, yFormat}) {
     _.each(_.clone(data), function (d) {
-      d.x = d[xIndicator] === null ? null : +d[xIndicator];
-      d.y = d[yIndicator] === null ? null : +d[yIndicator];
-    });
+      d.x = d[xIndicator] === null ? null : +d[xIndicator]
+      d.y = d[yIndicator] === null ? null : +d[yIndicator]
+    })
 
-    let points = _.filter(data, (d) => d.x !== null && d.y !== null);
+    let points = _.filter(data, (d) => d.x !== null && d.y !== null)
 
     if (!points.length) {
-      return {width, height};
+      return {width, height}
     }
 
     let domains = {
-      x: d3.extent(_.pluck(points, 'x')),
-      y: d3.extent(_.pluck(points, 'y'))
-    };
+      x: d3.extent(_.map(points, 'x')),
+      y: d3.extent(_.map(points, 'y'))
+    }
 
     let scales = {
       x: d3.scale.linear()
@@ -64,51 +64,50 @@ var Scatterplot = React.createClass({
       y: d3.scale.linear()
         .domain([0, 15])
         .range([height, 0])
-    };
+    }
 
     _.each(points, function (d, i) {
-      d.left = scales.x(d.x);
-      d.top = scales.y(d.y);
+      d.left = scales.x(d.x)
+      d.top = scales.y(d.y)
 
-      d.xLabel = xFormat(d.x);
-      d.yLabel = yFormat(d.y);
+      d.xLabel = xFormat(d.x)
+      d.yLabel = yFormat(d.y)
 
-      d.place = width - d.left < 20 ? 'left' : 'right';
-    });
+      d.place = width - d.left < 20 ? 'left' : 'right'
+    })
 
     return {
       scales,
       domains,
       points
-    };
+    }
   },
 
   getPosition: function (el) {
     return {
       width: el.clientX,
       height: el.clientY
-    };
+    }
   },
 
   render: function () {
-
     let {
       points,
       scales,
       domains
-    } = this.state;
+    } = this.state
 
     let {
       margins,
       height
-    } = this.props;
+    } = this.props
 
-    let ic = this.icon;
+    let ic = this.icon
 
     // TODO: React does not currently support the image tag.
     // We get around this by using the dangerouslySetInnerHTML method,
     // but there is probably a better way.
-    let image = `<image class="satellite-icon" width="${ic.width}" height="${ic.height}" x="${-ic.width * 0.4}" y="${-ic.height * 0.6}" xlink:href="assets/graphics/content/satellite-sprite.png" />`;
+    let image = `<image class="satellite-icon" width="${ic.width}" height="${ic.height}" x="${-ic.width * 0.4}" y="${-ic.height * 0.6}" xlink:href="../../assets/graphics/content/satellite-sprite.png" />`
 
     return (
       <g>
@@ -154,7 +153,8 @@ var Scatterplot = React.createClass({
           <ReactTooltip />
         </g>
       </g>
-    );
+    )
   }
-});
-module.exports = Scatterplot;
+})
+
+module.exports = Scatterplot

@@ -1,26 +1,41 @@
 .hero {
   position: relative;
+}
 
+.icon-centerer {
+  display: inline-block;
+}
+
+.collecticon-satsummit-logo-symbol-pos {
+  position: absolute;
+  font-size: 4rem;
+  vertical-align: middle;
+  left: 0;
+  top: 0;
+  opacity: 0.25;
 }
 
 .hero-block {
   margin: 0;
-  padding: .75em 2em;
-  background-color: tint($body-color, 95%);
+  padding: 0.75em 2em .75em;
+  background-color: $dark-blue;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 4000;
 
-  h3 {
-    font-weight: 400;
-    line-height: 1em;
-    color: $dark-blue;
+  h1 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.15rem;
+    line-height: 2em;
+    color: white;
     margin: 0;
     display: inline-block;
-    @include small {
-      display: block;
-      line-height: inherit;
+    transition: 0.4s all;
+    &:hover{
+      opacity: 0.8;
     }
   }
 
@@ -34,23 +49,41 @@
       height: 31px;
       margin-left: 2em;
     }
-
-    @include small {
-      text-align: right;
-      display: block;
-      margin: 0 7.5em .5em;
-      float: left;
-    }
   }
 
   .devseed {
     width: 188px;
     height: 32px;
-    @include small {
-      width: 141px;
-      height: 24px;
+  }
+}
+
+.hero-block__title {
+  a {
+    color: white;
+  }
+}
+
+.contribute-block {
+  display: none;
+  @include medium {
+    background-color: $lighter-blue;
+    position: absolute;
+    display: inline-block;
+    line-height: 4em;
+    padding: 0 5rem 0 0rem;
+    height: 100%;
+    top: 0;
+    right: 0;
+    border-left: 4px solid white;
+    transition: 0.2s all;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.15rem;
+    &:hover {
+      background-color: lighten($lighter-blue, 15);
     }
   }
+  @include linkColors(white, white)
 }
 
 #introduction {
@@ -61,9 +94,6 @@
 #intro-slide-content {
   margin-top: 6em;
   position: relative;
-  @include small {
-    margin-top: 4em;
-  }
 }
 
 .header-slide {
@@ -71,15 +101,14 @@
   float: left;
   display: block;
   height: 650px;
-  @include small {
-    height: 480px;
-    text-align: center;
-  }
 }
 
 #intro {
-  @include small {
-    height: auto;
-    padding-bottom: 1rem;
-  }
+}
+
+.collecticon-github {
+  vertical-align: middle;
+  margin-right: 0.75rem;
+  font-size: 4rem;
+  opacity: 0.2;
 }

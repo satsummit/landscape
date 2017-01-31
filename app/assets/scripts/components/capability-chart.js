@@ -1,8 +1,9 @@
-let React = require('react');
-let _ = require('lodash');
-let Dropdown = require('react-dropdown');
-let Scatterplot = require('./scatterplot');
-let indicators = require('../../data/capability-translation-chart');
+import React from 'react'
+import ReactDOM from 'react-dom'
+import _ from 'lodash'
+import Dropdown from 'react-dropdown'
+import Scatterplot from './scatterplot'
+import indicators from '../../data/capability-translation-chart'
 
 var Capabilities = React.createClass({
 
@@ -18,58 +19,57 @@ var Capabilities = React.createClass({
       y: 'resolution',
       width: 0,
       height: 0
-    };
+    }
   },
 
   componentDidMount: function () {
-    let self = this;
+    let self = this
     this.handleResize = _.debounce(function () {
-      let node = React.findDOMNode(self);
+      let node = ReactDOM.findDOMNode(self)
       self.setState({
-        width: node.offsetWidth,
+        width: (node.offsetWidth + 100),
         height: node.offsetHeight
-      });
-    }, 100);
-    window.addEventListener('resize', self.handleResize);
-    this.handleResize();
+      })
+    }, 100)
+    window.addEventListener('resize', self.handleResize)
+    this.handleResize()
   },
 
   componentWillUnmount: function () {
-    window.removeEventListener('resize', this.handleResize);
+    window.removeEventListener('resize', this.handleResize)
   },
 
   _xAxisSelect: function (option) {
-    this.setState({x: option.value});
+    this.setState({x: option.value})
   },
 
   _yAxisSelect: function (option) {
-    console.log('setting state', option.value);
-    this.setState({y: option.value});
+    console.log('setting state', option.value)
+    this.setState({y: option.value})
   },
 
   render: function () {
-
     let {
       x,
       y,
       width,
       height
-    } = this.state;
+    } = this.state
 
     let options = _.map(Object.keys(indicators).filter((k) => k !== x && k !== y), function (k) {
-      return {label: indicators[k].display, value: k};
-    });
-    let xOptions = [{value: x, label: indicators[x].display}].concat(options);
-    let yOptions = [{value: y, label: indicators[y].display}].concat(options);
+      return {label: indicators[k].display, value: k}
+    })
+    let xOptions = [{value: x, label: indicators[x].display}].concat(options)
+    let yOptions = [{value: y, label: indicators[y].display}].concat(options)
 
-    let data = this.props.data;
+    let data = this.props.data
 
     let margins = {
-      left: 240,
-      right: 180,
+      left: 220,
+      right: 60,
       top: 80,
       bottom: 120
-    };
+    }
 
     return (
       <div className='scatterplot'>
@@ -103,8 +103,8 @@ var Capabilities = React.createClass({
         </div>
 
       </div>
-    );
+    )
   }
-});
+})
 
-module.exports = Capabilities;
+module.exports = Capabilities

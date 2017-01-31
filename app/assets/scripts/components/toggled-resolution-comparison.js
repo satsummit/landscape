@@ -1,6 +1,6 @@
-let React = require('react');
-let MapComponent = require('./map');
-let _ = require('lodash');
+import React from 'react'
+import MapComponent from './map'
+import _ from 'lodash'
 
 module.exports = React.createClass({
 
@@ -17,41 +17,41 @@ module.exports = React.createClass({
     return {
       active: this.props.maps[0],
       key: this.props.imgTypes[0].key
-    };
+    }
   },
 
   _changeImg: function (evt) {
-    let imgId = evt.target.value.slice(6);
-    this.setState({ active: _.find(this.props.maps, {id: imgId}) });
+    let imgId = evt.target.value.slice(6)
+    this.setState({ active: _.find(this.props.maps, {id: imgId}) })
   },
 
   _changeImgType: function (evt) {
-    this.setState({ key: evt.target.value.slice(6) });
+    this.setState({ key: evt.target.value.slice(6) })
   },
 
   render: function () {
-    var active = this.state.active[this.state.key];
+    var active = this.state.active[this.state.key]
     let options = {
       center: this.props.center,
       zoom: this.state.active.zoom,
       id: active,
       scrollWheelZoom: false,
       accessToken: this.state.active.accessToken
-    };
+    }
 
     // Add messages from message/ message conditions array
     // Format: [{sensorCon: string, imgCon:string, msgStr: string}])
-    var messageBox = '';
-    var msgs = this.props.messages;
+    var messageBox = ''
+    var msgs = this.props.messages
     if (msgs) {
       for (var i = msgs.length - 1; i >= 0; i--) {
-        let msg = msgs[i];
+        let msg = msgs[i]
         if (this.state.active.id === msg.sensorCon && this.state.key === msg.imgCon) {
           messageBox = (<div className = 'image-comparison-message'
-            dangerouslySetInnerHTML = {{__html: msg.msgStr}}></div>);
+            dangerouslySetInnerHTML = {{__html: msg.msgStr}}></div>)
         };
-      };
-    };
+      }
+    }
 
     return (
       <div className='inherit-height'>
@@ -73,16 +73,7 @@ module.exports = React.createClass({
 
         {messageBox}
 
-        <div className='map-container'>
-          <div id='resolution-map' className='static-map'>
-            <MapComponent
-              options={options}
-              id={'resolution-' + options.id}
-            />
-          </div>
-        </div>
-
-        <div className='inline-radio-selector-embedded'>
+        <div className='inline-radio-selector-embedded resolution-map-selectors'>
           {this.props.imgTypes.map((imgType, i) =>
             <div className='inline-radio-item-embedded' key={'radio-selector-' + i}>
               <input type='radio'
@@ -98,7 +89,16 @@ module.exports = React.createClass({
           )}
         </div>
 
+        <div className='map-container'>
+          <div id='resolution-map' className='static-map'>
+            <MapComponent
+              options={options}
+              id={'resolution-' + options.id}
+            />
+          </div>
+        </div>
+
       </div>
-    );
+    )
   }
-});
+})

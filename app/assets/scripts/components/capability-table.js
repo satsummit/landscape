@@ -1,6 +1,6 @@
-let React = require('react');
-let _ = require('lodash');
-let indicators = require('../../data/capability-translation');
+import React from 'react'
+import _ from 'lodash'
+import indicators from '../../data/capability-translation'
 
 var CapabilitiesTable = React.createClass({
 
@@ -13,37 +13,37 @@ var CapabilitiesTable = React.createClass({
   getInitialState: function () {
     return {
       sort: 'name'
-    };
+    }
   },
 
   _sort: function (e) {
-    var sort = e.currentTarget.dataset.sort;
+    var sort = e.currentTarget.dataset.sort
     if (this.state.sort !== sort) {
       this.setState({
         sort: sort
-      });
+      })
     }
   },
 
   render: function () {
-    let data = this.props.data;
-    let sort = this.state.sort;
+    let data = this.props.data
+    let sort = this.state.sort
 
     let headers = _.map(indicators, function (obj, key) {
-      return {display: obj.display, sort: key};
-    });
-    headers.unshift({display: 'Satellite', sort: 'name'});
+      return {display: obj.display, sort: key}
+    })
+    headers.unshift({display: 'Satellite', sort: 'name'})
 
     let rows = _.chain(data)
       .sortBy(function (d) {
-        return sort === 'name' || d[sort] === 'n/a' ? d[sort] : d[sort] * -1;
+        return sort === 'name' || d[sort] === 'n/a' ? d[sort] : d[sort] * -1
       })
       .map(function (d) {
         return [d.name].concat(_.map(indicators, function (obj, key) {
-          return d[key] === undefined || d[key] === null ? 'n/a' : d[key];
-        }));
+          return d[key] === undefined || d[key] === null ? 'n/a' : d[key]
+        }))
       })
-      .value();
+      .value()
 
     return (
       <table>
@@ -52,7 +52,8 @@ var CapabilitiesTable = React.createClass({
             {headers.map((header, i) =>
               <th key={'capability-table-header-' + i}
                 onClick={this._sort}
-                data-sort={header.sort}>{header.display} &#9660;</th>
+                data-sort={header.sort}
+                className='capability-table-item'>{header.display} &#9660;</th>
             )}
           </tr>
         </thead>
@@ -66,8 +67,8 @@ var CapabilitiesTable = React.createClass({
           )}
         </tbody>
       </table>
-    );
+    )
   }
-});
+})
 
-module.exports = CapabilitiesTable;
+module.exports = CapabilitiesTable

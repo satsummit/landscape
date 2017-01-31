@@ -1,0 +1,9 @@
+<div class="mobile--breadcrumbs">
+	{% if page.parent == 'intro' %}
+		<a href="{{site.baseurl}}/">Introduction</a> / <a href="{{site.baseurl}}/{{page.permalink}}">{{page.title}}</a>
+	{% elsif page.parent %}
+		<a href="{{site.baseurl}}/{{page.parent}}">{{page.parent | capitalize}}</a> / <a href="{{site.baseurl}}/{{page.permalink}}">{{page.title}}</a>
+	{% else %}
+		<a href="{{site.baseurl}}/{{page.permalink}}">{{page.title | capitalize}}</a>
+	{% endif %}
+</div>

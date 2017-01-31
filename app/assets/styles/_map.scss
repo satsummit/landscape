@@ -7,7 +7,23 @@
 .static-map {
   width: 100%;
   height: 600px;
+  position: absolute;
+  left: 0;
   @include small {
     height: 320px;
   }
+}
+
+.map-container {
+  height: 600px;
+  margin: 2rem 0 4rem;
+}
+
+.static-map__right {
+  width: 50%;
+  left: 50%;
+}
+
+.static-map__left {
+  width: 50%;
 }
