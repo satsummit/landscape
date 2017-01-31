@@ -14,17 +14,17 @@ next: Spectral Bands
 
 ---
 
-Spatial resolution refers to the size of one pixel on the ground. For example 15 meters means that one pixel on the image corresponds to a square of 15 by 15 meters on the ground. This is also sometimes referred to as Ground Sample Distance (GSD).
+Spatial resolution refers to the size of one pixel on the ground. For example 15 meters means that one pixel on the image corresponds to a square of 15 by 15 meters on the ground. This is also sometimes referred to as Ground Sample Distance (GSD).  Temporal resolution refers to the how often data of the same area is collected. This is typically referred to as Revisit Time.
 
-Temporal resolution refers to the how often data of the same area is collected. This is typically referred to as Revisit Time.
+Sensors can trade spatial resolution for temporal resolution, but it is difficult to maximum both. Sensors that have a high spatial resolution cover a smaller area then a sensor with the same number of pixels but with a lower spatial resolution. With a smaller field of view it takes longer to cover the same area, thus as spatial resolution increases, temporal resolution decreases.
 
 Freely available imagery (e.g., Landsat, Sentinel, MODIS) tends to either have a revisit time measured in days (1-4 days) with resolution in the hundreds of meters (300m-500m), or a revisit time measured in weeks (10-20 days) with resolutions in the tens of meters (10m-30m). 
 
-High resolution commercial imagery is available up to .31m resolution, with revisit times varying quite a bit. Some sensors are tasked, or pointed to collect specific areas rather than always just collecting the area directly below. As a result, some areas may not be covered at all by tasked satellites. While there is still a premium for the highest resolution imagery (<0.50m), medium to low resolution is suitable for many applications, and increasingly affordable or available at no cost.
+High resolution commercial imagery is available up to .3m resolution, with revisit times varying quite a bit. Some sensors are tasked, or pointed to collect specific areas rather than always just collecting the area directly below. As a result, some areas may not be covered at all by tasked satellites. While there is still a premium for the highest resolution imagery (<0.50m), medium to low resolution is suitable for many applications, and increasingly affordable or available at no cost.
 
 #### Pansharpening
 
-Often satellites take images of lower resolution in many bands (e.g. Multispectral red, green and blue for a color image), and then have another channel with much wider spectral range (i.e. "panchromatic") with finer resolution. By means of a mathematical relations, it is possible to pan-sharpen the multispectral image with the panchromatic resolution.
+Some sensors take images of lower resolution in many bands (e.g. Multispectral red, green and blue for a color image), and then have another channel with much wider spectral range (i.e. "panchromatic") with finer resolution. By means of a mathematical relations, it is possible to increase the resolution of the multispectral bands with the higher resolution panchromatic band. Pan-sharpened imagery doesn't add information but can be useful for images that are primarily for human viewing purposes.
 
 #### Accuracy
 
@@ -33,7 +33,7 @@ Accuracy refers to the possible difference between the reported locations on the
 ### What spatial resolution do I need?
 
 The imagery samples below can help select the right imagery for your project.
-In an urban environment like Fortaleza, free Landsat imagery (15m) shows the extent of the city. Medium resolution imagery like RapidEye (5m) shows roads. With Worldview 3 (.31m) and Pleiades (.5m) images you can count beach umbrellas.
+In an urban environment like Fortaleza, free pan-sharpened Landsat imagery (15m) shows the extent of the city. Medium resolution imagery like RapidEye (5m) shows roads. With Worldview 3 (.3m) and Pleiades (.5m) images you can count beach umbrellas.
 
 <div id="resolutionComparison"></div>
 

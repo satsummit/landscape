@@ -1,20 +1,18 @@
 ---
 layout: default
 title: Introduction
-permalink:
+permalink: 
 prev:
 next: Capture
 
 ---
 
-## Better satellites
+## The state of satellites
 
 <div class="map-container">
   <div id="banner-map" class="static-map static-map__left"></div>
   <div id="banner-map-2" class="static-map static-map__right"></div>
 </div>
-
-### The state of satellites
 
 The satellite systems we use to capture, analyze, and distribute data about the Earth are improving every day, creating bold new opportunities for impact in global development.
 

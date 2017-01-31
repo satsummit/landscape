@@ -5,7 +5,7 @@ permalink: capture/
 title: Capture
 type: title-page
 
-prev: Common Band Combinations
+prev: 
 next: Spatial and Temporal Resolution
 
 ---
