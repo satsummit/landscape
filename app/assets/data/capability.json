@@ -80,7 +80,7 @@
   {
     "company": "NASA/USGS",
     "sensor": "rgb,nir,swir",
-    "revisit": "18",
+    "revisit": "16",
     "platform": "LandSat 4-5",
     "cost": "0",
     "resolution": "30",
@@ -93,7 +93,7 @@
   {
     "company": "NASA/USGS",
     "sensor": "pan,rgb,nir,swir",
-    "revisit": "18",
+    "revisit": "16",
     "platform": "LandSat 7-8",
     "cost": "0",
     "resolution": "15",
@@ -106,7 +106,7 @@
   {
     "company": "NASA",
     "sensor": "pan,rgb,nir,swir",
-    "revisit": "1.5",
+    "revisit": "1",
     "platform": "MODIS",
     "cost": "0",
     "resolution": "500",
