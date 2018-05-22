@@ -1,5 +1,5 @@
 module.exports = {
-  token: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw',
+  token: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2poaTR4M2pnMDZybTM3bWVxamtyMHhpcSJ9.ngb4dwTS--345izTuomZvA',
 
   banner: {
     id: 'stateofsatellite.mmkokm4g',
