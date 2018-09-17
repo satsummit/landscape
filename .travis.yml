@@ -15,6 +15,7 @@ before_script:
 # - "./.build_scripts/lint.sh"
 - npm test
 script:
+- bundle install
 - npm run build
 after_success:
 - "./.build_scripts/deploy.sh"
