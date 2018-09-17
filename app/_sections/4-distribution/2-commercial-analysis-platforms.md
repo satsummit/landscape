@@ -24,10 +24,10 @@ next: Applications
 
 ### Planet
 
-- The most attractive part of Planet Labs' satellite imagery archive is the high temporal resolution that you can make some interesting time-lapse and change comparison visually through [Planet Explore](https://www.planet.com/explorer).
+- The most attractive part of Planet's satellite imagery archive is the high temporal resolution.  This frequency allows you to do unique analysis and you make more granular change comparisons using [Planet Explorer](https://www.planet.com/explorer).
 
-- For imagery and analysis uses, Planet has two APIs available for developers to use. You can do imagery search, filter, download through their Data API, and inject Planet imagery's web tiles and basmaps into your applications through the Tiles and Basemaps API.
+- For imagery and analysis uses, Planet has two APIs available for developers. You can do imagery search, filter, and download through their [Data API](https://developers.planet.com/docs/api/searches-filtering/), and inject Planet imagery's web tiles and basemaps into your applications through the [Tiles and Basemaps API](https://developers.planet.com/docs/api/tile-services/).
 
-- However, Planet does not have a platform and many tutorials ready for the different level of users and needs available yet. [Planetlabs notebooks](https://github.com/planetlabs/notebooks) on GitHub has some IPython notebook showcase how to use planet's imagery, crop classification, ship detection. But they are no many tutorials around machine learning and deep learning, and it's hard to envision ML applications at scale without strong data science and cloud computing knowledge from the users.
+- However, Planet's [analysis platform](https://www.planet.com/products/analytics/) is still in beta, and there are not many tutorials ready for the different level of users and needs available yet. [Planet Interactive Guides](https://github.com/planetlabs/notebooks) on GitHub contain IPython notebooks which showcase how to access Planet's imagery and use it for crop classification and ship detection. Without more tutorials around machine learning and deep learning, it's hard to envision machine learning applications at scale without a strong data science and cloud computing knowledge from the users. 
 
 ### Sentinel Hub
