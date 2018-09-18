@@ -46,11 +46,11 @@ Using Analysis Ready Data, users can more easily perform reliable and consistent
 
 ## Mosaics
 
-One of the biggest challenges when dealing with remote sensing data is the presence of clouds. Even if the clouds, and cloud shadows, have been masked properly, it is difficult to work with images that have gaps of data missing throughout the scene. Becuase of this, mosaics have become a popular option. A mosaic is stitching together multiple scenes within a time period to create a seamless complete image. Areas that may have been covered with clouds in one image can be filled with good data from another image. This creates a continuous image that is both pleasing to look at and simple to use. The mosaic could include data over weeks, months, or even a year.
+One of the biggest challenges when dealing with remote sensing data is the presence of clouds. Even if the clouds, and cloud shadows, have been masked properly, it is difficult to work with images that have gaps of data missing throughout the scene. Because of this, mosaics have become a popular option. A mosaic is stitching together multiple scenes within a time period to create a seamless complete image. Areas that may have been covered with clouds in one image can be filled with good data from another image. This creates a continuous image that is both pleasing to look at and simple to use. The mosaic could include data over weeks, months, or even a year.
 
 However, the process of creating the mosaic also removes an important piece of information - the precise date when the data is collected. This temporal information is vital for some applications where changes can happen on timescales shorter than the time period of the mosaic. A mosaic using a years worth of imagery isn't very useful in visualizing seasonal changes or shifts in growing seasons.
 
-When using mosaics, as with the original scenes, it is important to know what units the data is provided in. Mosaics are frequently created for visual applications, such as the creation of a basemap. For this, different scenes might have been color corrected or otherwise transformed in order to create a more visually pleasing image. Thee are not as suitable for analysis purposes.
+When using mosaics, as with the original scenes, it is important to know what units the data is provided in. Mosaics are frequently created for visual applications, such as the creation of a basemap. For this, different scenes might have been color corrected or otherwise transformed in order to create a more visually pleasing image. These are not as suitable for analysis purposes.
 
 ## Data Formats
 
@@ -58,18 +58,18 @@ Data providers have a lot of choices to make when publishing data. It's not just
 
 As an example, consider downloading a single Landsat-8 scene using EarthExplorer. The entire scene, with all bands, is a 1 GB compressed file. The scene includes all 11 spectral bands for a region covering 68,000 km<sup>2</sup>. If the user is interested in just the Red and Near-Infrared bands for a region of 1000 hectares they are using much less than 1% of the data they need to download.
 
-An alternative is to store the data in a format a user can read any arbitrary piece of the data remotely, without having to download bytes that won't be used. Several file formats can provide this functionality, but the most widely used and accepted is what is called a Cloud-Optimized GeoTIFF (COG). A COG has several important features:
+An alternative is to store the data in a format a user can read any arbitrary piece of the data remotely, without having to download bytes that won't be used. Several file formats can provide this functionality, but the most widely used and accepted is what is called a [Cloud-Optimized GeoTIFF (COG)](https://www.cogeo.org/). A COG has several important features:
 
-- **Internally tiled**: Internall, data is stored in smaller tiles. This enables efficient reads when reading just a portion of the image
-- **Internal File Directory (IFD)**: An IFD is stored in the header of every GeoTIFFc, and is a directory of byte locations in the image. This allows clients to read the header and get the precise byte locations 
+- **Internally tiled**: Internally, data is stored in smaller tiles. This enables efficient reads when reading just a portion of the image
+
+- **Internal File Directory (IFD)**: An IFD is stored in the header of every GeoTIFF, and is a directory of byte locations in the image. This allows clients to read the header and get the precise byte locations
+
 - **Overviews**: Sometimes users don't need images at it's full resolution. By providing reduced resolution overviews with the data the data can be accessed much faster.
 
 ### Image Catalogs and Searching
 
-Another challenge in using satellite imagery is in first finding and getting satellite imagery. Every data provider uses their own unique catalog for inventorying their data, using their own field names and conventions. If they have an API this too is unique, so that a client has to adapt to each provider. This is confusing for human users, and further it is difficult if not impossible to create software clients that can be used across catalogs from different data providers.
+Another challenge in using satellite imagery is in first finding and getting satellite imagery. Every data provider uses their own unique catalog for inventorying their data, using their own field names and conventions. If they have an API, this too is unique, so that a client has to adapt to each provider. This is confusing for human users, and further it is difficult if not impossible to create software clients that can be used across catalogs from different data providers.
 
-The [Spatio-Temporal Asset Catalog (STAC) specification](https://github.com/radiantearth/stac-spec) is a recent effort to develop a standard for geospatial data providers to make catalogs of their data accessible in a standard way. This way a single software client can query different catalogs in the same way, users know what metadata fields mean without relying on provider specific documentation, and they can focus on how to use the data rather than how to get the data.
+The [Spatio-Temporal Asset Catalog (STAC) specification](https://github.com/radiantearth/stac-spec) is a recent effort to develop a standard for geospatial data providers to make catalogs of their data accessible in a standard way. Using this, a single software client can query different catalogs in the same way, users know what metadata fields mean without relying on provider specific documentation, and they can focus on how to use the data rather than how to get the data.
 
 The STAC spec is still being developed, however there is an [STAC API implementation](https://medium.com/devseed/sat-api-an-api-for-spatiotemporal-asset-catalogs-88c3c78fdb0e) that allows searching of the entire Landsat-8 and Sentinel-2 data that is stored on AWS. It can be accessed at http://sat-api.developmentseed.org/search/stac, or with the [sat-search STAC client](https://github.com/sat-utils/sat-search).
-
-
