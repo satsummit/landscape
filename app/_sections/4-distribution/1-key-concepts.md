@@ -20,7 +20,7 @@ Remote sensing data undergoes a lot of processing to get to what is recognizable
 
 For visualizing images, pixel values are often stretched from 0 to 255 to fit the range of displays. However for analysis purposes it's important to know the units of the underlying data values.
 
-- **Digital numbers**: Digital numbers are the raw values stored by the satellite, often ranging from 0-255 or 0-65535, that need to be adjusted by a gain and offset to be translated to meaningful values like those below. If the data is only available as Digital Numbers and no gain/offset is supplied, the data can be viewed, but it is not suitable for analysis.
+- **Digital Numbers (DN)**: Digital Numbers are the raw values stored by the satellite, often ranging from 0-255 or 0-65535, that need to be adjusted by a gain and offset to be translated to meaningful values like those below. If the data is only available as Digital Numbers and no gain/offset is supplied, the data can be viewed, but it is not suitable for analysis.
 
 - **Apparent Radiance**: Radiance is a measure of the absolute brightness as observed at the sensor. Because sun illumination can change, and spectral bands can be different widths (wider band = more light), radiance is not a good measure for analysis. However it can be converted to TOA reflectance.
 
@@ -58,12 +58,18 @@ Data providers have a lot of choices to make when publishing data. It's not just
 
 As an example, consider downloading a single Landsat-8 scene using EarthExplorer. The entire scene, with all bands, is a 1 GB compressed file. The scene includes all 11 spectral bands for a region covering 68,000 km<sup>2</sup>. If the user is interested in just the Red and Near-Infrared bands for a region of 1000 hectares they are using much less than 1% of the data they need to download.
 
-An alternative is to store the data in a format a user can read any arbitrary piece of the data remotely, without having to download bytes that won't be used. Several file formats can provide this functionality, but the most widely used and accepted is what is called a Cloud-Optimized GeoTIFF (COG). A COG is like a regular GeoTIFF except that 
+An alternative is to store the data in a format a user can read any arbitrary piece of the data remotely, without having to download bytes that won't be used. Several file formats can provide this functionality, but the most widely used and accepted is what is called a Cloud-Optimized GeoTIFF (COG). A COG has several important features:
 
-- Header 
-- 
-
+- **Internally tiled**: Internall, data is stored in smaller tiles. This enables efficient reads when reading just a portion of the image
+- **Internal File Directory (IFD)**: An IFD is stored in the header of every GeoTIFFc, and is a directory of byte locations in the image. This allows clients to read the header and get the precise byte locations 
+- **Overviews**: Sometimes users don't need images at it's full resolution. By providing reduced resolution overviews with the data the data can be accessed much faster.
 
 ### Image Catalogs and Searching
 
-STAC
+Another challenge in using satellite imagery is in first finding and getting satellite imagery. Every data provider uses their own unique catalog for inventorying their data, using their own field names and conventions. If they have an API this too is unique, so that a client has to adapt to each provider. This is confusing for human users, and further it is difficult if not impossible to create software clients that can be used across catalogs from different data providers.
+
+The [Spatio-Temporal Asset Catalog (STAC) specification](https://github.com/radiantearth/stac-spec) is a recent effort to develop a standard for geospatial data providers to make catalogs of their data accessible in a standard way. This way a single software client can query different catalogs in the same way, users know what metadata fields mean without relying on provider specific documentation, and they can focus on how to use the data rather than how to get the data.
+
+The STAC spec is still being developed, however there is an [STAC API implementation](https://medium.com/devseed/sat-api-an-api-for-spatiotemporal-asset-catalogs-88c3c78fdb0e) that allows searching of the entire Landsat-8 and Sentinel-2 data that is stored on AWS. It can be accessed at http://sat-api.developmentseed.org/search/stac, or with the [sat-search STAC client](https://github.com/sat-utils/sat-search).
+
+
