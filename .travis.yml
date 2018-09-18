@@ -1,10 +1,10 @@
 language: node_js
 node_js:
-- '0.12'
+- '4.5'
 env:
   global:
   - DEPLOY_BRANCH=master
-  - secure: "pwTBQ9oylRpjJpRZCU/YS/Gw6j9A3Nxgm7OWTeDFPt3WV06/87Mn8onPqQO7G5nTmPJiSx/DCBEuisExPzDC+lyk3aaL5mZZ+poSW+nDiydJe/InGv7vZeFvCD7B9NIBoPtpV1kC78I5oBrCsk9FJrKWVao6vZhrgOmy16/QBudNQ0xyKAhQK0EUTNnkVv0jJa1kcDBHxMHlA7erj9gNV9+3BM3FC6tF5LePjBBkq6Jar9BbGeLlJ5vSRbhnF7hPrSq6rX0okTL7tqUcZlbVCEXmPBxh958hsYPnGh3zeS6EhktLq6AmD8NkxMzfghne9JQYLOq+FjYK4yuWGAseRXxtzmv5Z00sDubQy3hDYnou7+okfZbr+j7G7hBOADrPCAdQWI++LJRZAjwqfw82FeFH3MEQ1DUF84Iy6+Jcq7h09j7miIUS5eo7yReWZFKhy/Ex7EWf6jR5AuSzoHSWVDMi2lrWnBwtfPvBtwIBFV1h/+0gedCibimUT3UoD+AJtaFhRXPBF/Uzz4Vmjs3Z9vxaVGauCVS/2GNaRAzo/OxDhTdhngRJHs8H6blJ85NczBH+K/LtgCPS3NPHuJKzfZPKKNlydK32fpZezcMWzpXkHbcj/lxLzRwajPfyjeK5Df+dPerCCCoPvLzvjcwg/UvSbL3l9qeNB/1sVlOWHbQ="
+  - secure: "1FaimSHlLI2lTZk+8rPlz+nnzDGAzAifHOwo1YxN7Q8v9jjtgP5wXrt1CXhUNE2zDUIS9hwHOizMoNrYqOAohv/rskadkhJD5uyTPLJ8Mk3FjrXUNViB1SZk8SZVM0+O7j0zxhwleaIT1TaCHurOLl37geCyog0D2rR19K5YrbSBWnGe0sLkBpz6hvCWjpnAhG1Si6fSogJBOE/mkTOOc5xzC2JQqKSCWN03C6N+fsCBGSyoROwwoAUJMDa39R5G3ecIlP7DspPxzbCpr4aKXlAqfu/gTxCWqW14nIeVmKG/M75twNE0e7buqlzaOTi1KpHyNAjJT0Q5smH0ncWO9w5hUjcQ1WpdpBMgUYXfoGkLs//+eG+AP6JjNzzgJvbPuSRlNP+lN0wSVft86Kopl+xGzHE988ALWAoUm6w8/BgrlEDNcBfJFpiDkXv9mZQr7HUkUsP29FiSzhXmEx4AtQcnJk6x8ZZ326gwM4RXgUHiJWYPx2mXjOaK2jCdVYw7+PvlWtvPgIcjaSteRN6xOQCpNYkWSGKqvlQyEmFzihfxmckixDzMRpZCNzFQWED9ZMGV48XJzhgF2wcv1wsaQGKMI5duZD0UQIyyvkbdqZKG6YRVuQxtrODu2te6iC2GqvsAQz3lUzCtisvCuvw31kVsmq7EQ3ZmVQ8H0B96PIA="
 cache:
   directories:
   - node_modules
@@ -15,6 +15,7 @@ before_script:
 # - "./.build_scripts/lint.sh"
 - npm test
 script:
+- bundle install
 - npm run build
 after_success:
 - "./.build_scripts/deploy.sh"
