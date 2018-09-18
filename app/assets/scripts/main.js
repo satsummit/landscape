@@ -98,6 +98,13 @@ function createLandslideModel () {
     'stateofsatellite.n9c6jfgk',
  [28.2899, 85.3308], 8, attribution)
 }
+function createRoadMLModel () {
+  var attribution = '<a style="font-weight:bold;" href="https://github.com/Geoyi/pixel-decoder"> ML road feature extraction</a> | Imagery &copy <a href="https://www.digitalglobe.com/">DigitalGlobe</a>, &copy <a href="https://www.mapbox.com/about/maps/">Mapbox</a>'
+  createTransparencySlider(maps.token, 'road-ml-map', 'road-ml-range',
+    'road-ml-opacity', 'Road ML Model', 'stateofsatellite.n9ion355',
+'stateofsatellite.cjm87jsb43mjn2vqtne2gxxkc-9v5a0',
+ [-6.817949,39.284513], 15, attribution, true)
+}
 
 function createComparisonSlider (token, frame, slider, map1, map2, view, zoom, attribution) {
   L.mapbox.accessToken = token
@@ -135,7 +142,7 @@ function createComparisonSlider (token, frame, slider, map1, map2, view, zoom, a
   map.setView(view, zoom)
 };
 
-function createTransparencySlider (token, frame, slider, labelEl, label, map1, map2, view, zoom, attribution) {
+function createTransparencySlider (token, frame, slider, labelEl, label, map1, map2, view, zoom, attribution, isStyleLayer) {
   L.mapbox.accessToken = token
   var map = L.mapbox.map(frame, '', {
     dragging: false,
@@ -156,7 +163,13 @@ function createTransparencySlider (token, frame, slider, labelEl, label, map1, m
   }
 
   L.mapbox.tileLayer(map1).addTo(map)
-  var overlay = L.mapbox.tileLayer(map2).addTo(map)
+
+var overlay = ""
+if (isStyleLayer) {
+  overlay = L.mapbox.tileLayer(map2).addTo(map)
+} else {
+  overlay = L.mapbox.tileLayer(map2).addTo(map)
+}
   var range = document.getElementById(slider)
   var opacityLabel = document.getElementById(labelEl)
 
@@ -211,6 +224,10 @@ if (document.querySelector('#uganda-agriculture-comparison')) {
 
 if (document.querySelector('#landslide-model-map')) {
   createLandslideModel()
+}
+
+if (document.querySelector('#road-ml-map')) {
+  createRoadMLModel()
 }
 
 if (document.querySelector('#comparisonSlider')) {
