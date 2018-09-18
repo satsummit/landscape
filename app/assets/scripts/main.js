@@ -1,3 +1,4 @@
+/* global L */
 'use strict'
 import React from 'react'
 import { render } from 'react-dom'
@@ -15,15 +16,15 @@ import ResolutionComparison from './components/resolution-comparison'
 import ToggledResolutionComparison from './components/toggled-resolution-comparison'
 
 // Header Interactives
-function openNav() {
-  document.querySelector('.nav--trigger').addEventListener('click', function() {
+function openNav () {
+  document.querySelector('.nav--trigger').addEventListener('click', function () {
     document.querySelector('.sidenav').style.width = '350px'
     document.querySelector('.container').style.marginRight = '350px'
   })
 }
 
-function closeNav() {
-  document.querySelector('.closebtn').addEventListener('click', function() {
+function closeNav () {
+  document.querySelector('.closebtn').addEventListener('click', function () {
     document.querySelector('.sidenav').style.width = '0'
     document.querySelector('.container').style.marginRight = '0'
   })
