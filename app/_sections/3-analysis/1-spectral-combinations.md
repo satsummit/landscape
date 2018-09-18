@@ -20,10 +20,10 @@ In this imagery over rural Uganda, near-infrared sensors augment imagery to high
 
 <div id="toggledResolutionComparison"></div>
 
-Each sensor has a specific set of spectral bands designed for the mission of the satellite. While some sensors may have only 3 or 4 bands, others may have dozens, or hundreds (these are called hyperspectral sensors). Mny earth-observing satellites include bands that fall within commonly used 'windows', such as "red" or "green".
+Each sensor has a specific set of spectral bands designed for the mission of the satellite. While some sensors may have only 3 or 4 bands, others may have dozens, or hundreds (these are called hyperspectral sensors). Many earth-observing satellites include bands that fall within commonly used 'windows', such as "red" or "green".
 
 | Common Name     | Band Range (μm) | Landsat 5 | Landsat 7 | Landsat 8 | Sentinel 2 | MODIS |
-|----------------------|---------------------------|-------------------------|---------------------------------------------------------------------------------------------|------------------------------------|------------------------------------|------------------------------------| 
+|----------------------|---------------------------|-------------------------|---------------------------------------------------------------------------------------------|------------------------------------|------------------------------------|------------------------------------|
 | Coastal |  0.40 - 0.45 |      |            |     1    |     1    |            
 |Blue    |  0.45 - 0.5 |  1    |      1     |     2    |     2    |       3    
 |Green   |  0.5 - 0.6  |  2    |      2     |     3    |     3     |      4    
@@ -35,11 +35,11 @@ Each sensor has a specific set of spectral bands designed for the mission of the
 |SWIR22     |2.1 - 2.3  |  7     |     7     |     7     |    12     |     7        
 |LWIR   | 10.5 - 12.5 |   6    |     6      |     10, 11     |          |      31, 32
 
-While the indvidual band specifications can vary, a "blue" band on any sensor is going to roughly fall within 0.45 and 0.5 microns.
+While the individual band specifications can vary, a "blue" band on any sensor is going to roughly fall within 0.45 and 0.5 microns.
 
 - **Coastal**: A coastal band is used for imaging shallow water, detecting fine particles in the atmosphere (aerosols), and measuring subtle changes in ocean color.
 - **Red, Green, Blue**: Covering the human visible range of 0.4 - 0.7 microns, these bands are the ones most often used for visualization.
-- **Pan**: A panchromatic is a single band that covers the entire visible range, thereby creating a "blank & white" image. Pan bands are useful due to their increased sensitivity (from the larger spectal range), and are also frequently higher resolution than other spectral bands on the same sensor. These pan bands can then be used to perform pan-sharpening on other spectral bands to increase their apparent resolution.
+- **Pan**: A panchromatic is a single band that covers the entire visible range, thereby creating a "blank & white" image. Pan bands are useful due to their increased sensitivity (from the larger spectral range), and are also frequently higher resolution than other spectral bands on the same sensor. These pan bands can then be used to perform pan-sharpening on other spectral bands to increase their apparent resolution.
 - **NIR**: The Near-infrared is beyond the range of human vision but is widely used in a variety of applications it's ability to separate out water and vegetation.
 - **Cirrus**: A spectral band in this range has become common on more recent sensors due to it's ability to detect high altitude clouds (i.e., cirrus clouds) that are invisible in other bands.
 - **SWIR16, SWIR22**: These two Short-Wave Infrared bands are designated as swir16 and swir22 because there are two windows in the short-wave IR region where the atmosphere is transparent, one is centered around 1.6 microns, and the other centered at 2.2 microns. If a sensor has short-wave IR bands on it, they will be in one or both of these windows. Elsewhere in the short-wave region a satellite can't see the ground through the atmosphere.
