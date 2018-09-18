@@ -20,18 +20,43 @@ In this imagery over rural Uganda, near-infrared sensors augment imagery to high
 
 <div id="toggledResolutionComparison"></div>
 
-There are several well-known combinations that are optimized to provide maximum contrast between categories of interest under various use cases.
+Each sensor has a specific set of spectral bands designed for the mission of the satellite. While some sensors may have only 3 or 4 bands, others may have dozens, or hundreds (these are called hyperspectral sensors). Many earth-observing satellites include bands that fall within commonly used 'windows', such as "red" or "green".
 
-| Combination Name | Red Wavelength | Green Wavelength | Blue Wavelength | LS 8 Bands
+| Common Name     | Band Range (μm) | Landsat 5 | Landsat 7 | Landsat 8 | Sentinel 2 | MODIS |
+|----------------------|---------------------------|-------------------------|---------------------------------------------------------------------------------------------|------------------------------------|------------------------------------|------------------------------------|
+| Coastal |  0.40 - 0.45 |      |            |     1    |     1    |            
+|Blue    |  0.45 - 0.5 |  1    |      1     |     2    |     2    |       3    
+|Green   |  0.5 - 0.6  |  2    |      2     |     3    |     3     |      4    
+|Red     |  0.6 - 0.7  |  3    |      3     |     4    |     4      |     1    
+|Pan     |  0.5 - 0.7  |       |      8    |     8     |            |         
+|NIR     |  0.77 - 1.00 | 4    |      4     |     5     |    8       |    2    
+|Cirrus  |  1.35 - 1.40 |       |           |     9     |    10      |    26   
+|SWIR16    | 1.55 - 1.75 | 5     |     5     |     6    |     11     |     6    
+|SWIR22     |2.1 - 2.3  |  7     |     7     |     7     |    12     |     7        
+|LWIR   | 10.5 - 12.5 |   6    |     6      |     10, 11     |          |      31, 32
+
+While the individual band specifications can vary, a "blue" band on any sensor is going to roughly fall within 0.45 and 0.5 microns.
+
+- **Coastal**: A coastal band is used for imaging shallow water, detecting fine particles in the atmosphere (aerosols), and measuring subtle changes in ocean color.
+- **Red, Green, Blue**: Covering the human visible range of 0.4 - 0.7 microns, these bands are the ones most often used for visualization.
+- **Pan**: A panchromatic is a single band that covers the entire visible range, thereby creating a "blank & white" image. Pan bands are useful due to their increased sensitivity (from the larger spectral range), and are also frequently higher resolution than other spectral bands on the same sensor. These pan bands can then be used to perform pan-sharpening on other spectral bands to increase their apparent resolution.
+- **NIR**: The Near-infrared is beyond the range of human vision but is widely used in a variety of applications it's ability to separate out water and vegetation.
+- **Cirrus**: A spectral band in this range has become common on more recent sensors due to it's ability to detect high altitude clouds (i.e., cirrus clouds) that are invisible in other bands.
+- **SWIR16, SWIR22**: These two Short-Wave Infrared bands are designated as swir16 and swir22 because there are two windows in the short-wave IR region where the atmosphere is transparent, one is centered around 1.6 microns, and the other centered at 2.2 microns. If a sensor has short-wave IR bands on it, they will be in one or both of these windows. Elsewhere in the short-wave region a satellite can't see the ground through the atmosphere.
+- **LWIR**: The long-wave infrared region is used to measure temperature on land or water. Some LWIR sensors cover the entire region from 10.5 to 12.5 microns, while others such as Landsat-8, will split the region up into 2 bands.
+
+These different spectral bands can now be combined in different ways to enhance the contrast between different categories of interest. The most common is to use the Red, Green, and Blue bands to create a natural color image, like what would be seen with the naked eye.
+
+| Combination Name | Band 1 | Band 2 | Band 3 |
 | --- | --- | --- |
-| Natural Color (actual RGB) | 0.64-0.67&#xb5;m | 0.53-0.59&#xb5;m | 0.45-0.51&#xb5;m | 4 3 2 |
-| False Color (urban) | 2.11-2.29&#xb5;m | 1.57-1.65&#xb5;m | 0.64-0.67&#xb5;m | 7 6 4 |
-| Agriculture | 0.85-0.88&#xb5;m | 0.64-0.67&#xb5;m | 0.53-0.59&#xb5;m | 5 4 3 |
-| Atmospheric Penetration | 2.11-2.29&#xb5;m | 1.57-1.65&#xb5;m | 0.85-0.88&#xb5;m | 7 6 5 |
-| Healthy Vegetation | 0.85-0.88&#xb5;m | 1.57-1.65&#xb5;m | 0.45-0.51&#xb5;m | 5 6 2 |
-| Land/Water | 0.85-0.88&#xb5;m | 1.57-1.65&#xb5;m | 0.64-0.67&#xb5;m | 5 6 4 |
-| Natural With Atmospheric Removal | 2.11-2.29&#xb5;m | 0.85-0.88&#xb5;m | 0.53–0.59&#xb5;m | 7 5 3 |
-| Vegetation Analysis | 1.57-1.65&#xb5;m | 0.85-0.88&#xb5;m | 0.64-0.67&#xb5;m | 6 5 4 |
+| Natural Color | red | green | blue |
+| Urban False Color | swir22 | swir16 | red |
+| Agriculture | nir | red | green |
+| Atmospheric Penetration | swir22 | swir16 | nir |
+| Healthy Vegetation | nir | swir16 | blue |
+| Land/Water | nir | swir16 | red |
+| Natural With Atmospheric Removal | swir22 | nir | green |
+| Vegetation Analysis | swir16 | nir | red |
 
 #### Mathematic spectral transformations
 

@@ -14,7 +14,7 @@
   "scripts": {
     "serve": "gulp serve",
     "build": "DS_ENV=production NODE_ENV=production gulp",
-    "lint": "eslint docs/assets/scripts/ --ext .js",
+    "lint": "eslint app/assets/scripts/ --ext .js",
     "test": "echo \"No tests\" && exit 0",
     "postinstall": "bundle install --path bundle/cache && [ -f _config-dev.yml ] || touch _config-dev.yml"
   },
