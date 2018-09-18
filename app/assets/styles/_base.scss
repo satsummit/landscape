@@ -135,7 +135,7 @@ article p {
 .article-padding {
   padding: 0 6rem 4rem 6rem;
   @include medium {
-    padding: 0 10rem 10rem 6rem;    
+    padding: 0 10rem 10rem 6rem;
   }
 }
 
@@ -216,3 +216,11 @@ hr {
   width: 100%;
 }
 
+figure img {
+  max-width: 100%;
+}
+
+figcaption {
+  text-align: center;
+  margin: 1rem 0 2rem;
+}
