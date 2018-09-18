@@ -46,17 +46,22 @@ Using Analysis Ready Data, users can more easily perform reliable and consistent
 
 ## Mosaics
 
-Mosaic imagery is popular due to some of the same reasons why ARD is needed. It is much easier to use a mosaic, where clouds have been removed, all pixels are filled with good data, and the overall color between pixels of different scenes has been matched. This creates a continuous image that is both pleasing to look at and simple to use. However, there are some disadvantages:
+One of the biggest challenges when dealing with remote sensing data is the presence of clouds. Even if the clouds, and cloud shadows, have been masked properly, it is difficult to work with images that have gaps of data missing throughout the scene. Becuase of this, mosaics have become a popular option. A mosaic is stitching together multiple scenes within a time period to create a seamless complete image. Areas that may have been covered with clouds in one image can be filled with good data from another image. This creates a continuous image that is both pleasing to look at and simple to use. The mosaic could include data over weeks, months, or even a year.
 
-- The mosaic could include data over weeks, months, or even a year, so time series algorithms are not appropriate. There can also be problems if there is change that occurs on timescales shorter than the period of the mosaic.
+However, the process of creating the mosaic also removes an important piece of information - the precise date when the data is collected. This temporal information is vital for some applications where changes can happen on timescales shorter than the time period of the mosaic. A mosaic using a years worth of imagery isn't very useful in visualizing seasonal changes or shifts in growing seasons.
 
-- If the mosaic has been color-matched, then the units have been altered and will longer be analysis-ready. For some algorithms this is fine, but for others this can cause problems. A mosaic that has been created for visual purposes is different than a mosaic made for scientific purposes.
+When using mosaics, as with the original scenes, it is important to know what units the data is provided in. Mosaics are frequently created for visual applications, such as the creation of a basemap. For this, different scenes might have been color corrected or otherwise transformed in order to create a more visually pleasing image. Thee are not as suitable for analysis purposes.
 
+## Data Formats
 
-## File Formats
+Data providers have a lot of choices to make when publishing data. It's not just what file format to use (e.g., tif, jpg, txt, csv, json), but also how the data is split up across files and how big each of those files are. This has traditionally involved trade-offs between ease of use and file sizes. If data is split up between lots of files then users need to download and manage many files. Alternately, if the data is consolidated into fewer files the risk is that the user needs to download a lot of extra data that they may not use.
 
-- Remote reading
-- COGs, JP2K
+As an example, consider downloading a single Landsat-8 scene using EarthExplorer. The entire scene, with all bands, is a 1 GB compressed file. The scene includes all 11 spectral bands for a region covering 68,000 km<sup>2</sup>. If the user is interested in just the Red and Near-Infrared bands for a region of 1000 hectares they are using much less than 1% of the data they need to download.
+
+An alternative is to store the data in a format a user can read any arbitrary piece of the data remotely, without having to download bytes that won't be used. Several file formats can provide this functionality, but the most widely used and accepted is what is called a Cloud-Optimized GeoTIFF (COG). A COG is like a regular GeoTIFF except that 
+
+- Header 
+- 
 
 
 ### Image Catalogs and Searching
