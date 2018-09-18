@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import mapbox from 'mapbox'
 
 let L = window.L
 
