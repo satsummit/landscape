@@ -60,4 +60,4 @@ var Axis = React.createClass({
   }
 })
 
-module.exports = Axis;
+module.exports = Axis
