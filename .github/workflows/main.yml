@@ -1,0 +1,51 @@
+name: Landscape
+
+on:
+  push:
+    branches:
+    - 'feature/ci'
+
+env:
+  NODE: 4.5
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.8.0
+        with:
+          access_token: ${{ github.token }}
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ env.NODE }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE }}
+
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        id: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package.json') }}
+
+      - name: Cache dist
+        uses: actions/cache@v2
+        id: cache-dist
+        with:
+          path: dist
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ github.workflow }}-${{ github.sha }}
+
+      - name: Install
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+        run: npm install
+
+      - name: Build production
+        run: npm run build
