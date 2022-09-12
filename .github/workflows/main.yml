@@ -26,6 +26,11 @@ jobs:
         with:
           node-version: ${{ env.NODE }}
 
+      - name: Use Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+
       - name: Cache node_modules
         uses: actions/cache@v2
         id: cache-node-modules
@@ -41,10 +46,6 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ github.workflow }}-${{ github.sha }}
 
       - name: Install
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.0' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
         run: npm install
 
       - name: Build production
