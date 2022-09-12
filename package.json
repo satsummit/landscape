@@ -41,7 +41,7 @@
     "babelify": "^7.3.0",
     "browser-sync": "^2.16.0",
     "browserify": "^13.1.0",
-    "collecticons-processor": "^2.0.0",
+    "collecticons-processor": "^3.1.0",
     "del": "^2.2.0",
     "envify": "^3.4.0",
     "eslint": "^3.10.2",
