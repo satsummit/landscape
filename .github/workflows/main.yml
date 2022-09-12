@@ -6,7 +6,7 @@ on:
     - 'feature/ci'
 
 env:
-  NODE: 4.5
+  NODE: 12
 
 jobs:
   build:
