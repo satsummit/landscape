@@ -46,7 +46,7 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ github.workflow }}-${{ github.sha }}
 
       - name: Install
-        run: yarn install
+        run: npm install
 
       - name: Build production
-        run: yarn build
+        run: npm run build
