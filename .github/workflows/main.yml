@@ -48,5 +48,8 @@ jobs:
       - name: Install
         run: npm install
 
+      - name: Bundler
+        run: npm run postinstall
+
       - name: Build production
         run: npm run build
