@@ -62,6 +62,7 @@ gulp.task('default', ['clean'], function () {
 gulp.task('serve', ['vendorScripts', 'javascript', 'styles', 'jekyll'], function () {
   browserSync({
     port: 3000,
+    open: false,
     server: {
       baseDir: ['.tmp', '_site'],
       routes: {
