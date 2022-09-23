@@ -15,6 +15,35 @@ After these basic requirements are met, run the following commands in the websit
 $ npm install
 ```
 
+## Development with Docker
+Since this project is very old it is simpler to have docker run it.   
+This was a solution to circumvent problems from an old system.
+
+**Build docker**
+```bash
+docker build -t landscape .
+```
+
+**Run docker and install the dependencies**  
+Since the folder is mounted, the dependencies are installed in your computer but built for the docker architecture.
+```bash
+docker run -p 3000:3000 -w /app -v "$(pwd):/app" -it --name landscape landscape bash
+
+## Now from within the container install the node and ruby deps
+npm install
+npm run postinstall
+
+## Serve
+npm run serve
+```
+
+**Serving the site**  
+If the container already exists, you just need to start it and run the serve command.
+```bash
+docker start -i landscape
+npm run serve
+```
+
 ### Getting started
 The site resides in the `app` and it is structured as a jekyll site.
 
