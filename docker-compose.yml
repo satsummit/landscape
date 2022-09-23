@@ -1,0 +1,18 @@
+version: '3'
+services:
+  landscape:
+    image: landscape:v1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+        - ./:/app
+    working_dir: /app
+    command: >
+      /bin/bash -c "
+        ln -s /mnt/node_modules node_modules
+        npm run postinstall --loglevel verbose
+        npm run serve
+      "

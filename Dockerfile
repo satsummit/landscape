@@ -10,7 +10,7 @@ RUN whoami
 # RUN source /root/.bashrc
 
 ENV NVM_DIR /root/.nvm
-ENV NODE_VERSION 10
+ENV NODE_VERSION 10.24.1
 
 # Install nvm with node and npm
 RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.39.1/install.sh | bash \
@@ -19,5 +19,9 @@ RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.39.1/install.sh | b
     && nvm alias default $NODE_VERSION \
     && nvm use default
 
-ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
-ENV PATH      $NVM_DIR/v$NODE_VERSION/bin:$PATH
+ENV NODE_PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin
+ENV PATH $NODE_PATH:$PATH
+ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/lib/node_modules:$PATH
+COPY package.json /mnt 
+RUN cd /mnt && npm install && npm link
+WORKDIR /app
