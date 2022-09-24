@@ -28,9 +28,10 @@ Reveal ensures equitable access to life-saving immunizations, antibiotics, and p
 Project AEDES, by CirroLytix is a tool that correlates dengue cases and deaths with real-time data from climate, google searches, and remote sensing, to predict potential dengue hotspot locations.
 
 ### STAC Tools & resources
-A range of tools help facilitate the use of the STAC spec – some of the most widely used are:
-- STAC Browser is a Vue-based browser for STAC catalogs.
-- STAC Server (previously known as sat-api) is a STAC compliant web API for searching and serving metadata for geospatial data. It is written in Javascript and backed by Elasticsearch
-- STAC Validator is a python utility to validate STAC json files against the STAC spec or against local STAC extensions.
-- PySTAC is a library for working with STAC catalogs in Python
+A range of tools help facilitate the use of the STAC spec – some of the most widely used are:<br>
+
+- STAC Browser is a Vue-based browser for STAC catalogs.<br>
+- STAC Server (previously known as sat-api) is a STAC compliant web API for searching and serving metadata for geospatial data. It is written in Javascript and backed by Elasticsearch<br>
+- STAC Validator is a python utility to validate STAC json files against the STAC spec or against local STAC extensions.<br>
+- PySTAC is a library for working with STAC catalogs in Python<br>
 - EODAG is a CLI tool and a Python framework for searching, aggregating results and downloading EO data through a unified API regardless of the data provider. It can be run as STAC client or STAC API proxy server for non-STAC providers.
