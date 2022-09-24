@@ -6,7 +6,7 @@ title: Analysis
 type: title-page
 
 prev: Spatial and Temporal Resolution
-next: Spectral Combinations
+next: Band Combinations
 
 ---
 
