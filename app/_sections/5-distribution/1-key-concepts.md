@@ -101,7 +101,7 @@ The [SpatioTemporal Asset Catalogs](https://stacspec.org/en/about/) (STAC) speci
 
 <figure class="align-center">
   <img src="/assets/graphics/content/visualization-stac.png" />
-  <figcaption>SSource: 
+  <figcaption>Source: 
 https://towardsdatascience.com/organizing-geospatial-data-with-spatio-temporal-assets-catalogs-stac-using-python-45f1a64ca082
 </figcaption>
 </figure>
