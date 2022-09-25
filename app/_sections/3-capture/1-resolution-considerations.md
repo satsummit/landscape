@@ -21,6 +21,8 @@ Spatial resolution (also referred to as ground sample distance GSD) refers to th
 - High resolution: 1-5 m/pixel (e.g., Planet Labs Rapid Eye Satellite)
 - Very high resolution: <1m/pixel (e.g., Maxar’s Worldview Satellites)
 
+### What spatial resolution do I need?
+The imagery samples below can help select the right imagery for your project. In an urban environment like Fortaleza, freely available Landsat imagery (15m) shows the extent of the city. Sentinel-2 imagery (10m) offers a closer view of city blocks. Medium resolution imagery like RapidEye (5m) shows roads. With Worldview 3 (.3m) and Pleiades (.5m) images you can count beach umbrellas. Your specific needs of your use case will inform the spatial resolution of the imagery you select. In general, you can think about moderate and low-resolution sensors as providing free data but are typically limited in their ability to view human-level change. As you improve resolution (aka have a lower pixel-size) the price of the imagery will increase but the ability to detect human-level change and activity increases. 
 
 #### Pansharpening
 
