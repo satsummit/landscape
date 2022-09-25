@@ -45,3 +45,18 @@ The applications of instance segmentation machine learning in remote sensing are
 **Hardware Solutions** - Linux Ubuntu– For developing your own ml algorithms and code, Linux is an open source (free) operating system often paired with the Linux distribution Ubuntu – it has become a favorite in ML/AI development because there are no inhibiting license requirement and is widely used across the industry. It can be expensive to get the hardware system requirements with GPUs, but it is a onetime fixed cost. 
 
 **Cloud Solutions** – With advancements in cloud compute capabilities, GIS data scientists can opt out of the clunky hardware solution and develop and run ML models in the cloud. Emerging platforms include Microsoft’s Planetary Computer enabled by Microsoft Azure, Google’s cloud that supports Google Colab, and Amazon World Services (AWS). Cloud ML solutions come with their own costs and can become expensive depending on the model compute requirements. Google Colab starts of free to use, and can upgraded for $9.99 month for faster GPUS and more memory 
+
+### Learning Materials & Tools
+
+As the machine learning space develops, an abundance of tools and learning materials are being published and open sourced for a broad community of users. Outlined below are several resources and additional considerations for using machine learning with satellite data.
+
+**GitHub** is a free and open-sourced web-based interface that has become a popular programming resource for data scientists, GIS analysts, and the machine learning community. GitHub serves as a repository for open-source machine learning project documentation, codebases, and additional resources that is free to access and utilize. 
+Robin Cole’s Satellite Image Deep Learning GitHub is a page which provides an expansive library of resources for machine learning with satellite imagery including countless resources on cutting edge machine learning projects that deploy classification and segmentation techniques.  
+**Radiant ML Hub** is a free and open-source geospatial library offering data and algorithms intended to accelerate the adoption and understanding of ML/AI as it’s applied to remotely sensed data. It houses large datasets of training data for machine learning applications including crop identification and agricultural forecasting, wildfire and flood mapping, building extraction, and land use classification.
+**Python** is a free programming language incorporated into many GIS software applications such as ArcGIS and QGIS. It is commonly used in machine learning and other processes to automate geoprocessing tasks. Here is a free introduction course from MIT.
+**Anaconda Distribution** is world’s most popular open-source Python distribution platform. It equips individuals to easily search and install thousands of Python/R packages and access a vast library of community content and support satellite imagery analysis.
+**Jupyter Notebooks** is a free software and web-based interactive development environment for python (works with other languages as well) notebooks, code, and data. Its interface allows users to configure and arrange workflows in data science and machine learning. It is a common way that project code and different applications/models are shared because it allows for easy replication and extension of the process. Here is an overview from RealPython.
+**TensorFlow** is a free and open source software library for machine learning and artificial intelligence. It works with python and C++ languages and is useful for training and inference of deep learning neural networks. 
+
+Additional Resources:
+https://link.springer.com/chapter/10.1007/978-3-319-65633-5_8
