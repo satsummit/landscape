@@ -62,6 +62,11 @@ High resolution commercial imagery is available up to .3m resolution, with revis
 
 Radiometric Resolution can be relatively boiled down to mean the amount of information recorded in each pixel. The higher the radiometric resolution, the more values that are available to store information which provides better discrimination between even the slightest differences in energy. For example, when assessing water quality from space, high radiometric resolution is necessary to distinguish between subtle differences in ocean color.
 
+<figure class="align-center">
+  <img src="/assets/graphics/content/radiometric-resolution.png" />
+  <figcaption>Source: https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing</figcaption>
+</figure>
+
 Spectral Resolution – The number of spectral bands and width of each spectral band on-board a specific sensor, or the ability of a sensor to discern finer wavelengths in the electromagnetic spectrum, often referred to in relation to the width of sensor bands. Multispectral sensors have 3-10 bands while other sensors have hundreds or even thousands of bands (super-spectral and hyperspectral sensors). Different classes of features and details in an image can be distinguished by comparing energy responses across distinct wavelengths. For example, water and vegetation can be distinguished using broad wavelength ranges in the visible and near infrared, while differentiating rock types requires finer wavelength ranges that interact with different mineral compositions.  Like the relation between spatial and temporal resolution, there is also an inverse relationship between spectral resolution and spatial resolution. In most cases as a sensor increases the number of spectral bands, it’s spatial resolution reduces.
 
 # Satellite Coverage 
