@@ -5,7 +5,7 @@ permalink: capture/
 title: Capture
 type: title-page
 
-prev: Introduction
+prev: Digital Microplanning
 next: Spatial and Temporal Resolution
 
 ---
