@@ -75,9 +75,5 @@ In addition to false color composition, spectral bands can be combined mathemati
 Common use cases of vegetation indices are vegetation mapping and monitoring, biodiversity assessments, forest degradation assessments, biomass mapping, crop condition monitoring and predicting crop yield, and carbon capture assessment. 
 Other common indices have been developed to measure burn severity, geologic qualities such as the presence of certain minerals, water turbidity, mud, snow, and more. 
 
-Normalized Difference Water Index (NDWI) and Normalized Difference Snow Index (NDSI) – Commonly used for water mapping and water quality monitoring, change detection, flood monitoring and damage assessment, snow and ice mapping and monitoring 
-Normalized Difference Built-up Index (NDBI) – emphasizes manufactured and built-up environments in imagery." %}
 
-{% include side-image.html title="Principle Component Analysis" image="pca-thumb.png" definition="Another image synthesis technique, Principle Component Analysis (PCA), decorrelates the data within each spectral band, such that the most common characteristics of all bands are placed in the highest category and less common characteristics are placed in lower categories, until all variance is explained. It is invaluable for exploration of data and landscape characteristics, simultaneously drawing attention to the most noteworthy and best-hidden features in a scene."%}
 
-{% include side-image.html title="Kauth-Thomas" image="tasscap-thumb.png" definition="KT-Transformations are a type of PCA, which, rather than being data-driven, combine information from multiple bands using specially developed coefficients to create the biophysically meaningful variables of Brightness, Greenness, and Wetness- essential components of a landscape." %}
