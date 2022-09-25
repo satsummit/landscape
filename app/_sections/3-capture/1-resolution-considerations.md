@@ -1,8 +1,8 @@
 ---
 layout: default
 scripts:
-permalink: capture/spatial-and-temporal-resolution.html
-title: "Spatial and Temporal Resolution"
+permalink: capture/resolution-considerations.html
+title: "Resolution Considerations"
 parent: capture
 
 prev: Capture
