@@ -21,11 +21,9 @@ Advanced analytical techniques go beyond inter-band math and may classify data i
 
 {% include side-image.html title="Change Detection" image="change_detection.png" definition="Change detection is the analysis of imagery from different time periods to detect and understand changes. Decades of historical and open access satellite data make it possible to monitor a range of changes on the Earth’s surface. Landsat 1 for example was launched in 1972 allowing for change detection back 50 years. Examples of common applications include urban growth, land resource planning, deforestation, ice melting, tracking urban conflict, disaster monitoring, and impact evaluations." %}
 
-{% include side-image.html title="Feature Extraction" image="similar_objects.png" definition="Analysis of imagery to extract and identify features. These can include man-made (buildings, roads, structures, crops, cars) and natural objects (land cover, water extent, forest health and species). Once extracted, these items can be sorted, counted, and analyzed." %}
-
 <figure class="align-center">
   <img src="/assets/graphics/content/change-detection.png" />
   <figcaption>Satellites that can be used for change detection back to 1972. Source: https://eos.com/blog/historical-satellite-images/</figcaption>
 </figure>
 
-
+{% include side-image.html title="Feature Extraction" image="similar_objects.png" definition="Analysis of imagery to extract and identify features. These can include man-made (buildings, roads, structures, crops, cars) and natural objects (land cover, water extent, forest health and species). Once extracted, these items can be sorted, counted, and analyzed." %}
