@@ -10,17 +10,17 @@ next: Spectral Bands
 
 ---
 
-# Spatial and Temporal Resolution
+# Spatial Resolution
 
 ---
 
-Spatial resolution refers to the size of one pixel on the ground. For example 15 meters means that one pixel on the image corresponds to a square of 15 by 15 meters on the ground. This is also sometimes referred to as Ground Sample Distance (GSD).  Temporal resolution refers to the how often data of the same area is collected. This is typically referred to as Revisit Time.
+Spatial resolution (also referred to as ground sample distance GSD) refers to the size of one pixel on the ground. For example, a spatial resolution of 15 meters means that one pixel on the image corresponds to a square of 15 by 15 meters on the ground. Finer resolution indicates a lower pixel size and means you can see more detail in the imagery. Today satellite imagery can be generally classified into three “buckets” of spatial resolution: 
 
-Sensors can trade spatial resolution for temporal resolution, but it is difficult to maximum both. Sensors that have a high spatial resolution cover a smaller area then a sensor with the same number of pixels but with a lower spatial resolution. With a smaller field of view it takes longer to cover the same area, thus as spatial resolution increases, temporal resolution decreases.
+- Low resolution: over 30 m/pixel (e.g., NASA Terra & Aqua MODIS Satellites)
+- Medium resolution: 5-30 m/pixel (e.g., USGS/NASA Landsat 8 Satellite)
+- High resolution: 1-5 m/pixel (e.g., Planet Labs Rapid Eye Satellite)
+- Very high resolution: <1m/pixel (e.g., Maxar’s Worldview Satellites)
 
-Freely available imagery (e.g., Landsat, Sentinel, MODIS) tends to either have a revisit time measured in days (1-4 days) with resolution in the hundreds of meters (300m-500m), or a revisit time measured in weeks (10-20 days) with resolutions in the tens of meters (10m-30m). 
-
-High resolution commercial imagery is available up to .3m resolution, with revisit times varying quite a bit. Some sensors are tasked, or pointed to collect specific areas rather than always just collecting the area directly below. As a result, some areas may not be covered at all by tasked satellites. While there is still a premium for the highest resolution imagery (<0.50m), medium to low resolution is suitable for many applications, and increasingly affordable or available at no cost.
 
 #### Pansharpening
 
