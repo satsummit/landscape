@@ -6,7 +6,7 @@ title: "Resolution Considerations"
 parent: capture
 
 prev: Capture
-next: Spectral Bands
+next: Satellite Providers
 
 ---
 
