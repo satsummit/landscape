@@ -6,7 +6,7 @@ title: Capture
 type: title-page
 
 prev: Digital Microplanning
-next: Spatial and Temporal Resolution
+next: Resolution Considerations
 
 ---
 
