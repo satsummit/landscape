@@ -6,7 +6,7 @@ title: "Advanced Analysis"
 parent: analysis
 
 prev: Band Combinations
-next: Distribution
+next: Machine Learning and AI Applications
 
 ---
 
