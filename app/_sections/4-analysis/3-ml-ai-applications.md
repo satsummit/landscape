@@ -37,3 +37,7 @@ Another type of remote sensing machine learning is image segmentation, or featur
 Segmentation models require supervised learning, where the human analyst must create data examples (training data) that the model will learn from. For example, if you want to teach a machine learning model to extract building footprints, you must first digitize a training dataset of building outlines in the format you wish the model to extract them in.
 
 The applications of instance segmentation machine learning in remote sensing are various, including environmental monitoring, disaster response mapping, population estimation, route optimization, and spatial modeling to name a few. 
+
+### Platforms For Satellite Data Machine Learning
+
+**Software Solutions** – Many software’s such as ESRI’s ArcGIS platform, L3Harris’s ENVI, or even Picterra’s Geospatial ML Platform have native machine learning functionality built in for ease of use that you can use from any operating system. The models and processes are built into the software to make the machine learning pipeline as simple as possible. Most software solutions come with a cost as most GIS software that has ML capability is proprietary. However, Quantum GIS (QGIS) is a free-to-use, open-source GIS software with limited ML capability. 
