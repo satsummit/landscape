@@ -41,3 +41,5 @@ The applications of instance segmentation machine learning in remote sensing are
 ### Platforms For Satellite Data Machine Learning
 
 **Software Solutions** – Many software’s such as ESRI’s ArcGIS platform, L3Harris’s ENVI, or even Picterra’s Geospatial ML Platform have native machine learning functionality built in for ease of use that you can use from any operating system. The models and processes are built into the software to make the machine learning pipeline as simple as possible. Most software solutions come with a cost as most GIS software that has ML capability is proprietary. However, Quantum GIS (QGIS) is a free-to-use, open-source GIS software with limited ML capability. 
+
+**Hardware Solutions** - Linux Ubuntu– For developing your own ml algorithms and code, Linux is an open source (free) operating system often paired with the Linux distribution Ubuntu – it has become a favorite in ML/AI development because there are no inhibiting license requirement and is widely used across the industry. It can be expensive to get the hardware system requirements with GPUs, but it is a onetime fixed cost. 
