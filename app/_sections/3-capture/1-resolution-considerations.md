@@ -28,7 +28,7 @@ Minimum required resolution – it is best practice to determine what is the min
 The imagery samples below can help select the right imagery for your project. In an urban environment like Fortaleza, freely available Landsat imagery (15m) shows the extent of the city. Sentinel-2 imagery (10m) offers a closer view of city blocks. Medium resolution imagery like RapidEye (5m) shows roads. With Worldview 3 (.3m) and Pleiades (.5m) images you can count beach umbrellas. Your specific needs of your use case will inform the spatial resolution of the imagery you select. In general, you can think about moderate and low-resolution sensors as providing free data but are typically limited in their ability to view human-level change. As you improve resolution (aka have a lower pixel-size) the price of the imagery will increase but the ability to detect human-level change and activity increases. 
 
 <figure class="align-center">
-  <img src="/assets/graphics/content/spectral-resolution.png" />
+  <img src="/assets/graphics/content/spatial-resolution-price-graph.png" />
   <figcaption>Source: https://www.researchgate.net/figure/Comparison-between-price-and-spatial-resolution-Based-on-the-minimum-price-area-and-the_fig1_326417596</figcaption>
 </figure>
 
