@@ -14,7 +14,6 @@ next: Population Estimation, Modelling, and Migration
 
 As the world commits trillions of dollars to progress the Sustainable Development Goals, international agendas such as Agenda 2063 and the existential challenge of climate change, having an evidence base to shape policy, guide intervention and evaluate impact is critical. Many challenges are geographic (spatial) in nature, and Earth observations are emerging as a unique capability to underpin geospatial impact evaluation. Using satellite imagery to evaluate the impact of an intervention addresses challenges for on the ground evaluation that takes extensive amounts of time and resource to complete. Take for example an effort to curb coastal erosion by installing breakwaters off the coast. Using historical satellite data you can monitor the rates of coastal erosion and see the impact that the breakwaters had. See below for an example of a study that did just that in Senegal. 
 
-
 <figure class="align-center">
   <img src="/assets/graphics/content/impact_evaluation.jpg" />
   <figcaption>Impact Evaluations of breakwaters on coastal erosion, Sourced from Digital Earth Africa’s sandbox.</figcaption>
@@ -22,8 +21,9 @@ As the world commits trillions of dollars to progress the Sustainable Developmen
 
 Satellite data can address the following difficulties currently faced in impact evaluations. 
 
-Chart in spreadsheet "geospatial solutions to address impact evaluation challenges"
-
 <figure class="align-center">
   <img src="/assets/graphics/content/geospatial_solution.png" />
+  <figcaption>
+    From spreadsheet "<a href="https://www.3ieimpact.org/sites/default/files/2021-01/3ie-NLT-Marketing-flyer.pdf">Geospatial Analysis in Impact Evaluation</a>".
+  </figcaption>
 </figure>
