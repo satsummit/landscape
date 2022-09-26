@@ -85,3 +85,92 @@ The factors mentioned above dictate the available and usable archive for any giv
 
 The images below detail the currency of images used in Maxar mosaics. Covered in more detail in the ‘Distribution’ section, a mosaic is a patchwork of (mostly) cloud free images. The date ranges shown in the images somewhat highlight this reduced focus of collection over these areas, though it is strongly encouraged to reach out to the provider in question to get the most accurate sense of data availability over an AOI.
 
+<figure class="align-center">
+  <img src="/assets/graphics/content/bangladesh-mosaic-coverage.png" />
+  <figcaption> Mosaic coverage map over Bangladesh. Source: Discover.Maxar.com</figcaption>
+</figure>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/bangladesh-mosaic-currency.png" />
+  <figcaption>Mosaic currency map over Bangladesh. Source: Discover.Maxar.com</figcaption>
+</figure>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/cambodia-mosaic-coverage.png" />
+  <figcaption> Mosaic coverage map over Cambodia. Source: Discover.Maxar.com</figcaption>
+</figure>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/cambodia-mosaic-currency.png" />
+  <figcaption>Mosaic currency map over Cambodia. Source: Discover.Maxar.com</figcaption>
+</figure>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/drc-mosaic-coverage.png" />
+  <figcaption> Mosaic coverage map over DRC. Source: Discover.Maxar.com</figcaption>
+</figure>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/drc-mosaic-currency.png" />
+  <figcaption>Mosaic currency map over DRC. Source: Discover.Maxar.com</figcaption>
+</figure>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/india-mosaic-coverage.png" />
+  <figcaption> Mosaic coverage map over India. Source: Discover.Maxar.com</figcaption>
+</figure>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/india-mosaic-currency.png" />
+  <figcaption>Mosaic currency map over India. Source: Discover.Maxar.com</figcaption>
+</figure>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/laos-mosaic-coverage.png" />
+  <figcaption> Mosaic coverage map over Laos. Source: Discover.Maxar.com</figcaption>
+</figure>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/laos-mosaic-currency.png" />
+  <figcaption>Mosaic currency map over Laos. Source: Discover.Maxar.com</figcaption>
+</figure>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/nigeria-mosaic-coverage.png" />
+  <figcaption> Mosaic coverage map over Nigeria. Source: Discover.Maxar.com</figcaption>
+</figure>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/nigeria-mosaic-currency.png" />
+  <figcaption>Mosaic currency map over Nigeria. Source: Discover.Maxar.com</figcaption>
+</figure>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/philippines-mosaic-coverage.png" />
+  <figcaption> Mosaic coverage map over Philippines. Source: Discover.Maxar.com</figcaption>
+</figure>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/philippines-mosaic-currency.png" />
+  <figcaption>Mosaic currency map over Philippines. Source: Discover.Maxar.com</figcaption>
+</figure>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/somalia-mosaic-coverage.png" />
+  <figcaption> Mosaic coverage map over Somalia. Source: Discover.Maxar.com</figcaption>
+</figure>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/somalia-mosaic-currency.png" />
+  <figcaption>Mosaic currency map over Somalia. Source: Discover.Maxar.com</figcaption>
+</figure>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/sudan-mosaic-coverage.png" />
+  <figcaption> Mosaic coverage map over Sudan. Source: Discover.Maxar.com</figcaption>
+</figure>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/sudan-mosaic-currency.png" />
+  <figcaption>Mosaic currency map over Sudan. Source: Discover.Maxar.com</figcaption>
+</figure>
