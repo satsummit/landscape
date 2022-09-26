@@ -6,7 +6,7 @@ title: Mining
 parent: applications
 
 prev: Monitoring Water Quality and Quantity with Earth Observation Techniques
-next: Monitoring Climate change
+next: Monitoring Climate Change
 
 ---
 

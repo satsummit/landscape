@@ -2,7 +2,7 @@
 layout: default
 scripts:
 permalink: applications/monitoring-climate-change.html
-title: Monitoring Climate change
+title: Monitoring Climate Change
 parent: applications
 
 prev: Mining

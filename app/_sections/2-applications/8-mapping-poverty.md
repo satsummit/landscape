@@ -5,7 +5,7 @@ permalink: applications/mapping-poverty.html
 title: Mapping Poverty
 parent: applications
 
-prev: Monitoring Climate change
+prev: Monitoring Climate Change
 next: Geospatial Impact Evaluations
 
 ---
