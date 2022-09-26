@@ -35,3 +35,12 @@ NASA's Earth Observing System Data and Information System (EOSDIS) data products
 |Level 3  |  Variables mapped on uniform space-time grid scales, usually with some completeness and consistency.
 | Level 3A | L3A data are generally periodic summaries (weekly, ten-day, monthly) of L2 products.
 | Level 4  | Model output or results from analyses of lower-level data (e.g., variables derived from multiple measurements).
+
+### End Results of Processing Levels
+
+No one resolution can fit all uses and budgets. The highest resolution is not always necessary, and it can be limiting when budgets are tight.  It is important to utilize the minimum required resolution as a best practice. The following list of common resolutions and their uses will help with finding the best resolution needed.
+
+
+### Orthorectification
+
+Imagery has an amazing amount of information, but raw aerial or satellite imagery cannot be used in a GIS until it has been processed such that all pixels are in an accurate (x,y) position on the ground. Photogrammetry is a discipline, developed over many decades, for processing imagery to generate accurately georeferenced images, referred to as orthorectified images (or sometimes simply orthoimages). Orthorectified images have been processed to apply corrections for optical distortions from the sensor system, and apparent changes in the position of ground objects caused by the perspective of the sensor view angle and ground terrain.
