@@ -44,3 +44,23 @@ No one resolution can fit all uses and budgets. The highest resolution is not al
 ### Orthorectification
 
 Imagery has an amazing amount of information, but raw aerial or satellite imagery cannot be used in a GIS until it has been processed such that all pixels are in an accurate (x,y) position on the ground. Photogrammetry is a discipline, developed over many decades, for processing imagery to generate accurately georeferenced images, referred to as orthorectified images (or sometimes simply orthoimages). Orthorectified images have been processed to apply corrections for optical distortions from the sensor system, and apparent changes in the position of ground objects caused by the perspective of the sensor view angle and ground terrain.
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/orthorectification.png" />
+  <figcaption>Source: https://earthobservatory.nasa.gov/ContentFeature/GlobalLandSurvey/images/orthorectification.jpg</figcaption>
+</figure>
+
+### Atmospheric Compensation
+
+There are three main types of Atmospheric Compensation algorithms used by imagery providers. They all aim to remove atmospheric effects from raw imagery but go about solving the problem through different methods.
+
+**Top-of-atmosphere (TOA) reflectance** performs a normalization for solar energy. TOA normalizes the pixels values to the 0.0-1.0 range to reduce variability between images. Because the information needed to convert digital numbers (DN) to TOA reflectance values is known, this transformation is very fast and fully automated. The main limitations of TOA reflectance are the remaining effects of Rayleigh scattering (which results in bluish images), aerosol absorption and scattering phenomena (which result in non-uniform, decreased image visibility).
+
+**Rayleigh-only reflectance** accounts for the systematic properties of the atmosphere by removing the Rayleigh scattering component (a result of the interaction of sunlight with molecules in the atmosphere) from imagery. Again, the transformation is very fast and fully automated. In cases of very low aerosol loads, Rayleigh-only reflectance produces images that are less blue than TOA reflectance, but the effects of haze variability remain visible.
+
+**Surface reflectance** compensates for atmospheric absorption and scattering phenomena on a pixel-by-pixel basis. It approximates what would be measured by a sensor held just above the Earth surface, without any alterations from the atmosphere. Of these three choices, surface reflectance oftentimes provides the best visual experience.
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/acomp.png" />
+  <figcaption>Three main types of Atmospheric Compensation (AComp) algorithms. Source: https://maxar-blog-assets.s3.amazonaws.com/uploads/blogImages/2017/11/Figure-6_acomp.png​</figcaption>
+</figure>
