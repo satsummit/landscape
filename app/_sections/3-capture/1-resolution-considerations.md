@@ -43,9 +43,13 @@ Temporal resolution becomes an important consideration in various use cases incl
 
 Increased capture capacity for large satellites and new microsatellite platforms offer frequent revisit rates and more extensive image capture, allowing high frequency monitoring of changes on earth. More regular data makes it easier to study change over time, track the progress of projects, and leverage recent imagery to visualize a region in the days leading up to a disaster. Seasonal forecast products such as [Copernicus Climate Change Service](https://cds.climate.copernicus.eu/cdsapp#!/search?type=dataset&keywords=((%20%22Product%20type:%20Seasonal%20forecasts%22%20))) provide satellite data and graphical products that are updated every month for various use cases. 
 
+{% comment %}
+%% Commented out because the map does not work. It uses mapbox's classic styles which are deprecated.
+
 Planet Labs high frequency imagery over Canada below shows the progress of the growing season, week by week.
 
 <div id="revisitComparison"></div>
+{% endcomment %}
 
 ## Spatial/ Temporal Resolution Trade offs
 
@@ -54,7 +58,6 @@ Sensors typically trade spatial resolution for temporal resolution, but it has b
 Freely available imagery (e.g., Landsat, Sentinel, MODIS) tends to either have a revisit time measured in days (1-4 days) with resolution in the hundreds of meters (300m-500m), or a revisit time measured in weeks (10-20 days) with resolutions in the tens of meters (10m-30m).
 
 High resolution commercial imagery is available up to .3m resolution, with revisit times varying quite a bit. Some sensors are tasked, or pointed to collect specific areas rather than always just collecting the area directly below. As a result, some areas may not be covered at all by tasked satellites. While there is still a premium for the highest resolution imagery (<0.50m), medium to low resolution is suitable for many applications, and increasingly affordable or available at no cost.
-
 
 ## Other Resolution Considerations
 
