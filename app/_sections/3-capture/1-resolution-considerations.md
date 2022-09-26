@@ -56,7 +56,9 @@ Planet Labs high frequency imagery over Canada below shows the progress of the g
 Sensors typically trade spatial resolution for temporal resolution, but it has been difficult historically to maximize both. Sensors that have a high spatial resolution often cover a smaller area than a sensor with lower spatial resolution. With a smaller field of view, it takes longer to cover the same area, thus as spatial resolution increases, temporal resolution decreases. However, new microsatellite constellations are beginning to change this precedent. Large constellations of small satellites with high resolution sensors allow for rapid revisit of a site while still providing quality imagery.
 
 Freely available imagery (e.g., Landsat, Sentinel, MODIS) tends to either have a revisit time measured in days (1-4 days) with resolution in the hundreds of meters (300m-500m), or a revisit time measured in weeks (10-20 days) with resolutions in the tens of meters (10m-30m).
+
 High resolution commercial imagery is available up to .3m resolution, with revisit times varying quite a bit. Some sensors are tasked, or pointed to collect specific areas rather than always just collecting the area directly below. As a result, some areas may not be covered at all by tasked satellites. While there is still a premium for the highest resolution imagery (<0.50m), medium to low resolution is suitable for many applications, and increasingly affordable or available at no cost.
+
 
 # Other Resolution Considerations
 
