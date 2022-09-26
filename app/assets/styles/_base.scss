@@ -27,12 +27,36 @@ h4 {
   font-style: italic;
 }
 
+figure.align-center {
+  max-width: 60rem;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.geo-mosaic {
+  display: grid;
+  grid-template-columns: 1fr;
+  
+  @include large {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  @include xlarge {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
 /* Containers
 ========================================================================== */
 .container {
   margin-top: 4rem;
   display: table;
   height: 100%;
+  width: 100%;
   transition: all 0.2s;
   background-color: lighten($lighter-blue, 60);
 }
@@ -133,7 +157,8 @@ article p {
 }
 
 .article-padding {
-  padding: 0 6rem 4rem 6rem;
+  padding: 0 6rem 8rem 6rem;
+
   @include medium {
     padding: 0 10rem 10rem 6rem;
   }
