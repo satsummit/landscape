@@ -61,7 +61,7 @@ The production settings are in `_config.yml`. If overrides for local development
 # Start development mode with docker-compose
 
 ```sh
-docker-compose up --build
+docker compose up --build
 ```
 
 The container will start in port 3000 and use the local directory to build the web-site.
