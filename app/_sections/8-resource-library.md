@@ -6,7 +6,7 @@ title: Resource Library
 type: title-page
 
 prev: Further Investments
-next: 
+next: Works Cited
 
 ---
 ## Resource Library 

@@ -3,7 +3,7 @@ layout: default
 title: Introduction
 permalink: 
 prev:
-next: Capture
+next: Applications
 
 ---
 

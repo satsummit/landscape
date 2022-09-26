@@ -5,7 +5,7 @@ permalink: distribution/
 title: Distribution
 type: title-page
 
-prev: Advanced Analysis
+prev: Machine Learning and AI Applications
 next: Key Concepts
 
 ---
