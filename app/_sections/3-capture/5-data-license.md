@@ -10,9 +10,7 @@ next: Analysis
 
 ---
 
-# Data License
-
----
+## Data License
 
 An important factor regarding the use of satellite images is the license for the data. It is important to understand the limitations, reusability, and distribution restrictions of the data. For open data, like Landsat, MODIS, ASTER and Copernicus , there are little to no restrictions on use. These satellites were launched by national governments and operate quite differently from commercial satellite imagery providers. The data from Landsat is especially useful as it is all free to the public and spans over 40 years of collection. Services such as Google Earth and Open Street Map (OSM) are also free to use under the principles of fair use in U.S. copyright law. 
 

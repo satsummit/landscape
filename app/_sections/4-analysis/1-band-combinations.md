@@ -10,9 +10,7 @@ next: Advanced Analysis
 
 ---
 
-# Spectral Bands
-
----
+## Spectral Bands
 
 A simple form of image interpretation involves assigning invisible light bands to red, green, and blue channels to create a false color image, commonly referred to as ‘band combinations’. Band combinations are used to highlight the presence of certain materials and/or minimize the representation of other features. The most common band combination is Natural Color and is used to mimic what the human eye would see over a given region, another common combination is Color Infrared which highlights the presence of vegetation. 
 
@@ -40,7 +38,7 @@ Each sensor has a specific set of spectral bands designed for the mission of the
 
 <figure class="align-center">
   <img src="/assets/graphics/content/spectral-resolution.png" />
-  <figcaption>Graphic of currently available optical satellite sensors grouped by different domains of the electromagnetic spectrum (VIS = visible, NIR = near infrared, VNIR = visible near infrared, SWIR = shortwave infrared, TIR = thermal infrared). Source: https://www.researchgate.net/figure/Spectral-resolution-of-currently-available-optical-satellite-sensors-grouped-by-different_fig1_348695518</figcaption>
+  <figcaption>Graphic of currently available optical satellite sensors grouped by different domains of the electromagnetic spectrum (VIS = visible, NIR = near infrared, VNIR = visible near infrared, SWIR = shortwave infrared, TIR = thermal infrared). Source at <a href="https://www.researchgate.net/figure/Spectral-resolution-of-currently-available-optical-satellite-sensors-grouped-by-different_fig1_348695518">researchgate.net</a></figcaption>
 </figure>
 
 While the individual band specifications can vary, a "blue" band on any sensor is going to roughly fall within 0.45 and 0.5 microns.
@@ -68,14 +66,14 @@ Types of Spectal Bands Windows:
 | Natural With Atmospheric Removal | swir22 | nir | green |
 | Vegetation Analysis | swir16 | nir | red |
 
-#### Mathematic spectral transformations
+### Mathematic spectral transformations
 
 In addition to false color composition, spectral bands can be combined mathematically to emphasize a particular set of characteristics. These techniques may draw from all relevant bands, rather than the three band ‘limit’ set by human vision, to draw out very specific characteristics. This generally demands greater processing of the raw data to minimize noise across the deeper image stack. Mathematical transformations can be combined with ground data and well-developed algorithms to answer more quantitative questions. While false color can be used to detect the subjective health of agriculture, the proper mathematic transformations might be able to measure the health of each field using a transferrable metric. While false color composites can distinguish mud from water, a mathematic transformation could measure how wet the mud is.
 
 Common use cases of vegetation indices are vegetation mapping and monitoring, biodiversity assessments, forest degradation assessments, biomass mapping, crop condition monitoring and predicting crop yield, and carbon capture assessment. 
 Other common indices have been developed to measure burn severity, geologic qualities such as the presence of certain minerals, water turbidity, mud, snow, and more. 
 
-{% include side-image.html title="Vegetation and other Indices" image="ndvi-thumb.png" definition="Synthesizing data from multiple spectral bands, through ratio or coefficient-based transformations, can produce indices that can be used to compare every point in an image on the same scale. The most common indices, such as Normalized Difference Vegetation Index (NDVI) and Enhanced Vegetation Index (EVI), measure vegetation health and can be used to distinguish between types of plants. Soil Adjusted Vegetation Index (SAVI) and its counterparts OSAVI and GSAVI suppresses the effects of soil which can lead to erroneous NDVI calculations in areas with sparse vegetation. A comprehensive list of vegetation indices and their formulas can be found here: https://www.l3harrisgeospatial.com/docs/broadbandgreenness.html#Optimize. Common use cases of vegetation indices are vegetation mapping and monitoring, biodiversity assessments, forest degradation assessments, biomass mapping, crop condition monitoring and predicting crop yield, and carbon capture assessment. Other common indices have been developed to measure burn severity, geologic qualities such as the presence of certain minerals, water turbidity, mud, snow, and more. Normalized Difference Water Index (NDWI) and Normalized Difference Snow Index (NDSI) – Commonly used for water mapping and water quality monitoring, change detection, flood monitoring and damage assessment, snow and ice mapping and monitoring. Normalized Difference Built-up Index (NDBI) – emphasizes manufactured and built-up environments in imagery." %}
+{% include side-image.html title="Vegetation and other Indices" image="ndvi-thumb.png" definition="Synthesizing data from multiple spectral bands, through ratio or coefficient-based transformations, can produce indices that can be used to compare every point in an image on the same scale. The most common indices, such as Normalized Difference Vegetation Index (NDVI) and Enhanced Vegetation Index (EVI), measure vegetation health and can be used to distinguish between types of plants. Soil Adjusted Vegetation Index (SAVI) and its counterparts OSAVI and GSAVI suppresses the effects of soil which can lead to erroneous NDVI calculations in areas with sparse vegetation. A comprehensive list of vegetation indices and their formulas can be found at [l3harrisgeospatial.co](https://www.l3harrisgeospatial.com/docs/broadbandgreenness.html#Optimize). Common use cases of vegetation indices are vegetation mapping and monitoring, biodiversity assessments, forest degradation assessments, biomass mapping, crop condition monitoring and predicting crop yield, and carbon capture assessment. Other common indices have been developed to measure burn severity, geologic qualities such as the presence of certain minerals, water turbidity, mud, snow, and more. Normalized Difference Water Index (NDWI) and Normalized Difference Snow Index (NDSI) – Commonly used for water mapping and water quality monitoring, change detection, flood monitoring and damage assessment, snow and ice mapping and monitoring. Normalized Difference Built-up Index (NDBI) – emphasizes manufactured and built-up environments in imagery." %}
 
 {% include side-image.html title="Principle Component Analysis" image="pca-thumb.png" definition="Another image synthesis technique, Principle Component Analysis (PCA), decorrelates the data within each spectral band, such that the most common characteristics of all bands are placed in the highest category and less common characteristics are placed in lower categories, until all variance is explained. It is invaluable for exploration of data and landscape characteristics, simultaneously drawing attention to the most noteworthy and best-hidden features in a scene."%}
 
