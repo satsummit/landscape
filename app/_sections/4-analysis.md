@@ -5,7 +5,7 @@ permalink: analysis/
 title: Analysis
 type: title-page
 
-prev: Spatial and Temporal Resolution
+prev: Data License
 next: Band Combinations
 
 ---

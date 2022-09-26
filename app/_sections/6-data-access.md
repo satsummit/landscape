@@ -5,7 +5,7 @@ permalink: data-access-platforms/
 title: Data Access Platforms
 type: title-page
 
-prev: Crop Classification in Challenging Geographies
+prev: Key Concepts
 next: Commercial Platforms
 
 ---
