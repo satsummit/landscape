@@ -103,5 +103,5 @@ Aerial imagery can be collected from any aerial aircraft such as planes, helicop
 1) [https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits](https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits)  
 2) [https://albedo.com/](https://albedo.com/)  
 3) [https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing)  
-4) [https://crisp.nus.edu.sg/~research/tutorial/optical.htm#:~:text=Optical%20remote%20sensing%20makes%20use,absorb%20differently%20at%20different%20wavelengths](https://crisp.nus.edu.sg/~research/tutorial/optical.htm#:~:text=Optical%20remote%20sensing%20makes%20use,absorb%20differently%20at%20different%20wavelengths)  
+4) [https://crisp.nus.edu.sg/~research/tutorial/optical.htm](https://crisp.nus.edu.sg/~research/tutorial/optical.htm)  
 5) [https://www.earthdata.nasa.gov/learn/backgrounders/what-is-sar](https://www.earthdata.nasa.gov/learn/backgrounders/what-is-sar)  
