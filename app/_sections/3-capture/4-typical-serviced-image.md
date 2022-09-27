@@ -12,7 +12,7 @@ next: Data License
 
 ## Typical Serviced Image
 
-A typical serviced satellite image (bought or downloaded) includes several processing steps. From the raw image (Level 0), data are calibrated into units of physical reflectance (called Level 1 processing), and the image is geolocated and ortho-rectified following an elevation model of the terrain or Ground Control Points (GCP) of a certain Accuracy, under a geodetic reference frame (e.g., Mercator). Over large areas, several captures may need to be stitched together. This product is usually referred to as Level 2 or similar. In many cases, the end user will only see the final image, either in a report or as an interactive map on the web, such as the maps in this report.
+A typical serviced satellite image (bought or downloaded) includes several processing steps. From the raw image (Level 0), data are calibrated into units of physical reflectance (called Level 1 processing), and the image is geolocated and ortho-rectified following an elevation model of the terrain, Ground Control Points (GCP), or a geodetic reference frame (e.g., Mercator). Over large areas, several captures may need to be stitched together. This product is usually referred to as Level 2 or similar. In many cases, the end user will only see the final image, either in a report or as an interactive map on the web, such as the maps in this report.
 
 ### [Data Processing Levels](http://www.earthdata.nasa.gov/engage/open-data-services-and-software/data-information-policy/data-levels)
 
@@ -34,11 +34,6 @@ NASA's Earth Observing System Data and Information System (EOSDIS) data products
 | Level 3A | L3A data are generally periodic summaries (weekly, ten-day, monthly) of L2 products.
 | Level 4  | Model output or results from analyses of lower-level data (e.g., variables derived from multiple measurements).
 
-### End Results of Processing Levels
-
-No one resolution can fit all uses and budgets. The highest resolution is not always necessary, and it can be limiting when budgets are tight.  It is important to utilize the minimum required resolution as a best practice. The following list of common resolutions and their uses will help with finding the best resolution needed.
-
-
 ### [Orthorectification](https://www.esri.com/about/newsroom/insider/what-is-orthorectified-imagery/)
 
 Imagery has an amazing amount of information, but raw aerial or satellite imagery cannot be used in a GIS until it has been processed such that all pixels are in an accurate (x,y) position on the ground. Photogrammetry is a discipline, developed over many decades, for processing imagery to generate accurately georeferenced images, referred to as orthorectified images (or sometimes simply orthoimages). Orthorectified images have been processed to apply corrections for optical distortions from the sensor system, and apparent changes in the position of ground objects caused by the perspective of the sensor view angle and ground terrain.
@@ -48,9 +43,9 @@ Imagery has an amazing amount of information, but raw aerial or satellite imager
   <figcaption>Source at <a href="https://earthobservatory.nasa.gov/ContentFeature/GlobalLandSurvey/images/orthorectification.jpg">earthobservatory.nasa.gov</a></figcaption>
 </figure>
 
-### Atmospheric Compensation
+### [Atmospheric Compensation](https://blog.maxar.com/earth-intelligence/2017/lets-clear-the-air-digitalglobe-atmospheric-compensation-acomp-part-2)
 
-There are three main types of [Atmospheric Compensation](https://blog.maxar.com/earth-intelligence/2017/lets-clear-the-air-digitalglobe-atmospheric-compensation-acomp-part-2) algorithms used by imagery providers. They all aim to remove atmospheric effects from raw imagery but go about solving the problem through different methods.
+There are three main types of Atmospheric Compensation algorithms used by imagery providers. They all aim to remove atmospheric effects from raw imagery but go about solving the problem through different methods.
 
 **Top-of-atmosphere (TOA) reflectance** performs a normalization for solar energy. TOA normalizes the pixels values to the 0.0-1.0 range to reduce variability between images. Because the information needed to convert digital numbers (DN) to TOA reflectance values is known, this transformation is very fast and fully automated. The main limitations of TOA reflectance are the remaining effects of Rayleigh scattering (which results in bluish images), aerosol absorption and scattering phenomena (which result in non-uniform, decreased image visibility).
 
