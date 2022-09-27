@@ -19,7 +19,7 @@ Spatial resolution (also referred to as ground sample distance GSD) refers to th
 - High resolution: 1-5 m/pixel (e.g., Planet Labs Rapid Eye Satellite)
 - Very high resolution: <1m/pixel (e.g., Maxar’s Worldview Satellites)
 
-Minimum required resolution – it is best practice to determine what is the minimum required resolution required for your specific application. For example, if you only need 5m resolution but could get access to 30 cm resolution, consider if the 30 cm is really is necessary. Often people learn towards wanting the highest resolution when it is not needed and often more expensive.  
+Minimum required resolution section is duplicated – one needs to be removed. Recommend removing the first one that comes directly after the bulleted list overviewing low, medium,high, very high resolutions.
 
 ### What spatial resolution do I need?
 
@@ -37,7 +37,7 @@ Minimum required resolution – it is best practice to determine what is the min
 ## Temporal Resolution
 
 Temporal resolution refers to the frequency with which data is collected over the same region. This is typically referred to as ‘revisit time’. Temporal resolution largely depends on the sensor’s characteristics, the orbit, and the swath width (the area on the Earth’s surface captured by the satellite). Many Earth Observation satellites are in a polar orbit and revisit times can vary from 1 to 16 days. For example, NASA’s Terra and Aqua MODIS satellite has a temporal resolution of 1-2 days. Landsat 8 on the other hand has a narrower swath and a temporal resolution of 16 days<sup>1</sup>. Commercial sensors often have the ability to pivot the direction of the on-board sensor and image nearby regions on the Earth’s surface, oftentimes referred to as ‘tasking’, which becomes particularly useful when monitoring a dynamic event like a flood or humanitarian crisis.
-Temporal resolution becomes an important consideration in various use cases including land use change, agriculture, drought, migration, disaster response and others. For example, the temporal resolution needed to monitor land use changes over a decade (changes happening very slowly) looks very different than the temporal resolution needed to assess damages and inform response to an unfolding natural disaster (changes happening very quickly). AKA to monitor changes on the human level, one typically requires high temporal resolution, while moderate-low temporal resolution can suffice for monitoring changes to the Earth’s surface or mapping urban sprawl of a city.
+Temporal resolution becomes an important consideration in various use cases including land use change, agriculture, drought, migration, disaster response and others. For example, the temporal resolution needed to monitor land use changes over a decade (changes happening very slowly) looks very different than the temporal resolution needed to assess damages and inform response to an unfolding natural disaster (changes happening very quickly). To monitor changes on the human level, one typically requires high temporal resolution, while moderate-low temporal resolution can suffice for monitoring changes to the Earth’s surface or mapping urban sprawl of a city.
 
 ### What spatial resolution do I need?
 
@@ -53,7 +53,7 @@ Planet Labs high frequency imagery over Canada below shows the progress of the g
 
 ## Spatial/ Temporal Resolution Trade offs
 
-Sensors typically trade spatial resolution for temporal resolution, but it has been difficult historically to maximize both. Sensors that have a high spatial resolution often cover a smaller area than a sensor with lower spatial resolution. With a smaller field of view, it takes longer to cover the same area, thus as spatial resolution increases, temporal resolution decreases. However, new microsatellite constellations are beginning to change this precedent. Large constellations of small satellites with high resolution sensors allow for rapid revisit of a site while still providing quality imagery.
+Sensors typically trade spatial resolution for temporal resolution and, it has been difficult historically to maximize both. Sensors that have a high spatial resolution often cover a smaller area than a sensor with lower spatial resolution. With a smaller field of view, it takes longer to cover the same area, thus as spatial resolution increases, temporal resolution decreases. However, new microsatellite constellations are beginning to change this precedent. Large constellations of small satellites with high resolution sensors allow for rapid revisit of a site while still providing quality imagery.
 
 Freely available imagery (e.g., Landsat, Sentinel, MODIS) tends to either have a revisit time measured in days (1-4 days) with resolution in the hundreds of meters (300m-500m), or a revisit time measured in weeks (10-20 days) with resolutions in the tens of meters (10m-30m).
 
