@@ -12,14 +12,9 @@ next: Satellites Sensors and Properties
 
 ## Satellite Providers
 
-Spatial resolution (also referred to as ground sample distance GSD) refers to the size of one pixel on the ground. For example, a spatial resolution of 15 meters means that one pixel on the image corresponds to a square of 15 by 15 meters on the ground. Finer resolution indicates a lower pixel size and means you can see more detail in the imagery. 
-
 | Satellite     | Open Data | Spatial Resolution | Revisit rate (days) | Cost ($ per km<sup>2</sup>) | Active Years | Active Status | Notes|
 |----------------------|---------------------------|-------------------------|---------------------------------------------------------------------------------------------|------------------------------------|------------------------------------|------------------------------------|------------------------------------|
-| Airbus Pléiadesneeo |   |      |            |         |         |         |            
 |Airbus Pléiades    |  No |  50cm    |      1     |     13    |     11    |       Yes    |   Constellation of 2       
-|Airbus Vision-1  |    |      |           |         |          |          
-|Airbus DMC Constellation     |    |      |           |         |           |         
 |Airbus SPOT 6/7     |  No  |   1.5m    |      1    |     5.15     |      10      |    Yes             
 |Maxar WV1     |  No | 50cm    |      1.7     |     n/a     |    15       |    Yes    
 |Maxar WV2  |  No |   46cm    |     1.1      |     17.5     |    13      |    Yes   

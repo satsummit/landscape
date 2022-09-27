@@ -33,13 +33,9 @@ next:
 ### Capture
 
 - [https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing)
-- [https://cds.climate.copernicus.eu/cdsapp#!/search?type=dataset&keywords=((%20%22Product%20type:%20Seasonal%20forecasts%22%20)](https://cds.climate.copernicus.eu/cdsapp#!/search?type=dataset&keywords=((%20%22Product%20type:%20Seasonal%20forecasts%22%20))
-- [https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing)
 - [https://www.nrcan.gc.ca/maps-tools-and-publications/satellite-imagery-and-air-photos/tutorial-fundamentals-remote-sensing/satellites-and-sensors/spectral-resolution/9393](https://www.nrcan.gc.ca/maps-tools-and-publications/satellite-imagery-and-air-photos/tutorial-fundamentals-remote-sensing/satellites-and-sensors/spectral-resolution/9393)
 - [https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits](https://www.esa.int/Enabling_Support/Space_Transportation/Types_of_orbits)
 - [https://albedo.com/](https://albedo.com/)
-- [https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing)
-- [https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing)
 - [https://crisp.nus.edu.sg/~research/tutorial/optical.htm#:~:text=Optical%20remote%20sensing%20makes%20use,absorb%20differently%20at%20different%20wavelengths](https://crisp.nus.edu.sg/~research/tutorial/optical.htm#:~:text=Optical%20remote%20sensing%20makes%20use,absorb%20differently%20at%20different%20wavelengths)
 - [https://www.earthdata.nasa.gov/learn/backgrounders/what-is-sar](https://www.earthdata.nasa.gov/learn/backgrounders/what-is-sar)
 - [https://eijournal.com/print/articles/discover-the-benefits-of-radar-imaging](https://eijournal.com/print/articles/discover-the-benefits-of-radar-imaging)
