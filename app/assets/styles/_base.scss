@@ -5,9 +5,6 @@ a {
   @include linkColors(lighten($lighter-blue,20), $mid-orange)
 }
 
-li {
-}
-
 h2 {
   font-size: 2rem;
   font-weight: 800;
@@ -43,10 +40,53 @@ figure.align-center {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
-  
-  @include xlarge {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+}
+
+.geo-mosaic-legend {
+  padding: 1rem 0;
+
+  p {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .year-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 1rem;
+  }
+
+  .year {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .year::before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    display: block;
+  }
+  .year-2022::before {
+    background-color: #69d2fd;
+  }
+  .year-2021::before {
+    background-color: #8afc6f;
+  }
+  .year-2020::before {
+    background-color: #f9fb72;
+  }
+  .year-2019::before {
+    background-color: #f8c067;
+  }
+  .year-2018::before {
+    background-color: #fa8861;
+  }
+  .year-lt2018::before {
+    background-color: #fb635e;
   }
 }
 
@@ -157,7 +197,7 @@ article p {
 }
 
 .article-padding {
-  padding: 0 6rem 8rem 6rem;
+  padding: 0 2rem 8rem 2rem;
 
   @include medium {
     padding: 0 10rem 10rem 6rem;
@@ -170,9 +210,6 @@ article p {
 
 /* Table
 ========================================================================== */
-
-#capabilityTable {
-}
 
 .image-container {
   width: 100%;

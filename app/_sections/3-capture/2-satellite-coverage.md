@@ -22,7 +22,19 @@ Beyond these weather-based and hardware/design-based issues, there is also the c
 
 The factors mentioned above dictate the available and usable archive for any given sensor. One of the many reasons users focus on assets like Landsat and Sentinel is due to their guaranteed revisit schedule. While there may be issues of clouds at given times, you can still expect an image to be captured over a given area on a specific date. The confidence in availability of images coming from high-resolution sensors varies, with certain constellations specifically designed to revisit areas, while others weigh the factors above prior to deciding whether they collect data over an area or not. 
 
-The images below detail the currency of images used in Maxar mosaics. Covered in more detail in the ‘Distribution’ section, a mosaic is a patchwork of (mostly) cloud free images. The date ranges shown in the images somewhat highlight this reduced focus of collection over these areas, though it is strongly encouraged to reach out to the provider in question to get the most accurate sense of data availability over an AOI.
+The images below detail the currency of images used in Maxar mosaics as of September, 2022, with the legend showing the image age by color. Covered in more detail in the ‘Distribution’ section, a mosaic is a patchwork of (mostly) cloud free images. The date ranges shown in the images somewhat highlight this reduced focus of collection over these areas, though it is strongly encouraged to reach out to the provider in question to get the most accurate sense of data availability over an AOI.
+
+<div class="geo-mosaic-legend">
+  <p>Image Collection Year</p>
+  <ul class="year-list">
+    <li class="year year-2022">2022</li>
+    <li class="year year-2021">2021</li>
+    <li class="year year-2020">2020</li>
+    <li class="year year-2019">2019</li>
+    <li class="year year-2018">2018</li>
+    <li class="year year-lt2018">&lt;2018</li>
+  </ul>
+</div>
 
 <div class="geo-mosaic">
 <figure class="align-center">
@@ -107,11 +119,11 @@ The images below detail the currency of images used in Maxar mosaics. Covered in
 
 <figure class="align-center">
   <img src="/assets/graphics/content/sudan-mosaic-coverage.png" />
-  <figcaption> Mosaic coverage map over Sudan. Source: Discover.Maxar.com</figcaption>
+  <figcaption> Mosaic coverage map over Sudan and South Sudan. Source: Discover.Maxar.com</figcaption>
 </figure>
 
 <figure class="align-center">
   <img src="/assets/graphics/content/sudan-mosaic-currency.png" />
-  <figcaption>Mosaic currency map over Sudan. Source: Discover.Maxar.com</figcaption>
+  <figcaption>Mosaic currency map over Sudan and South Sudan. Source: Discover.Maxar.com</figcaption>
 </figure>
 </div>

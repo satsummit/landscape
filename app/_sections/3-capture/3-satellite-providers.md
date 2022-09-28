@@ -35,3 +35,5 @@ next: Satellites Sensors and Properties
 |Maxar IKONOS   | No |   82cm    |     3      |     n/a     |    3      |     No
 |Maxar WV4  | No |   31cm    |     4.5      |     n/a     |    3      |     No
 |RADARSAT Constellation   | No |   3    |     2      |     n/a     |    3      |     Yes                  
+
+_The pricing information listed above should be used for general budgetary considerations. The actual price of satellite data is determined through many factors including whether an organization already has a relationship with a given provider, the size/amount of data being purchased, the age of the data in question, whether the imagery is being purchased ‘offline’ or if it is available through a streaming service (like an API or GUI), etc. Communicating through a procurement office and working directly with the provider will provide the most accurate pricing information._
