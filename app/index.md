@@ -39,7 +39,7 @@ An overview on some of the upcoming satellites and constellations slated for lau
 A list of common platforms, both commercial and federally funded, where users can access satellite data including links.
 
 ### [Further Investments](/further-investments)
-An overview of several investments and data partnerships that off low/no-cost access to satellite data, typically for a specific purpose like environmental monitoring.
+An overview of several investments and data partnerships that offer low/no-cost access to satellite data, typically for a specific purpose like environmental monitoring.
 
 ### [Resource Library](/resource-library)
 Links to several platforms built using satellite and auxiliary data, some of which are Global Public Goods.
