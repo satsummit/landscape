@@ -3,8 +3,8 @@ name: Landscape
 on:
   push:
     branches:
-    - 'feature/2022'
-    # - 'master'
+    - 'master'
+    - 'develop'
 
 env:
   NODE: 10
@@ -75,6 +75,7 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ github.sha }}
 
       - name: Deploy to surge 🚀
+        if: github.ref == 'refs/heads/develop'
         uses: dswistowski/surge-sh-action@v1
         with:
           domain: 'landscape2022.surge.sh'
@@ -82,10 +83,11 @@ jobs:
           login: ${{ secrets.SURGE_LOGIN }}
           token: ${{ secrets.SURGE_TOKEN }}
 
-      # - name: Deploy to GH Pages 🚀
-      #   uses: JamesIves/github-pages-deploy-action@v4.2.5
-      #   with:
-      #     branch: gh-pages
-      #     clean: true
-      #     single-commit: true
-      #     folder: _site
+      - name: Deploy to GH Pages 🚀
+        if: github.ref == 'refs/heads/master'
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: gh-pages
+          clean: true
+          single-commit: true
+          folder: _site
