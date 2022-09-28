@@ -18,6 +18,7 @@ var notifier = require('node-notifier')
 var cp = require('child_process')
 var YAML = require('yamljs')
 var SassString = require('node-sass').types.String
+const { compile } = require('collecticons-processor')
 
 // /////////////////////////////////////////////////////////////////////////////
 // --------------------------- Variables -------------------------------------//
@@ -61,6 +62,7 @@ gulp.task('default', ['clean'], function () {
 gulp.task('serve', ['vendorScripts', 'javascript', 'styles', 'jekyll'], function () {
   browserSync({
     port: 3000,
+    open: false,
     server: {
       baseDir: ['.tmp', '_site'],
       routes: {
@@ -185,26 +187,15 @@ gulp.task('jekyll', function (done) {
 // ------------------------- Collecticon tasks -------------------------------//
 // --------------------- (Font generation related) ---------------------------//
 // ---------------------------------------------------------------------------//
-gulp.task('collecticons', function (done) {
-  var args = [
-    'node_modules/collecticons-processor/bin/collecticons.js',
-    'compile',
-    'app/assets/graphics/collecticons/',
-    '--font-embed',
-    '--font-dest', 'app/assets/fonts',
-    '--font-name', 'Collecticons',
-    '--font-types', 'woff',
-    '--style-format', 'sass',
-    '--style-dest', 'app/assets/styles/core/',
-    '--style-name', 'collecticons',
-    '--class-name', 'collecticon',
-    '--author-name', 'Development Seed',
-    '--author-url', 'https://developmentseed.org/',
-    '--no-preview'
-  ]
-
-  return cp.spawn('node', args, {stdio: 'inherit'})
-    .on('close', done)
+gulp.task('collecticons', function () {
+  return compile({
+    dirPath: 'app/assets/icons/collecticons/',
+    fontName: 'Collecticons',
+    // fontTypes is now woff2 which is compatible with modern browsers.
+    styleDest: 'app/assets/styles/core/',
+    styleName: '_collecticons', // sass no longer prefixed with _
+    preview: false
+  })
 })
 
 // //////////////////////////////////////////////////////////////////////////////

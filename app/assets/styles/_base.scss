@@ -8,15 +8,75 @@ a {
 li {
 }
 
+h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  @include small {
+    font-size: 1.3rem;
+  }
+}
+
+h3 {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+h4 {
+  color: lighten($lighter-blue, 25);
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+figure.align-center {
+  max-width: 60rem;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.geo-mosaic {
+  display: grid;
+  grid-template-columns: 1fr;
+  
+  @include large {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  @include xlarge {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Containers
+========================================================================== */
+.container {
+  margin-top: 4rem;
+  display: table;
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s;
+  background-color: lighten($lighter-blue, 60);
+}
+
 .container-article {
   display: table-cell;
   border-left: solid 1px rgba(0,0,0,0.2);
   position: relative;
+  background-color: white;
   a {
     @include linkColors($mid-green, $mid-orange)
   }
 }
 
+.container-sidenav {
+  display: table-row;
+}
+
+/* Sidebar
+========================================================================== */
 .sidebar {
   display: none;
   @include medium {
@@ -24,7 +84,7 @@ li {
     padding: 20px;
     li {
       padding: 0 2rem;
-      width: 13rem;
+      width: 12rem;
     }
     .sidebar--title__first {
       padding-top: 2rem;
@@ -39,17 +99,6 @@ li {
   }
 }
 
-.container-sidenav {
-  display: table-row;
-}
-
-.container {
-  margin-top: 4rem;
-  display: table;
-  height: 100%;
-  transition: all 0.2s;
-}
-
 .sidebar--title {
   font-weight: 800;
   margin: 1rem 0 0.5rem;
@@ -57,8 +106,25 @@ li {
 }
 
 .sidebar--subsection {
-  margin: 0.25rem 0 0 0.75rem;
+  margin: 0.25rem 0 0;
   font-size: 0.9rem;
+  list-style: none;
+  position:relative;
+  span {
+    margin-left: 1.3rem;
+    display: block;
+  }
+}
+
+.collecticon-circle-empty {
+  position:absolute;
+  top: 4px;
+}
+
+.collecticon-circle-full {
+  position:absolute;
+  top: 4px;
+  color: rgba(0,0,0,0.2);
 }
 
 /* Content
@@ -91,76 +157,19 @@ article p {
 }
 
 .article-padding {
-  padding: 0 6rem 15rem 6rem;
+  padding: 0 6rem 8rem 6rem;
+
   @include medium {
-    padding: 0 10rem 15rem 6rem;    
+    padding: 0 10rem 10rem 6rem;
   }
 }
 
-h2 {
-  font-size: 2rem;
-  font-weight: 800;
+.extra-bottom-margin {
+  margin-bottom: 4rem;
 }
 
-h3 {
-  font-weight: 800;
-  font-size: 1.2rem;
-}
-
-h4 {
-  color: lighten($lighter-blue, 25);
-  font-size: 1.4rem;
-  font-style: italic;
-}
-
-table {
-  border-collapse:collapse;
-  background-color: #fafafa;
-  border: 1px solid rgba(0,0,0,0.2);
-  max-width: 100%;
-  margin: 2rem 0 3rem;
-}
-
-thead {
-}
-
-th {
-  padding: 1rem 2rem;
-  font-weight: 400;
-  font-size: 0.9rem;
-  color: white;
-  background-color: $mid-green;
-  border-bottom: 3px solid darken($mid-green, 20);
-}
-
-.capability-table-item {
-  cursor: pointer;
-  &:hover{
-    background-color: lighten($mid-green, 5);
-  }
-}
-
-tr:nth-child(even) {
-  background-color: rgba(0,0,0,0.05);
-}
-
-td {
-  font-size: 0.9rem;
-  text-align: center;
-  padding: 1rem 0;
-}
-
-td:nth-child(1) {
-  text-align: left;
-  padding: 1rem 2rem;
-  border-right: 1px solid rgba(0,0,0,0.1);
-}
-
-.table-container {
-  width: 100%;
-  overflow: hidden;
-  margin: 2rem 0;
-}
+/* Table
+========================================================================== */
 
 #capabilityTable {
 }
@@ -212,21 +221,10 @@ hr {
   }
 }
 
-.inline-radio-title {
-  text-align: center;
-  background-color: $mid-blue;
-  color: white;
-  border-bottom: 1px solid darken($mid-blue, 20);
-  h3 {
-    padding: 0.5rem 0;
-    margin-bottom: 0;
-  }
-}
-
 .landslide-model-slider {
   width: 250px;
   position: absolute;
-  z-index: 4000;
+  z-index: 1;
   margin: 1rem 0 0 1rem;
   padding: 0.75rem 1rem 0.5rem 1rem;
   border: 1px solid grey;
@@ -234,11 +232,20 @@ hr {
   border-radius: 4px;
 }
 
-.range-labels {
-
-}
-
 #landslide-model-range {
   margin-top: 0.5rem;
   width: 100%;
+}
+
+.satellite-chart {
+  width: 100%;
+}
+
+figure img {
+  max-width: 100%;
+}
+
+figcaption {
+  text-align: center;
+  margin: 1rem 0 2rem;
 }

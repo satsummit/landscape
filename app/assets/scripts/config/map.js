@@ -187,5 +187,4 @@ module.exports = {
       accessToken: 'pk.eyJ1IjoiYnJ1bm9zYW4iLCJhIjoiY2lxeHg5N2p4MDFyYmZrbWdybWw2eDR6ciJ9.dzFsJgTLWzEeVb8rvhsONw'
     }]
   }
-
-};
+}

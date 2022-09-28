@@ -5,7 +5,7 @@
 	<div class="image-container-right">
 		<dt><h4>{{ include.title }}</h4></dt>
 		<dd class="image-container-defintion">
-			{{ include.definition }}
+			{{ include.definition | markdownify }}
 		</dd>
 		{% if include.solution %}
 			<dd class="image-container-solution">

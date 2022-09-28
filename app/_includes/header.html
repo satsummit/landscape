@@ -8,7 +8,7 @@
 			  <li class="sidebar--title sidebar--title__first {% if page.title == 'Introduction' %}siderbar--item__active{% endif %}"><a href="/">Introduction</a></li>
 			  {% for s in site.sections %}
 			    {% if s.parent %}
-			      <li class="sidebar--subsection {% if page.title == s.title %}siderbar--item__active{% endif %}"><a href="{{site.baseurl}}/{{s.permalink}}">{{s.title}}</a></li>
+			      <li class="sidebar--subsection {% if page.title == s.title %}siderbar--item__active{% endif %}"><a href="{{site.baseurl}}/{{s.permalink}}"><i class="collecticon {% if page.title == s.title %}collecticon-circle-full{% else %}collecticon-circle-empty{% endif %}"></i><span>{{s.title}}</span></a></li>
 			    {% else %}
 			      <li class="sidebar--title {% if page.title == s.title %}siderbar--item__active{% endif %}"><a href="{{site.baseurl}}/{{s.permalink}}">{{s.title}}</a></li>
 			    {% endif %}

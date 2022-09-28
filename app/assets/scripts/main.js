@@ -1,3 +1,4 @@
+/* global L */
 'use strict'
 import React from 'react'
 import { render } from 'react-dom'
@@ -8,22 +9,22 @@ import _ from 'lodash'
 import Map from './components/map'
 import maps from './config/mapbox'
 
-// import CapabilityChart from './components/capability-chart'
+import CapabilityChart from './components/capability-chart'
 import CapabilityTable from './components/capability-table'
 import capabilities from '../data/capability.json'
 import ResolutionComparison from './components/resolution-comparison'
 import ToggledResolutionComparison from './components/toggled-resolution-comparison'
 
 // Header Interactives
-function openNav() {
-  document.querySelector('.nav--trigger').addEventListener('click', function() {
+function openNav () {
+  document.querySelector('.nav--trigger').addEventListener('click', function () {
     document.querySelector('.sidenav').style.width = '350px'
     document.querySelector('.container').style.marginRight = '350px'
   })
 }
 
-function closeNav() {
-  document.querySelector('.closebtn').addEventListener('click', function() {
+function closeNav () {
+  document.querySelector('.closebtn').addEventListener('click', function () {
     document.querySelector('.sidenav').style.width = '0'
     document.querySelector('.container').style.marginRight = '0'
   })
@@ -75,12 +76,12 @@ function createToggledResolutionComparison () {
   let container = document.querySelector('#toggledResolutionComparison')
   render(<ToggledResolutionComparison imgTypes={maps.ugandaResolutionComparison.imgTypes}
     maps={maps.ugandaResolutionComparison.maps} token={maps.token}
-    center={[0.5037, 33.2964]} messages={maps.ugandaResolutionComparison.messages}/>, container)
+    center={[0.5037, 33.2964]} title='Spectral Bands' messages={maps.ugandaResolutionComparison.messages}/>, container)
 }
 
 function createRoadsComparisonPalawan () {
   let container = document.querySelector('#palawan-roads-comparison')
-  render(<ResolutionComparison maps={maps.palawanRoadsComparison.maps}
+  render(<ResolutionComparison title='Visible Road Networks by Resolution' maps={maps.palawanRoadsComparison.maps}
     token={maps.token} center={[10.14524, 119.2151]}/>, container)
 }
 

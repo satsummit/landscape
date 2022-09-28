@@ -1,5 +1,6 @@
 // Cribbed from https://github.com/fraserxu/react-dropdown
 @import "vendor/dropdown";
+
 .Dropdown-control {
   padding: 8px 30px 8px 10px;
   min-width: 150px;
@@ -80,10 +81,6 @@
     // because these icons are more rectangular
     margin-top: -12px;
     margin-bottom: -12px;
-
-    &:hover{
-
-    };
   }
 
   &:hover {
@@ -135,17 +132,35 @@ input.radio-item {
   &:checked ~ label {
     color: #fff;
   }
+
+  &:checked ~ .radio-item-label {
+    background-color: lighten($mid-blue,20);
+    border-right: 2px solid #b3b9c4;
+  }
+
+  &:hover:not(:checked) ~ .radio-item-label {
+    background-color: lighten($mid-blue, 40);
+    border-right: 2px solid lighten($mid-blue, 40);
+  }
 }
 
 .radio-item-label {
   padding-right: 1em;
   border-bottom: 1px solid rgba(0,0,0,0.1);
+  max-width: 16rem;
+  font-size: 0.9rem;
 }
 
-&:checked ~ .radio-item-label {
-    background-color: lighten($mid-blue,20)
-}
 
-&:hover:not(:checked) ~ .radio-item-label {
-    background-color: lighten($mid-blue, 25);
+.inline-radio-title {
+  text-align: left;
+  background-color: $mid-blue;
+  color: white;
+  border-bottom: 1px solid darken($mid-blue, 20);
+  h3 {
+    max-width: 14rem;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+  }
 }

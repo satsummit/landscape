@@ -1,44 +1,18 @@
 <!-- Footer Content-->
-<footer class="article-footer {% if page.prev == null or page.next == null %}article-footer__fwidth{% endif %}">
+<footer class="article-footer">
+	 {% if page.prev != null %}
+	 	<a href="{{site.baseurl}}/{{prev-link}}" class="article-footer__flex">
+			 <i class="collecticon collecticon-chevron-left"></i>
+			 <!-- title -->
+			 <h2>{{page.prev}}</h2>
+	 	</a>
+	 {% endif %}
 
-	<!-- Determine if we need two nav blocks or one -->
-	<a href="{{site.baseurl}}/{% if page.prev == null %}{{next-link}}{% else %}{{prev-link}}{% endif %}" class="article-footer__flex">
-		<!-- Create first footer block -->
-		<article class="{% if page.prev == null or page.next == null %}article-footer__full{% else %}article-footer__left{% endif %}">
-			<!-- Determine which chevron to use.. -->
-			{% if page.prev == null %}
-				<i class="collecticon collecticon-chevron-right"></i>
-			{% else %}
-				<i class="collecticon collecticon-chevron-left"></i>
-			{% endif %}
-
-			<!-- If we're on the first page, just use the title for the next page -->
-			<h2>
-				{% if page.prev == null %}
-					{{page.next}}
-				{% else %}
-					{{page.prev}}
-				{% endif %}
-			</h2>
-
-			<!-- preview -->
-			<p></p>
-
-		</article>
-	 </a>
-	 <!-- If we're doing two pages, make the second block -->
-	 {% if page.prev != null and page.next != null %}
+	 {% if page.next != null %}
 	 	<a href="{{site.baseurl}}/{{next-link}}" class="article-footer__flex">
-	 		<article class="article-footer__right">
-	 			<i class="collecticon collecticon-chevron-right"></i>
-
-	 			<!-- title -->
-	 			<h2>{{page.next}}</h2>
-
-				<!-- preview -->
-	 			<p></p>
-
-	 		</article>
+			 <!-- title -->
+			 <h2>{{page.next}}</h2>
+			<i class="collecticon collecticon-chevron-right"></i>
 	 	</a>
 	 {% endif %}
 </footer>
