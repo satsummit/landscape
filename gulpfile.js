@@ -17,7 +17,9 @@ var revReplace = require('gulp-rev-replace')
 var notifier = require('node-notifier')
 var cp = require('child_process')
 var YAML = require('yamljs')
-var SassString = require('node-sass').types.String
+var nodeSass = require('node-sass')
+const sass = require('gulp-sass')(nodeSass)
+var SassString = nodeSass.types.String
 const { compile } = require('collecticons-processor')
 
 // /////////////////////////////////////////////////////////////////////////////
@@ -227,7 +229,7 @@ gulp.task('styles', function () {
       this.emit('end')
     }))
     .pipe($.sourcemaps.init())
-    .pipe($.sass({
+    .pipe(sass({
       outputStyle: 'expanded',
       precision: 10,
       functions: {
