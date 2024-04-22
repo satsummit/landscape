@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+
+<!--[if lt IE 10]> <html class="lt-ie10 no-js"  lang=""> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="description" content="Exploratory, and collaboratory, review of current and upcoming satellite tools for development, from capture, distribution, analysis and applications.">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>State of Satellite Imagery</title>
+  <link rel="canonical" href="/analysis/band-combinations.html">
+  <link rel="alternate" type="application/rss+xml" title="Jekyll Seed" href="/feed.xml">
+  <script defer data-domain="landscape.satsummit.io" src="https://plausible.io/js/script.outbound-links.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,500,300,300italic' rel='stylesheet' type='text/css'>
+
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+  <link rel="stylesheet" href="/assets/styles/main-5bbae75fc5.css">
+</head>
+
+
+<body>
+
+	<header id="header" class="hero">
+	<div class="hero-block">
+	  <h1 class="hero-block__title"><a href="/" class="icon-centerer"><i class="collecticon collecticon-satsummit-logo-symbol-pos"></i> Satellites in Global Development</a></h1>
+		<!-- Mobile Nav -->
+		<div id="mySidenav" class="sidenav">
+		  <a href="javascript:void(0)" class="closebtn">&times;</a>
+			<ul class="secondnav">
+			  <li class="sidebar--title sidebar--title__first "><a href="/">Introduction</a></li>
+			  
+			    
+			      <li class="sidebar--title "><a href="/applications/">Applications</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/accounting-of-transportation-networks.html"><i class="collecticon collecticon-circle-empty"></i><span>Accounting of Transportation Networks</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/forest-and-agriculture.html"><i class="collecticon collecticon-circle-empty"></i><span>Forest and Agriculture</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/disaster-reduction-and-response.html"><i class="collecticon collecticon-circle-empty"></i><span>Disaster Reduction and Response</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/crop-classification-in-challenging-geographies.html"><i class="collecticon collecticon-circle-empty"></i><span>Crop Classification in Challenging Geographies</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/monitoring-water-quality-and-quantity-with-earth-observation-techniques.html"><i class="collecticon collecticon-circle-empty"></i><span>Monitoring Water Quality and Quantity with EO Techniques</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/mining.html"><i class="collecticon collecticon-circle-empty"></i><span>Mining</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/monitoring-climate-change.html"><i class="collecticon collecticon-circle-empty"></i><span>Monitoring Climate Change</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/mapping-poverty.html"><i class="collecticon collecticon-circle-empty"></i><span>Mapping Poverty</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/geospatial-impact-evaluations.html"><i class="collecticon collecticon-circle-empty"></i><span>Geospatial Impact Evaluations</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/population-estimation-modelling-and-migration.html"><i class="collecticon collecticon-circle-empty"></i><span>Population Estimation, Modelling, and Migration</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/renewable-energy-mapping.html"><i class="collecticon collecticon-circle-empty"></i><span>Renewable Energy Mapping</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/digital-microplanning.html"><i class="collecticon collecticon-circle-empty"></i><span>Digital Microplanning</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/capture/">Capture</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/capture/resolution-considerations.html"><i class="collecticon collecticon-circle-empty"></i><span>Resolution Considerations</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/capture/satellite-coverage.html"><i class="collecticon collecticon-circle-empty"></i><span>Satellite Coverage</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/capture/satellite-providers.html"><i class="collecticon collecticon-circle-empty"></i><span>Satellite Providers</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/capture/satellites-sensors-properties.html"><i class="collecticon collecticon-circle-empty"></i><span>Satellites Sensors and Properties</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/capture/typical-serviced-image.html"><i class="collecticon collecticon-circle-empty"></i><span>Typical Serviced Image</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/capture/data-license.html"><i class="collecticon collecticon-circle-empty"></i><span>Data License</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/analysis/">Analysis</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection siderbar--item__active"><a href="/analysis/band-combinations.html"><i class="collecticon collecticon-circle-full"></i><span>Band Combinations</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/analysis/advanced-analysis.html"><i class="collecticon collecticon-circle-empty"></i><span>Advanced Analysis</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/analysis/ml-ai-applications.html"><i class="collecticon collecticon-circle-empty"></i><span>Machine Learning and AI Applications</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/distribution/">Distribution</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/distribution/key-concepts.html"><i class="collecticon collecticon-circle-empty"></i><span>Key Concepts</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/data-access-platforms/">Data Access Platforms</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/data-access-platforms/commercial-platforms.html"><i class="collecticon collecticon-circle-empty"></i><span>Commercial Platforms</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/data-access-platforms/free-federal-access-methods.html"><i class="collecticon collecticon-circle-empty"></i><span>Free/Federal Access Methods</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/further-investments/">Further Investments</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/resource-library/">Resource Library</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/works-cited/">Works Cited</a></li>
+			    
+			  
+			</ul>
+		</div>
+
+	  <!-- Mobile Nav Opener -->
+		<nav class="nav--trigger"><i class="collecticon collecticon-hamburger-menu"></i></nav>
+
+	  <!-- Contribute Block -->
+	  <a href="https://github.com/satsummit/landscape" target="_blank">
+	    <div class="contribute-block">
+	    	<i class="collecticon collecticon-github"></i>CONTRIBUTE
+	    </div>
+	  </a>
+	</div>
+</header>
+
+
+	<div class="container">
+		<div class="container-sidenav">
+			<ul class="sidebar">
+  <li class="sidebar--title sidebar--title__first "><a href="/">Introduction</a></li>
+  
+    
+      <li class="sidebar--title "><a href="/applications/">Applications</a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/accounting-of-transportation-networks.html"><i class="collecticon collecticon-circle-empty"></i><span>Accounting of Transportation Networks</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/forest-and-agriculture.html"><i class="collecticon collecticon-circle-empty"></i><span>Forest and Agriculture</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/disaster-reduction-and-response.html"><i class="collecticon collecticon-circle-empty"></i><span>Disaster Reduction and Response</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/crop-classification-in-challenging-geographies.html"><i class="collecticon collecticon-circle-empty"></i><span>Crop Classification in Challenging Geographies</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/monitoring-water-quality-and-quantity-with-earth-observation-techniques.html"><i class="collecticon collecticon-circle-empty"></i><span>Monitoring Water Quality and Quantity with EO Techniques</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/mining.html"><i class="collecticon collecticon-circle-empty"></i><span>Mining</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/monitoring-climate-change.html"><i class="collecticon collecticon-circle-empty"></i><span>Monitoring Climate Change</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/mapping-poverty.html"><i class="collecticon collecticon-circle-empty"></i><span>Mapping Poverty</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/geospatial-impact-evaluations.html"><i class="collecticon collecticon-circle-empty"></i><span>Geospatial Impact Evaluations</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/population-estimation-modelling-and-migration.html"><i class="collecticon collecticon-circle-empty"></i><span>Population Estimation, Modelling, and Migration</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/renewable-energy-mapping.html"><i class="collecticon collecticon-circle-empty"></i><span>Renewable Energy Mapping</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/digital-microplanning.html"><i class="collecticon collecticon-circle-empty"></i><span>Digital Microplanning</span></a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/capture/">Capture</a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/capture/resolution-considerations.html"><i class="collecticon collecticon-circle-empty"></i><span>Resolution Considerations</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/capture/satellite-coverage.html"><i class="collecticon collecticon-circle-empty"></i><span>Satellite Coverage</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/capture/satellite-providers.html"><i class="collecticon collecticon-circle-empty"></i><span>Satellite Providers</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/capture/satellites-sensors-properties.html"><i class="collecticon collecticon-circle-empty"></i><span>Satellites Sensors and Properties</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/capture/typical-serviced-image.html"><i class="collecticon collecticon-circle-empty"></i><span>Typical Serviced Image</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/capture/data-license.html"><i class="collecticon collecticon-circle-empty"></i><span>Data License</span></a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/analysis/">Analysis</a></li>
+    
+  
+    
+      <li class="sidebar--subsection siderbar--item__active"><a href="/analysis/band-combinations.html"><i class="collecticon collecticon-circle-full"></i><span>Band Combinations</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/analysis/advanced-analysis.html"><i class="collecticon collecticon-circle-empty"></i><span>Advanced Analysis</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/analysis/ml-ai-applications.html"><i class="collecticon collecticon-circle-empty"></i><span>Machine Learning and AI Applications</span></a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/distribution/">Distribution</a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/distribution/key-concepts.html"><i class="collecticon collecticon-circle-empty"></i><span>Key Concepts</span></a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/data-access-platforms/">Data Access Platforms</a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/data-access-platforms/commercial-platforms.html"><i class="collecticon collecticon-circle-empty"></i><span>Commercial Platforms</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/data-access-platforms/free-federal-access-methods.html"><i class="collecticon collecticon-circle-empty"></i><span>Free/Federal Access Methods</span></a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/further-investments/">Further Investments</a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/resource-library/">Resource Library</a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/works-cited/">Works Cited</a></li>
+    
+  
+ </ul>
+
+
+			<div class="container-article">
+				<article class="article-padding">
+					<!-- Generate Navigation Links-->
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+							
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+							
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+
+					<div class="mobile--breadcrumbs">
+	
+		<a href="/analysis">Analysis</a> / <a href="/analysis/band-combinations.html">Band Combinations</a>
+	
+</div>
+
+
+					<h2 id="spectral-bands">Spectral Bands</h2>
+
+<p>A simple form of image interpretation involves assigning invisible light bands to red, green, and blue channels to create a false color image, commonly referred to as ‘band combinations’. Band combinations are used to highlight the presence of certain materials and/or minimize the representation of other features. The most common band combination is Natural Color and is used to mimic what the human eye would see over a given region, another common combination is Color Infrared which highlights the presence of vegetation.</p>
+
+<div class="image-container">
+	<div class="image-container-left">
+		<img class="" src="../assets/graphics/content/false_color.png" />
+	</div>
+	<div class="image-container-right">
+		<dt><h4>False Color</h4></dt>
+		<dd class="image-container-defintion">
+			<p>False color images can distinguish muddy water from muddy land, pinpoint fires, or clearly show the extent of a growing city. The example combines the moisture sensitivity of mid-Infrared reflectance with the vegetation sensitivity of near-infrared to highlight agricultural fields.</p>
+
+		</dd>
+		
+	</div>
+</div>
+
+<p>In this imagery over rural Uganda, near-infrared sensors augment imagery to highlight vegetation (False Color) and to measure the health of that vegetation (NDVI). These images show a range of imagery resolutions from different growing seasons.</p>
+
+<div id="toggledResolutionComparison"></div>
+
+<p>Each sensor has a specific set of spectral bands designed for the mission of the satellite. While some sensors may have only 3 or 4 bands, others may have dozens, or hundreds (these are called hyperspectral sensors). Many earth-observing satellites include bands that fall within commonly used ‘windows’, such as “red” or “near-infrared”.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Common Name</th>
+      <th>Band Range (μm)</th>
+      <th>Landsat 5</th>
+      <th>Landsat 7</th>
+      <th>Landsat 8</th>
+      <th>Sentinel 2</th>
+      <th>MODIS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Coastal</td>
+      <td>0.40 - 0.45</td>
+      <td> </td>
+      <td> </td>
+      <td>1</td>
+      <td>1</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Blue</td>
+      <td>0.45 - 0.5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Green</td>
+      <td>0.5 - 0.6</td>
+      <td>2</td>
+      <td>2</td>
+      <td>3</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Red</td>
+      <td>0.6 - 0.7</td>
+      <td>3</td>
+      <td>3</td>
+      <td>4</td>
+      <td>4</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Pan</td>
+      <td>0.5 - 0.7</td>
+      <td> </td>
+      <td>8</td>
+      <td>8</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>NIR</td>
+      <td>0.77 - 1.00</td>
+      <td>4</td>
+      <td>4</td>
+      <td>5</td>
+      <td>8</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Cirrus</td>
+      <td>1.35 - 1.40</td>
+      <td> </td>
+      <td> </td>
+      <td>9</td>
+      <td>10</td>
+      <td>26</td>
+    </tr>
+    <tr>
+      <td>SWIR16</td>
+      <td>1.55 - 1.75</td>
+      <td>5</td>
+      <td>5</td>
+      <td>6</td>
+      <td>11</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>SWIR22</td>
+      <td>2.1 - 2.3</td>
+      <td>7</td>
+      <td>7</td>
+      <td>7</td>
+      <td>12</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <td>LWIR</td>
+      <td>10.5 - 12.5</td>
+      <td>6</td>
+      <td>6</td>
+      <td>10, 11</td>
+      <td> </td>
+      <td>31, 32</td>
+    </tr>
+  </tbody>
+</table>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/spectral-resolution.png" />
+  <figcaption>Graphic of currently available optical satellite sensors grouped by different domains of the electromagnetic spectrum (VIS = visible, NIR = near infrared, VNIR = visible near infrared, SWIR = shortwave infrared, TIR = thermal infrared). Source at <a href="https://www.researchgate.net/figure/Spectral-resolution-of-currently-available-optical-satellite-sensors-grouped-by-different_fig1_348695518">researchgate.net</a></figcaption>
+</figure>
+
+<p>While the individual band specifications can vary, a “blue” band on any sensor is going to roughly fall within 0.45 and 0.5 microns.</p>
+
+<ul>
+  <li><strong>Coastal</strong>: A coastal band is used for imaging shallow water, detecting fine particles in the atmosphere (aerosols), and measuring subtle changes in ocean color.</li>
+  <li><strong>Red, Green, Blue</strong>: Covering the human visible range of 0.4 - 0.7 microns, these bands are the ones most often used for visualization.</li>
+  <li><strong>Pan</strong>: A panchromatic is a single band that covers the entire visible range, thereby creating a “black &amp; white” image. Pan bands are useful due to their increased sensitivity (from the larger spectral range), and are also frequently higher resolution than other spectral bands on the same sensor. High resolution pan bands can be used to pan-sharpen on other spectral bands to increase their apparent resolution.</li>
+  <li><strong>NIR</strong>: The Near-infrared is beyond the range of human vision but is widely used in a variety of applications it’s ability to separate out water and vegetation.</li>
+  <li><strong>Cirrus</strong>: A spectral band in this range has become common on more recent sensors due to it’s ability to detect high altitude clouds (i.e., cirrus clouds) that are invisible in other bands.</li>
+  <li><strong>Short Wave Infrared (SWIR)</strong>: Imaging systems using the short-wave infrared (SWIR) wavelength bands offer unique remote sensing capabilities, such as material detection and smoke penetration overcoming challenges in measurement, inspection, and process-monitoring applications often impossible with other technologies.</li>
+  <li><strong>Long Wave Infrared (LWIR)</strong>: The long-wave infrared region is used to measure temperature on land or water. Some LWIR sensors cover the entire region from 10.5 to 12.5 microns, while others such as Landsat-8, will split the region up into 2 bands.</li>
+</ul>
+
+<p>These different spectral bands can be combined in different ways to enhance the contrast between different categories of interest. The most common is to use the red, green, and blue bands to create a natural color image, like what would be seen with the naked eye. See the following chart for common band combinations that bring about specific insights in the data.</p>
+
+<p>Types of Spectal Bands Windows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Combination Name</th>
+      <th>Band 1</th>
+      <th>Band 2</th>
+      <th>Band 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Natural Color</td>
+      <td>red</td>
+      <td>green</td>
+      <td>blue</td>
+    </tr>
+    <tr>
+      <td>Urban False Color</td>
+      <td>swir22</td>
+      <td>swir16</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <td>Agriculture</td>
+      <td>nir</td>
+      <td>red</td>
+      <td>green</td>
+    </tr>
+    <tr>
+      <td>Atmospheric Penetration</td>
+      <td>swir22</td>
+      <td>swir16</td>
+      <td>nir</td>
+    </tr>
+    <tr>
+      <td>Healthy Vegetation</td>
+      <td>nir</td>
+      <td>swir16</td>
+      <td>blue</td>
+    </tr>
+    <tr>
+      <td>Land/Water</td>
+      <td>nir</td>
+      <td>swir16</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <td>Natural With Atmospheric Removal</td>
+      <td>swir22</td>
+      <td>nir</td>
+      <td>green</td>
+    </tr>
+    <tr>
+      <td>Vegetation Analysis</td>
+      <td>swir16</td>
+      <td>nir</td>
+      <td>red</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="mathematic-spectral-transformations">Mathematic spectral transformations</h3>
+
+<p>In addition to false color composition, spectral bands can be combined mathematically to emphasize a particular set of characteristics. These techniques may draw from all relevant bands, rather than the three band ‘limit’ set by human vision, to draw out very specific characteristics. This generally demands greater processing of the raw data to minimize noise across the deeper image stack. Mathematical transformations can be combined with ground data and well-developed algorithms to answer more quantitative questions. While false color can be used to detect the subjective health of agriculture, the proper mathematic transformations might be able to measure the health of each field using a transferrable metric. While false color composites can distinguish mud from water, a mathematic transformation could measure how wet the mud is.</p>
+
+<p>Common use cases of vegetation indices are vegetation mapping and monitoring, biodiversity assessments, forest degradation assessments, biomass mapping, crop condition monitoring and predicting crop yield, and carbon capture assessment. 
+Other common indices have been developed to measure burn severity, geologic qualities such as the presence of certain minerals, water turbidity, mud, snow, and more.</p>
+
+<div class="image-container">
+	<div class="image-container-left">
+		<img class="" src="../assets/graphics/content/ndvi-thumb.png" />
+	</div>
+	<div class="image-container-right">
+		<dt><h4>Vegetation and other Indices</h4></dt>
+		<dd class="image-container-defintion">
+			<p>Synthesizing data from multiple spectral bands, through ratio or coefficient-based transformations, can produce indices that can be used to compare every point in an image on the same scale. The most common indices, such as Normalized Difference Vegetation Index (NDVI) and Enhanced Vegetation Index (EVI), measure vegetation health and can be used to distinguish between types of plants. Soil Adjusted Vegetation Index (SAVI) and its counterparts OSAVI and GSAVI suppresses the effects of soil which can lead to erroneous NDVI calculations in areas with sparse vegetation. A comprehensive list of vegetation indices and their formulas can be found at <a href="https://www.l3harrisgeospatial.com/docs/broadbandgreenness.html#Optimize">l3harrisgeospatial.co</a>. Common use cases of vegetation indices are vegetation mapping and monitoring, biodiversity assessments, forest degradation assessments, biomass mapping, crop condition monitoring and predicting crop yield, and carbon capture assessment. Other common indices have been developed to measure burn severity, geologic qualities such as the presence of certain minerals, water turbidity, mud, snow, and more. Normalized Difference Water Index (NDWI) and Normalized Difference Snow Index (NDSI) – Commonly used for water mapping and water quality monitoring, change detection, flood monitoring and damage assessment, snow and ice mapping and monitoring. Normalized Difference Built-up Index (NDBI) – emphasizes manufactured and built-up environments in imagery.</p>
+
+		</dd>
+		
+	</div>
+</div>
+
+<div class="image-container">
+	<div class="image-container-left">
+		<img class="" src="../assets/graphics/content/pca-thumb.png" />
+	</div>
+	<div class="image-container-right">
+		<dt><h4>Principle Component Analysis</h4></dt>
+		<dd class="image-container-defintion">
+			<p>Another image synthesis technique, Principle Component Analysis (PCA), decorrelates the data within each spectral band, such that the most common characteristics of all bands are placed in the highest category and less common characteristics are placed in lower categories, until all variance is explained. It is invaluable for exploration of data and landscape characteristics, simultaneously drawing attention to the most noteworthy and best-hidden features in a scene.</p>
+
+		</dd>
+		
+	</div>
+</div>
+
+<div class="image-container">
+	<div class="image-container-left">
+		<img class="" src="../assets/graphics/content/tasscap-thumb.png" />
+	</div>
+	<div class="image-container-right">
+		<dt><h4>Kauth-Thomas</h4></dt>
+		<dd class="image-container-defintion">
+			<p>KT-Transformations are a type of PCA, which, rather than being data-driven, combine information from multiple bands using specially developed coefficients to create the biophysically meaningful variables of Brightness, Greenness, and Wetness- essential components of a landscape.</p>
+
+		</dd>
+		
+	</div>
+</div>
+
+
+				</article>
+
+				<!-- Footer Content-->
+<footer class="article-footer">
+	 
+	 	<a href="/analysis/" class="article-footer__flex">
+			 <i class="collecticon collecticon-chevron-left"></i>
+			 <!-- title -->
+			 <h2>Analysis</h2>
+	 	</a>
+	 
+
+	 
+	 	<a href="/analysis/advanced-analysis.html" class="article-footer__flex">
+			 <!-- title -->
+			 <h2>Advanced Analysis</h2>
+			<i class="collecticon collecticon-chevron-right"></i>
+	 	</a>
+	 
+</footer>
+
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<script src="/assets/scripts/vendor-3ca6b100c1.js"></script>
+<script src="/assets/scripts/bundle-bf95e95a0f.js"></script>
+
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+<!--[if lt IE 10]> <html class="lt-ie10 no-js"  lang=""> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="description" content="Exploratory, and collaboratory, review of current and upcoming satellite tools for development, from capture, distribution, analysis and applications.">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>State of Satellite Imagery</title>
+  <link rel="canonical" href="/applications/mining.html">
+  <link rel="alternate" type="application/rss+xml" title="Jekyll Seed" href="/feed.xml">
+  <script defer data-domain="landscape.satsummit.io" src="https://plausible.io/js/script.outbound-links.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,500,300,300italic' rel='stylesheet' type='text/css'>
+
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+  <link rel="stylesheet" href="/assets/styles/main-5bbae75fc5.css">
+</head>
+
+
+<body>
+
+	<header id="header" class="hero">
+	<div class="hero-block">
+	  <h1 class="hero-block__title"><a href="/" class="icon-centerer"><i class="collecticon collecticon-satsummit-logo-symbol-pos"></i> Satellites in Global Development</a></h1>
+		<!-- Mobile Nav -->
+		<div id="mySidenav" class="sidenav">
+		  <a href="javascript:void(0)" class="closebtn">&times;</a>
+			<ul class="secondnav">
+			  <li class="sidebar--title sidebar--title__first "><a href="/">Introduction</a></li>
+			  
+			    
+			      <li class="sidebar--title "><a href="/applications/">Applications</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/accounting-of-transportation-networks.html"><i class="collecticon collecticon-circle-empty"></i><span>Accounting of Transportation Networks</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/forest-and-agriculture.html"><i class="collecticon collecticon-circle-empty"></i><span>Forest and Agriculture</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/disaster-reduction-and-response.html"><i class="collecticon collecticon-circle-empty"></i><span>Disaster Reduction and Response</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/crop-classification-in-challenging-geographies.html"><i class="collecticon collecticon-circle-empty"></i><span>Crop Classification in Challenging Geographies</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/monitoring-water-quality-and-quantity-with-earth-observation-techniques.html"><i class="collecticon collecticon-circle-empty"></i><span>Monitoring Water Quality and Quantity with EO Techniques</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection siderbar--item__active"><a href="/applications/mining.html"><i class="collecticon collecticon-circle-full"></i><span>Mining</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/monitoring-climate-change.html"><i class="collecticon collecticon-circle-empty"></i><span>Monitoring Climate Change</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/mapping-poverty.html"><i class="collecticon collecticon-circle-empty"></i><span>Mapping Poverty</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/geospatial-impact-evaluations.html"><i class="collecticon collecticon-circle-empty"></i><span>Geospatial Impact Evaluations</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/population-estimation-modelling-and-migration.html"><i class="collecticon collecticon-circle-empty"></i><span>Population Estimation, Modelling, and Migration</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/renewable-energy-mapping.html"><i class="collecticon collecticon-circle-empty"></i><span>Renewable Energy Mapping</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/digital-microplanning.html"><i class="collecticon collecticon-circle-empty"></i><span>Digital Microplanning</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/capture/">Capture</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/capture/resolution-considerations.html"><i class="collecticon collecticon-circle-empty"></i><span>Resolution Considerations</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/capture/satellite-coverage.html"><i class="collecticon collecticon-circle-empty"></i><span>Satellite Coverage</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/capture/satellite-providers.html"><i class="collecticon collecticon-circle-empty"></i><span>Satellite Providers</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/capture/satellites-sensors-properties.html"><i class="collecticon collecticon-circle-empty"></i><span>Satellites Sensors and Properties</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/capture/typical-serviced-image.html"><i class="collecticon collecticon-circle-empty"></i><span>Typical Serviced Image</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/capture/data-license.html"><i class="collecticon collecticon-circle-empty"></i><span>Data License</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/analysis/">Analysis</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/analysis/band-combinations.html"><i class="collecticon collecticon-circle-empty"></i><span>Band Combinations</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/analysis/advanced-analysis.html"><i class="collecticon collecticon-circle-empty"></i><span>Advanced Analysis</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/analysis/ml-ai-applications.html"><i class="collecticon collecticon-circle-empty"></i><span>Machine Learning and AI Applications</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/distribution/">Distribution</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/distribution/key-concepts.html"><i class="collecticon collecticon-circle-empty"></i><span>Key Concepts</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/data-access-platforms/">Data Access Platforms</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/data-access-platforms/commercial-platforms.html"><i class="collecticon collecticon-circle-empty"></i><span>Commercial Platforms</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/data-access-platforms/free-federal-access-methods.html"><i class="collecticon collecticon-circle-empty"></i><span>Free/Federal Access Methods</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/further-investments/">Further Investments</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/resource-library/">Resource Library</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/works-cited/">Works Cited</a></li>
+			    
+			  
+			</ul>
+		</div>
+
+	  <!-- Mobile Nav Opener -->
+		<nav class="nav--trigger"><i class="collecticon collecticon-hamburger-menu"></i></nav>
+
+	  <!-- Contribute Block -->
+	  <a href="https://github.com/satsummit/landscape" target="_blank">
+	    <div class="contribute-block">
+	    	<i class="collecticon collecticon-github"></i>CONTRIBUTE
+	    </div>
+	  </a>
+	</div>
+</header>
+
+
+	<div class="container">
+		<div class="container-sidenav">
+			<ul class="sidebar">
+  <li class="sidebar--title sidebar--title__first "><a href="/">Introduction</a></li>
+  
+    
+      <li class="sidebar--title "><a href="/applications/">Applications</a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/accounting-of-transportation-networks.html"><i class="collecticon collecticon-circle-empty"></i><span>Accounting of Transportation Networks</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/forest-and-agriculture.html"><i class="collecticon collecticon-circle-empty"></i><span>Forest and Agriculture</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/disaster-reduction-and-response.html"><i class="collecticon collecticon-circle-empty"></i><span>Disaster Reduction and Response</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/crop-classification-in-challenging-geographies.html"><i class="collecticon collecticon-circle-empty"></i><span>Crop Classification in Challenging Geographies</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/monitoring-water-quality-and-quantity-with-earth-observation-techniques.html"><i class="collecticon collecticon-circle-empty"></i><span>Monitoring Water Quality and Quantity with EO Techniques</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection siderbar--item__active"><a href="/applications/mining.html"><i class="collecticon collecticon-circle-full"></i><span>Mining</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/monitoring-climate-change.html"><i class="collecticon collecticon-circle-empty"></i><span>Monitoring Climate Change</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/mapping-poverty.html"><i class="collecticon collecticon-circle-empty"></i><span>Mapping Poverty</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/geospatial-impact-evaluations.html"><i class="collecticon collecticon-circle-empty"></i><span>Geospatial Impact Evaluations</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/population-estimation-modelling-and-migration.html"><i class="collecticon collecticon-circle-empty"></i><span>Population Estimation, Modelling, and Migration</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/renewable-energy-mapping.html"><i class="collecticon collecticon-circle-empty"></i><span>Renewable Energy Mapping</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/digital-microplanning.html"><i class="collecticon collecticon-circle-empty"></i><span>Digital Microplanning</span></a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/capture/">Capture</a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/capture/resolution-considerations.html"><i class="collecticon collecticon-circle-empty"></i><span>Resolution Considerations</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/capture/satellite-coverage.html"><i class="collecticon collecticon-circle-empty"></i><span>Satellite Coverage</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/capture/satellite-providers.html"><i class="collecticon collecticon-circle-empty"></i><span>Satellite Providers</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/capture/satellites-sensors-properties.html"><i class="collecticon collecticon-circle-empty"></i><span>Satellites Sensors and Properties</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/capture/typical-serviced-image.html"><i class="collecticon collecticon-circle-empty"></i><span>Typical Serviced Image</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/capture/data-license.html"><i class="collecticon collecticon-circle-empty"></i><span>Data License</span></a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/analysis/">Analysis</a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/analysis/band-combinations.html"><i class="collecticon collecticon-circle-empty"></i><span>Band Combinations</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/analysis/advanced-analysis.html"><i class="collecticon collecticon-circle-empty"></i><span>Advanced Analysis</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/analysis/ml-ai-applications.html"><i class="collecticon collecticon-circle-empty"></i><span>Machine Learning and AI Applications</span></a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/distribution/">Distribution</a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/distribution/key-concepts.html"><i class="collecticon collecticon-circle-empty"></i><span>Key Concepts</span></a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/data-access-platforms/">Data Access Platforms</a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/data-access-platforms/commercial-platforms.html"><i class="collecticon collecticon-circle-empty"></i><span>Commercial Platforms</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/data-access-platforms/free-federal-access-methods.html"><i class="collecticon collecticon-circle-empty"></i><span>Free/Federal Access Methods</span></a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/further-investments/">Further Investments</a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/resource-library/">Resource Library</a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/works-cited/">Works Cited</a></li>
+    
+  
+ </ul>
+
+
+			<div class="container-article">
+				<article class="article-padding">
+					<!-- Generate Navigation Links-->
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+							
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+
+					<div class="mobile--breadcrumbs">
+	
+		<a href="/applications">Applications</a> / <a href="/applications/mining.html">Mining</a>
+	
+</div>
+
+
+					<h2 id="mining">Mining</h2>
+
+<p>Numerous industries worldwide depend on minerals that are mined from the ground. The revenue from mining is over a trillion USD annually.<sup>1</sup> Satellite data can help support more efficient and environmentally friendly mining and resource extraction around the world. Remote sensing images can be used for mineral exploration in two general categories, 1) to map geology and the faults and fractures that localize ore deposits; 2) recognize hydrothermally altered rocks by their spectral signatures.<sup>2</sup> Landsat and Sentinel data has historically supported mining assessments, but new higher spectral and spatial resolution sensors are bringing even more valuable insights to the industry</p>
+
+<p>Using remote sensing data and image analysis tools to identify mineral deposits</p>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/remote_sensing.jpg" />
+  <figcaption>Source: https://www.srk.com/en/services/mineral-exploration-remote-sensing-and-geophysics​</figcaption>
+</figure>
+
+<p>In addition to supporting the discovery and extraction of new mineral deposits, remote sensing technology can also allow for more effective monitoring and detection of illegal and un-regulated mining that takes place around the world today. Unregulated mining practices have a detrimental impact to public health due to higher levels of pollution and poor working conditions. A World Economic Forum report on the state of mining in Africa estimates that unregulated gold mines cause $9 billion in economic damage a year. It goes on to explore how satellite data that can help in prevent 10% of unregulated mining would be worth $900 million to the African economy.<sup>3</sup> Analysts can use satellite data to compare and observe changes in land use and surface activities to identify mining activity such as the creation of artificial ponds or land being cleared for access road.</p>
+
+<hr />
+<p>1) <a href="https://www.statista.com/topics/1143/mining/#topicHeader__wrapper">https://www.statista.com/topics/1143/mining/#topicHeader__wrapper</a><br />
+2) <a href="https://www.sciencedirect.com/science/article/abs/pii/S0169136899000074">https://www.sciencedirect.com/science/article/abs/pii/S0169136899000074</a><br />
+3) <a href="https://www.weforum.org/reports/unlocking-the-potential-of-earth-observation-to-address-africa-s-critical-challenges">https://www.weforum.org/reports/unlocking-the-potential-of-earth-observation-to-address-africa-s-critical-challenges</a></p>
+
+				</article>
+
+				<!-- Footer Content-->
+<footer class="article-footer">
+	 
+	 	<a href="/" class="article-footer__flex">
+			 <i class="collecticon collecticon-chevron-left"></i>
+			 <!-- title -->
+			 <h2>Monitoring Water Quality and Quantity with Earth Observation Techniques</h2>
+	 	</a>
+	 
+
+	 
+	 	<a href="/applications/monitoring-climate-change.html" class="article-footer__flex">
+			 <!-- title -->
+			 <h2>Monitoring Climate Change</h2>
+			<i class="collecticon collecticon-chevron-right"></i>
+	 	</a>
+	 
+</footer>
+
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<script src="/assets/scripts/vendor-3ca6b100c1.js"></script>
+<script src="/assets/scripts/bundle-bf95e95a0f.js"></script>
+
+</html>

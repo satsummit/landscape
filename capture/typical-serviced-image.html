@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+
+<!--[if lt IE 10]> <html class="lt-ie10 no-js"  lang=""> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="description" content="Exploratory, and collaboratory, review of current and upcoming satellite tools for development, from capture, distribution, analysis and applications.">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>State of Satellite Imagery</title>
+  <link rel="canonical" href="/capture/typical-serviced-image.html">
+  <link rel="alternate" type="application/rss+xml" title="Jekyll Seed" href="/feed.xml">
+  <script defer data-domain="landscape.satsummit.io" src="https://plausible.io/js/script.outbound-links.js"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,500,300,300italic' rel='stylesheet' type='text/css'>
+
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+  <link rel="stylesheet" href="/assets/styles/main-5bbae75fc5.css">
+</head>
+
+
+<body>
+
+	<header id="header" class="hero">
+	<div class="hero-block">
+	  <h1 class="hero-block__title"><a href="/" class="icon-centerer"><i class="collecticon collecticon-satsummit-logo-symbol-pos"></i> Satellites in Global Development</a></h1>
+		<!-- Mobile Nav -->
+		<div id="mySidenav" class="sidenav">
+		  <a href="javascript:void(0)" class="closebtn">&times;</a>
+			<ul class="secondnav">
+			  <li class="sidebar--title sidebar--title__first "><a href="/">Introduction</a></li>
+			  
+			    
+			      <li class="sidebar--title "><a href="/applications/">Applications</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/accounting-of-transportation-networks.html"><i class="collecticon collecticon-circle-empty"></i><span>Accounting of Transportation Networks</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/forest-and-agriculture.html"><i class="collecticon collecticon-circle-empty"></i><span>Forest and Agriculture</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/disaster-reduction-and-response.html"><i class="collecticon collecticon-circle-empty"></i><span>Disaster Reduction and Response</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/crop-classification-in-challenging-geographies.html"><i class="collecticon collecticon-circle-empty"></i><span>Crop Classification in Challenging Geographies</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/monitoring-water-quality-and-quantity-with-earth-observation-techniques.html"><i class="collecticon collecticon-circle-empty"></i><span>Monitoring Water Quality and Quantity with EO Techniques</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/mining.html"><i class="collecticon collecticon-circle-empty"></i><span>Mining</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/monitoring-climate-change.html"><i class="collecticon collecticon-circle-empty"></i><span>Monitoring Climate Change</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/mapping-poverty.html"><i class="collecticon collecticon-circle-empty"></i><span>Mapping Poverty</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/geospatial-impact-evaluations.html"><i class="collecticon collecticon-circle-empty"></i><span>Geospatial Impact Evaluations</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/population-estimation-modelling-and-migration.html"><i class="collecticon collecticon-circle-empty"></i><span>Population Estimation, Modelling, and Migration</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/renewable-energy-mapping.html"><i class="collecticon collecticon-circle-empty"></i><span>Renewable Energy Mapping</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/applications/digital-microplanning.html"><i class="collecticon collecticon-circle-empty"></i><span>Digital Microplanning</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/capture/">Capture</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/capture/resolution-considerations.html"><i class="collecticon collecticon-circle-empty"></i><span>Resolution Considerations</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/capture/satellite-coverage.html"><i class="collecticon collecticon-circle-empty"></i><span>Satellite Coverage</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/capture/satellite-providers.html"><i class="collecticon collecticon-circle-empty"></i><span>Satellite Providers</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/capture/satellites-sensors-properties.html"><i class="collecticon collecticon-circle-empty"></i><span>Satellites Sensors and Properties</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection siderbar--item__active"><a href="/capture/typical-serviced-image.html"><i class="collecticon collecticon-circle-full"></i><span>Typical Serviced Image</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/capture/data-license.html"><i class="collecticon collecticon-circle-empty"></i><span>Data License</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/analysis/">Analysis</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/analysis/band-combinations.html"><i class="collecticon collecticon-circle-empty"></i><span>Band Combinations</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/analysis/advanced-analysis.html"><i class="collecticon collecticon-circle-empty"></i><span>Advanced Analysis</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/analysis/ml-ai-applications.html"><i class="collecticon collecticon-circle-empty"></i><span>Machine Learning and AI Applications</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/distribution/">Distribution</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/distribution/key-concepts.html"><i class="collecticon collecticon-circle-empty"></i><span>Key Concepts</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/data-access-platforms/">Data Access Platforms</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/data-access-platforms/commercial-platforms.html"><i class="collecticon collecticon-circle-empty"></i><span>Commercial Platforms</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--subsection "><a href="/data-access-platforms/free-federal-access-methods.html"><i class="collecticon collecticon-circle-empty"></i><span>Free/Federal Access Methods</span></a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/further-investments/">Further Investments</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/resource-library/">Resource Library</a></li>
+			    
+			  
+			    
+			      <li class="sidebar--title "><a href="/works-cited/">Works Cited</a></li>
+			    
+			  
+			</ul>
+		</div>
+
+	  <!-- Mobile Nav Opener -->
+		<nav class="nav--trigger"><i class="collecticon collecticon-hamburger-menu"></i></nav>
+
+	  <!-- Contribute Block -->
+	  <a href="https://github.com/satsummit/landscape" target="_blank">
+	    <div class="contribute-block">
+	    	<i class="collecticon collecticon-github"></i>CONTRIBUTE
+	    </div>
+	  </a>
+	</div>
+</header>
+
+
+	<div class="container">
+		<div class="container-sidenav">
+			<ul class="sidebar">
+  <li class="sidebar--title sidebar--title__first "><a href="/">Introduction</a></li>
+  
+    
+      <li class="sidebar--title "><a href="/applications/">Applications</a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/accounting-of-transportation-networks.html"><i class="collecticon collecticon-circle-empty"></i><span>Accounting of Transportation Networks</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/forest-and-agriculture.html"><i class="collecticon collecticon-circle-empty"></i><span>Forest and Agriculture</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/disaster-reduction-and-response.html"><i class="collecticon collecticon-circle-empty"></i><span>Disaster Reduction and Response</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/crop-classification-in-challenging-geographies.html"><i class="collecticon collecticon-circle-empty"></i><span>Crop Classification in Challenging Geographies</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/monitoring-water-quality-and-quantity-with-earth-observation-techniques.html"><i class="collecticon collecticon-circle-empty"></i><span>Monitoring Water Quality and Quantity with EO Techniques</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/mining.html"><i class="collecticon collecticon-circle-empty"></i><span>Mining</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/monitoring-climate-change.html"><i class="collecticon collecticon-circle-empty"></i><span>Monitoring Climate Change</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/mapping-poverty.html"><i class="collecticon collecticon-circle-empty"></i><span>Mapping Poverty</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/geospatial-impact-evaluations.html"><i class="collecticon collecticon-circle-empty"></i><span>Geospatial Impact Evaluations</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/population-estimation-modelling-and-migration.html"><i class="collecticon collecticon-circle-empty"></i><span>Population Estimation, Modelling, and Migration</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/renewable-energy-mapping.html"><i class="collecticon collecticon-circle-empty"></i><span>Renewable Energy Mapping</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/applications/digital-microplanning.html"><i class="collecticon collecticon-circle-empty"></i><span>Digital Microplanning</span></a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/capture/">Capture</a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/capture/resolution-considerations.html"><i class="collecticon collecticon-circle-empty"></i><span>Resolution Considerations</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/capture/satellite-coverage.html"><i class="collecticon collecticon-circle-empty"></i><span>Satellite Coverage</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/capture/satellite-providers.html"><i class="collecticon collecticon-circle-empty"></i><span>Satellite Providers</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/capture/satellites-sensors-properties.html"><i class="collecticon collecticon-circle-empty"></i><span>Satellites Sensors and Properties</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection siderbar--item__active"><a href="/capture/typical-serviced-image.html"><i class="collecticon collecticon-circle-full"></i><span>Typical Serviced Image</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/capture/data-license.html"><i class="collecticon collecticon-circle-empty"></i><span>Data License</span></a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/analysis/">Analysis</a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/analysis/band-combinations.html"><i class="collecticon collecticon-circle-empty"></i><span>Band Combinations</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/analysis/advanced-analysis.html"><i class="collecticon collecticon-circle-empty"></i><span>Advanced Analysis</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/analysis/ml-ai-applications.html"><i class="collecticon collecticon-circle-empty"></i><span>Machine Learning and AI Applications</span></a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/distribution/">Distribution</a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/distribution/key-concepts.html"><i class="collecticon collecticon-circle-empty"></i><span>Key Concepts</span></a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/data-access-platforms/">Data Access Platforms</a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/data-access-platforms/commercial-platforms.html"><i class="collecticon collecticon-circle-empty"></i><span>Commercial Platforms</span></a></li>
+    
+  
+    
+      <li class="sidebar--subsection "><a href="/data-access-platforms/free-federal-access-methods.html"><i class="collecticon collecticon-circle-empty"></i><span>Free/Federal Access Methods</span></a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/further-investments/">Further Investments</a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/resource-library/">Resource Library</a></li>
+    
+  
+    
+      <li class="sidebar--title "><a href="/works-cited/">Works Cited</a></li>
+    
+  
+ </ul>
+
+
+			<div class="container-article">
+				<article class="article-padding">
+					<!-- Generate Navigation Links-->
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+							
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+							
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+						
+
+						
+					
+
+					<div class="mobile--breadcrumbs">
+	
+		<a href="/capture">Capture</a> / <a href="/capture/typical-serviced-image.html">Typical Serviced Image</a>
+	
+</div>
+
+
+					<h2 id="typical-serviced-image">Typical Serviced Image</h2>
+
+<p>A typical serviced satellite image (bought or downloaded) includes several processing steps. From the raw image (Level 0), data are calibrated into units of physical reflectance (called Level 1 processing), and the image is geolocated and ortho-rectified following an elevation model of the terrain, Ground Control Points (GCP), or a geodetic reference frame (e.g., Mercator). Over large areas, several captures may need to be stitched together. This product is usually referred to as Level 2 or similar. In many cases, the end user will only see the final image, either in a report or as an interactive map on the web, such as the maps in this report.</p>
+
+<h3 id="data-processing-levelshttpwwwearthdatanasagovengageopen-data-services-and-softwaredata-information-policydata-levels"><a href="http://www.earthdata.nasa.gov/engage/open-data-services-and-software/data-information-policy/data-levels">Data Processing Levels</a></h3>
+
+<p>The following paragraph and table explore the different levels of data processing that are done specifically by NASA, but also apply to the industry at large.</p>
+
+<p>NASA’s Earth Observing System Data and Information System (EOSDIS) data products are processed at various levels ranging from Level 0 to Level 4. Level 0 products are raw data at full instrument resolution. At higher levels, the data are converted into more useful parameters and formats. All EOS instruments must have Level 1 Standard Data Products (SDPs); most have SDPs at Level 2 and Level 3; and many have Level 4 SDPs. Some EOS Interdisciplinary Science Investigations also have generated Level 4 SDPs. Specifications for the set of SDPs to be generated are reviewed by the Earth Observing System Project Science Office (EOSPSO) and NASA Headquarters to ensure completeness and consistency in providing a comprehensive science data output for EOS. Standard data products are produced at NASA’s Distributed Active Archive Centers (DAACs) or Science Investigator-led Processing Systems (SIPS).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data Level</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Level 0</td>
+      <td>Reconstructed, unprocessed instrument and payload data at full resolution, with any and all communications artifacts (e.g., synchronization frames, communications headers, duplicate data) removed. (In most cases, NASA’s EOS Data and Operations System [EDOS] provides these data to the DAACs as production data sets for processing by the Science Data Processing Segment [SDPS] or by one of the SIPS to produce higher-level products.)</td>
+    </tr>
+    <tr>
+      <td>Level 1A</td>
+      <td>Level 1A (L1A) data are reconstructed, unprocessed instrument data at full resolution, time-referenced, and annotated with ancillary information, including radiometric and geometric calibration coefficients and georeferencing parameters (e.g., platform ephemeris) computed and appended but not applied to L0 data.</td>
+    </tr>
+    <tr>
+      <td>Level 1B</td>
+      <td>L1B data are L1A data that have been processed to sensor units (not all instruments have L1B source data).</td>
+    </tr>
+    <tr>
+      <td>Level 1C</td>
+      <td>L1C data are L1B data that include new variables to describe the spectra. These variables allow the user to identify which L1C channels have been copied directly from the L1B and which have been synthesized from L1B and why.</td>
+    </tr>
+    <tr>
+      <td>Level 2</td>
+      <td>Derived geophysical variables at the same resolution and location as L1 source data.</td>
+    </tr>
+    <tr>
+      <td>Level 2A</td>
+      <td>L2A data contains information derived from the geolocated sensor data, such as ground elevation, highest and lowest surface return elevations, energy quantile heights (“relative height” metrics), and other waveform-derived metrics describing the intercepted surface.</td>
+    </tr>
+    <tr>
+      <td>Level 2B</td>
+      <td>L2B data are L2A data that have been processed to sensor units (not all instruments will have a L2B equivalent).</td>
+    </tr>
+    <tr>
+      <td>Level 3</td>
+      <td>Variables mapped on uniform space-time grid scales, usually with some completeness and consistency.</td>
+    </tr>
+    <tr>
+      <td>Level 3A</td>
+      <td>L3A data are generally periodic summaries (weekly, ten-day, monthly) of L2 products.</td>
+    </tr>
+    <tr>
+      <td>Level 4</td>
+      <td>Model output or results from analyses of lower-level data (e.g., variables derived from multiple measurements).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="orthorectificationhttpswwwesricomaboutnewsroominsiderwhat-is-orthorectified-imagery"><a href="https://www.esri.com/about/newsroom/insider/what-is-orthorectified-imagery/">Orthorectification</a></h3>
+
+<p>Imagery has an amazing amount of information, but raw aerial or satellite imagery cannot be used in a GIS until it has been processed such that all pixels are in an accurate (x,y) position on the ground. Photogrammetry is a discipline, developed over many decades, for processing imagery to generate accurately georeferenced images, referred to as orthorectified images (or sometimes simply orthoimages). Orthorectified images have been processed to apply corrections for optical distortions from the sensor system, and apparent changes in the position of ground objects caused by the perspective of the sensor view angle and ground terrain.</p>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/orthorectification.png" />
+  <figcaption>Source at <a href="https://earthobservatory.nasa.gov/ContentFeature/GlobalLandSurvey/images/orthorectification.jpg">earthobservatory.nasa.gov</a></figcaption>
+</figure>
+
+<h3 id="atmospheric-compensationhttpsblogmaxarcomearth-intelligence2017lets-clear-the-air-digitalglobe-atmospheric-compensation-acomp-part-2"><a href="https://blog.maxar.com/earth-intelligence/2017/lets-clear-the-air-digitalglobe-atmospheric-compensation-acomp-part-2">Atmospheric Compensation</a></h3>
+
+<p>There are three main types of Atmospheric Compensation algorithms used by imagery providers. They all aim to remove atmospheric effects from raw imagery but go about solving the problem through different methods.</p>
+
+<p><strong>Top-of-atmosphere (TOA) reflectance</strong> performs a normalization for solar energy. TOA normalizes the pixels values to the 0.0-1.0 range to reduce variability between images. Because the information needed to convert digital numbers (DN) to TOA reflectance values is known, this transformation is very fast and fully automated. The main limitations of TOA reflectance are the remaining effects of Rayleigh scattering (which results in bluish images), aerosol absorption and scattering phenomena (which result in non-uniform, decreased image visibility).</p>
+
+<p><strong>Rayleigh-only reflectance</strong> accounts for the systematic properties of the atmosphere by removing the Rayleigh scattering component (a result of the interaction of sunlight with molecules in the atmosphere) from imagery. Again, the transformation is very fast and fully automated. In cases of very low aerosol loads, Rayleigh-only reflectance produces images that are less blue than TOA reflectance, but the effects of haze variability remain visible.</p>
+
+<p><strong>Surface reflectance</strong> compensates for atmospheric absorption and scattering phenomena on a pixel-by-pixel basis. It approximates what would be measured by a sensor held just above the Earth surface, without any alterations from the atmosphere. Of these three choices, surface reflectance oftentimes provides the best visual experience.</p>
+
+<figure class="align-center">
+  <img src="/assets/graphics/content/acomp.png" />
+  <figcaption>Three main types of Atmospheric Compensation (AComp) algorithms. Source at <a href="https://maxar-blog-assets.s3.amazonaws.com/uploads/blogImages/2017/11/Figure-6_acomp.png">maxar-blog-assets.s3.amazonaws.com</a>​</figcaption>
+</figure>
+
+				</article>
+
+				<!-- Footer Content-->
+<footer class="article-footer">
+	 
+	 	<a href="/capture/satellites-sensors-properties.html" class="article-footer__flex">
+			 <i class="collecticon collecticon-chevron-left"></i>
+			 <!-- title -->
+			 <h2>Satellites Sensors and Properties</h2>
+	 	</a>
+	 
+
+	 
+	 	<a href="/capture/data-license.html" class="article-footer__flex">
+			 <!-- title -->
+			 <h2>Data License</h2>
+			<i class="collecticon collecticon-chevron-right"></i>
+	 	</a>
+	 
+</footer>
+
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<script src="/assets/scripts/vendor-3ca6b100c1.js"></script>
+<script src="/assets/scripts/bundle-bf95e95a0f.js"></script>
+
+</html>
